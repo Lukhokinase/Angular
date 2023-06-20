@@ -1,0 +1,49 @@
+.top{
+    position: absolute;
+    width: 316px;
+    height: 88px;
+    left: calc(50% - 316px/2);
+    top: 56px;
+    
+    background: #D0B48F;
+    border-radius: 7px;
+}
+
+.top2{
+    position: absolute;
+    width: 111px;
+    height: 26px;
+    left: 34px;
+    top: 104px;
+    z-index: 999;
+    
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+.logo{
+    position: absolute;
+    left: 7px;
+    top: 6px;
+}
+.logo2{
+    position: absolute;
+    left: 238px;
+    border-radius: 0px 0px 10px 0px;
+    top: 28px;
+    z-index: 9999;
+
+}
+.cat{
+    position: absolute;
+    left: calc(50% - 316px/2);
+top: 168px;
+border: solid black;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 13px;
+
+
+color: #000000;
+}

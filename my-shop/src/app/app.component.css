@@ -1,0 +1,20 @@
+
+.single-line{
+  position: absolute;
+width: 104px;
+height: 28px;
+left: 70px;
+top: -7px;
+
+font-family: 'Lobster';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 28px;
+/* identical to box height */
+
+
+color: #000000;
+
+
+}
