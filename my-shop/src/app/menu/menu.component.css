@@ -3,7 +3,7 @@
     width: 316px;
     height: 88px;
     left: calc(50% - 316px/2);
-    top: 56px;
+    top: 69px;
     
     background: #D0B48F;
     border-radius: 7px;
@@ -37,13 +37,13 @@
     position: absolute;
     left: calc(50% - 316px/2);
 top: 168px;
-border: solid black;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
 font-size: 11px;
 line-height: 13px;
-
+display: flex;
+text-indent: 10px;
 
 color: #000000;
 }
@@ -53,7 +53,7 @@ color: #000000;
 position: absolute;
 width: 142px;
 height: 127px;
-left: 0px;
+left: 25px;
 top: 196px;
 
 background: linear-gradient(116.82deg, #FFF0D2 16.13%, rgba(255, 255, 255, 0) 100%);
