@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { YourBagComponent } from './your-bag/your-bag.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    YourBagComponent
+    YourBagComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
