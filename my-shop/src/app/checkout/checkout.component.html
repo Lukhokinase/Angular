@@ -1,1 +1,4 @@
-<p>checkout works!</p>
+<div class="container">
+  <h2>Checkout Your Payment</h2>
+  <button *ngIf="stripe" (click)="checkout()">Checkout</button>
+</div>
