@@ -8,6 +8,7 @@ import { MenuofGodComponent } from './menuof-god/menuof-god.component';
 import { ViewoneComponent } from './viewone/viewone.component';
 import { GodcheckoutComponent } from './godcheckout/godcheckout.component';
 import { GodcartComponent } from './godcart/godcart.component';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { GodcartComponent } from './godcart/godcart.component';
     ViewoneComponent,
     GodcheckoutComponent,
     GodcartComponent,
+    NavComponent,
     
   ],
   imports: [
