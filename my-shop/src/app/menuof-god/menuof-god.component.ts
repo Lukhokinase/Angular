@@ -14,7 +14,7 @@ export class MenuofGodComponent implements OnInit {
 
   }
   ngOnInit(): void {
- 
+    this.getAllItems()
   }
 
   getAllItems(){
