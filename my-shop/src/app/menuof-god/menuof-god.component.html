@@ -96,10 +96,10 @@
     >
       <div class="col-6 godcard" *ngFor = "let item of products">
         <div class="card">
-          <!-- Product image-->
+          <!-- Product imaget-->
           <img
             class="card-img-top"
-           
+            src={{item.picture}}
             alt="..."
           />
           <!-- Product details-->
@@ -108,7 +108,7 @@
               <!-- Product name-->
               <h6 class="fw-bolder">{{item.itemname}}</h6>
               <!-- Product price-->
-              <p>{{item.price}}</p>
+              <p>R{{item.price}}</p>
               <svg
                 class="icon"
                 xmlns="http://www.w3.org/2000/svg"
