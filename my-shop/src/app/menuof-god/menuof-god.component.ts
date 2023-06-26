@@ -14,12 +14,13 @@ export class MenuofGodComponent implements OnInit {
 
   }
   ngOnInit(): void {
- 
+    this.getAllItems()
   }
 
   getAllItems(){
     this.productService.getAllItems().subscribe((data)=>{
       this.products = data
+      console.log(data)
     })
   }
 }

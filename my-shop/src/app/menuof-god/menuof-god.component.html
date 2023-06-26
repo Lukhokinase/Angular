@@ -42,8 +42,8 @@
     <!-- Section-->
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-4 row-cols-md-3 row-cols-xl-6 justify-content-start">
-                <div class="col-6 godcard">
+            <div class="row gx-4 gx-lg-5 row-cols-4 row-cols-md-3 row-cols-xl-6 justify-content-start" >
+                <div class="col-6 godcard" *ngFor="let item of products">
                     <div class="card">
                         <!-- Product image-->
                         <img class="card-img-top" src="https://static.onecms.io/wp-content/uploads/sites/43/2022/05/19/228553-MoistChocolateMuffins-mfs-2X3-0923.jpg" alt="...">
@@ -51,9 +51,9 @@
                         <div class="card-body">
                             <div class="">
                                 <!-- Product name-->
-                                <h6 class="fw-bolder">Fancy</h6>
+                                <h6 class="fw-bolder">{{item.itemname}}</h6>
                                 <!-- Product price-->
-                                <p>$80.00</p>
+                                <p>{{item.price}}</p>
                             </div>
                         </div>
                         <!-- Product actions-->
