@@ -12,7 +12,7 @@ import { GodcartComponent } from './godcart/godcart.component';
 import { NavComponent } from './nav/nav.component';
 
 
-import { EmptyCartComponent } from './empty-bag/empty-bag.component';
+import { EmptyBagComponent } from './empty-bag/empty-bag.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { PaymentComponent } from './payment/payment.component';
@@ -24,7 +24,7 @@ import { PaymentComponent } from './payment/payment.component';
     MenuComponent,
     MenuofGodComponent,
     ViewoneComponent,
-    EmptyCartComponent,
+    EmptyBagComponent,
     CategoryComponent,
     ProductListComponent,
    
