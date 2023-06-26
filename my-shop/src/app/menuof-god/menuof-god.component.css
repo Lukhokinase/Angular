@@ -15,10 +15,7 @@
   .text1{
     justify-content: center;
   }
-  .godcard{
-   
-   
-  }
+ 
   .card{
     height: 150px;
     margin-bottom: 10px;
@@ -132,7 +129,7 @@
   /* Legend */
   .legend{
     border:500px solid transparent;
-    border-left:800px solid rgba(52, 73, 94, .7);
+    border-left:800px solid rgba(52, 73, 94, .1);
     border-bottom:0;
     position:absolute;
     bottom:0;
@@ -549,5 +546,25 @@
   .a{
     color: #fe0066;
   }
+
+  #slider{
+    height: 250px;
+    border-radius: 30px;
+    width: 96%;
+    margin: auto;
+    
   
-  
+    
+  }
+  .wordss{
+    position: absolute;
+    bottom: 250px;
+    font-family: 'Playfair Display';
+  }
+  .wordss1{
+    position: absolute;
+    bottom: 300px;
+  }
+  .heading{
+    text-align: center;
+  }
