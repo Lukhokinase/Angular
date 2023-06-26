@@ -1,5 +1,5 @@
 <!-- Navigation-->
-<app-nav></app-nav>
+<!-- <app-nav></app-nav> -->
 
 <!-- Header-->
 
@@ -98,7 +98,7 @@
         <div class="card">
           <!-- Product image-->
           <a routerLink="/view"><img
-            class="card-img-top"
+            class="card-img-top imagefit" height="62px"
             src={{item.picture}}
             alt="..."
           /></a>
@@ -109,6 +109,8 @@
               <h6 class="fw-bolder">{{item.itemname}}</h6>
               <!-- Product price-->
               <p>R{{item.price}}</p>
+              <button type="button" (click)="addToCart(item)">
+
               <svg
                 class="icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -116,12 +118,14 @@
                 height="20"
                 viewBox="0 0 48 48"
               >
+              
                 <circle cx="24" cy="24" r="21" fill="#4CAF50" />
                 <g fill="#fff">
                   <path d="M21 14h6v20h-6z" />
                   <path d="M14 21h20v6H14z" />
                 </g>
               </svg>
+              </button>
             </div>
           </div>
           <!-- Product actions-->
@@ -130,11 +134,6 @@
     </div>
   </div>
 </section>
-<!-- Footer-->
-<footer class="py-5 bg-dark">
-  <div class="container">
-    <p class="m-0 text-center text-white">
-      <a routerLink="/view">rrrrrrrrr</a>
-    </p>
-  </div>
-</footer>
+<app-bag></app-bag>
+
+

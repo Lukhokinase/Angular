@@ -10,6 +10,7 @@ import { ViewoneComponent } from './viewone/viewone.component';
 import { GodcheckoutComponent } from './godcheckout/godcheckout.component';
 import { GodcartComponent } from './godcart/godcart.component';
 import { NavComponent } from './nav/nav.component';
+import { bagComponent } from './bag/bag.component';
 
 
 import { EmptyBagComponent } from './empty-bag/empty-bag.component';
@@ -27,7 +28,7 @@ import { PaymentComponent } from './payment/payment.component';
     EmptyBagComponent,
     CategoryComponent,
     ProductListComponent,
-   
+    bagComponent,
     GodcheckoutComponent,
     GodcartComponent,
     NavComponent,
