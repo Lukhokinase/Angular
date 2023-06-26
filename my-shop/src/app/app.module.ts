@@ -9,6 +9,7 @@ import { MenuofGodComponent } from './menuof-god/menuof-god.component';
 import { ViewoneComponent } from './viewone/viewone.component';
 import { GodcheckoutComponent } from './godcheckout/godcheckout.component';
 import { GodcartComponent } from './godcart/godcart.component';
+import { NavComponent } from './nav/nav.component';
 
 
 import { EmptyBagComponent } from './empty-bag/empty-bag.component';
@@ -28,6 +29,7 @@ import { ProductListComponent } from './product-list/product-list.component';
    
     GodcheckoutComponent,
     GodcartComponent,
+    NavComponent,
     
   ],
   
