@@ -153,7 +153,7 @@
     animation:content-s 7.5s infinite;
   }
   .content-txt h1{
-    font-family:Arial;
+    font-family: 'Alfa Slab One';
     text-transform:uppercase;
     font-size:24px;
     color:#fff;
@@ -478,6 +478,7 @@
     color:#222;
     text-transform:uppercase;
     margin:20px 0;
+    
   }
   .container h2{
     font-family:arial;
@@ -559,7 +560,7 @@
   .wordss{
     position: absolute;
     bottom: 250px;
-    font-family: 'Playfair Display';
+   
   }
   .wordss1{
     position: absolute;
