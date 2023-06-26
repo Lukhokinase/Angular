@@ -6,7 +6,7 @@ selector: 'app-empty-bag',
 templateUrl: './empty-bag.component.html',
 styleUrls: ['./empty-bag.component.css']
 })
-export class EmptyCartComponent implements OnInit {
+export class EmptyBagComponent implements OnInit {
 
 constructor() {}
 

@@ -10,9 +10,10 @@ import { ViewoneComponent } from './viewone/viewone.component';
 import { GodcheckoutComponent } from './godcheckout/godcheckout.component';
 import { GodcartComponent } from './godcart/godcart.component';
 import { NavComponent } from './nav/nav.component';
+import { bagComponent } from './bag/bag.component';
 
 
-import { EmptyCartComponent } from './empty-bag/empty-bag.component';
+import { EmptyBagComponent } from './empty-bag/empty-bag.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductListComponent } from './product-list/product-list.component';
 // import { TypesComponent } from './types/types.component';
@@ -23,10 +24,10 @@ import { ProductListComponent } from './product-list/product-list.component';
     MenuComponent,
     MenuofGodComponent,
     ViewoneComponent,
-    EmptyCartComponent,
+    EmptyBagComponent,
     CategoryComponent,
     ProductListComponent,
-   
+    bagComponent,
     GodcheckoutComponent,
     GodcartComponent,
     NavComponent,

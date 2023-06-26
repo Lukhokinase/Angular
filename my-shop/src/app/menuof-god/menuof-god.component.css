@@ -467,7 +467,7 @@
   
   /* Content */
   .container{
-    width:70%;
+    width:100%;
     height:auto;
     padding:20px 0;
     margin:20px auto;
@@ -567,4 +567,8 @@
   }
   .heading{
     text-align: center;
+  }
+  .imagefit{
+    object-fit: scale-down;
+    
   }

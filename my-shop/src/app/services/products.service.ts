@@ -12,11 +12,15 @@ const apiUrl = 'http://localhost:3200/v1/items'
 
 export class ProductsService {
   Url: any;
+  items:Item[]=[];
   
 
   constructor(private http: HttpClient) { }
 
-
+  addToCart(product: Item) {
+    
+    this.items.push(product);
+  }
   getAllItems(): Observable<Item[]> {
     return this.http.get<Item[]>(apiUrl+'/products/getall')
       
