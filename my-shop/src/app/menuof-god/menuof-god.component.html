@@ -1,114 +1,182 @@
-<body>
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
-            <img src="" alt="" height="35" width="3">
-            <a class="navbar-brand" href="#!">Phunga Cafe</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">All Products</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
-                        <i class="bi-cart-fill me-1"></i>
-                        Cart
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </nav>
-    <!-- Header-->
-    <header class="back py-5">
-        <div class="container px-4 px-lg-5 my-5">
-            <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder text1">Get Your Coffee</h1>
-                <p class="lead fw-normal text-white-50 mb-0 text1">Coffee so good , it feels like its made for you</p>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Section-->
-    <section class="py-5">
-        <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-4 row-cols-md-3 row-cols-xl-6 justify-content-start" >
-                <div class="col-6 godcard" *ngFor="let item of products">
-                    <div class="card">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://static.onecms.io/wp-content/uploads/sites/43/2022/05/19/228553-MoistChocolateMuffins-mfs-2X3-0923.jpg" alt="...">
-                        <!-- Product details-->
-                        <div class="card-body">
-                            <div class="">
-                                <!-- Product name-->
-                                <h6 class="fw-bolder">{{item.itemname}}</h6>
-                                <!-- Product price-->
-                                <p>{{item.price}}</p>
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                      
-                    </div>
-                </div>
+<!-- Navigation-->
+<app-nav></app-nav>
 
-                <div class="col-6 godcard">
-                    <div class="card">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://static.onecms.io/wp-content/uploads/sites/43/2022/05/19/228553-MoistChocolateMuffins-mfs-2X3-0923.jpg" alt="...">
-                        <!-- Product details-->
-                        <div class="card-body">
-                            <div class="">
-                                <!-- Product name-->
-                                <h6 class="fw-bolder">Fancy</h6>
-                                <!-- Product price-->
-                                <p>$80.00</p>
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                      
-                    </div>
-                </div>
+<!-- Header-->
 
-                <div class="col-6 godcard">
-                    <div class="card">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://static.onecms.io/wp-content/uploads/sites/43/2022/05/19/228553-MoistChocolateMuffins-mfs-2X3-0923.jpg" alt="...">
-                        <!-- Product details-->
-                        <div class="card-body p-2">
-                            <div class="subCardBody">
-                                <!-- Product name-->
-                                <h6 class="fw-bolder">Fancy</h6>
-                                <!-- Product price-->
-                                <p>$80.00</p>
-                                <svg  class="icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#4CAF50"/><g fill="#fff"><path d="M21 14h6v20h-6z"/><path d="M14 21h20v6H14z"/></g></svg>
-                            </div>
-                            
-                        </div>
-                        <!-- Product actions-->
-                      
-                    </div>
-                </div>
-                
-            </div>
+<div id="slider">
+  <div class="slides">
+    <div class="slider">
+      <div class="legend"></div>
+      <div class="content">
+        <div class="content-txt">
+          <h1 class="wordss">Coffe Cafe</h1>
+          <h2 class="wordss">
+            Get yourself a cup of coffe to get your day stared
+          </h2>
         </div>
+      </div>
+      <div class="image">
+        <img
+          src="https://images.unsplash.com/photo-1558303420-f814d8a590f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80"
+        />
+      </div>
+    </div>
+    <div class="slider">
+      <div class="legend"></div>
+      <div class="content">
+        <div class="content-txt">
+          <h1 class="wordss">Specials on All Muffins</h1>
+          <h2 class="wordss">
+           20% on all muffin valid till 1 of July
+          </h2>
+        </div>
+      </div>
+      <div class="image">
+        <img
+          src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+        />
+      </div>
+    </div>
+    <div class="slider">
+      <div class="legend"></div>
+      <div class="content">
+        <div class="content-txt">
+          <h1 class="wordss">Lorem ipsum dolor</h1>
+          <h2 class="wordss">
+            Nam ultrices pellentesque facilisis. In semper tellus mollis nisl
+            pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium
+            sit amet auctor ut, ultrices vel nibh.
+          </h2>
+        </div>
+      </div>
+      <div class="image">
+        <img
+          src="https://images.unsplash.com/photo-1510972527921-ce03766a1cf1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+        />
+      </div>
+    </div>
+    <div class="slider">
+      <div class="legend"></div>
+      <div class="content">
+        <div class="content-txt">
+          <h1 class="wordss">Lorem ipsum dolor</h1>
+          <h2 class="wordss">
+            Nam ultrices pellentesque facilisis. In semper tellus mollis nisl
+            pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium
+            sit amet auctor ut, ultrices vel nibh.
+          </h2>
+        </div>
+      </div>
+      <div class="image">
+        <img
+          src="https://images.unsplash.com/photo-1514134583630-250e42c36dbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="switch">
+    <ul>
+      <li>
+        <div class="on"></div>
+      </li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Section-->
+<section class="py-5">
+    <h1 class="heading">OUR MENU</h1>
+  <div class="container px-4 px-lg-5 mt-5">
    
-        
-    </section>
-    <!-- Footer-->
-    <footer class="py-5 bg-dark">
-        <div class="container"><p class="m-0 text-center text-white"><a routerLink="/view">rrrrrrrrr</a></p></div>
-    </footer>
-   
+    <div
+      class="row gx-4 gx-lg-5 row-cols-4 row-cols-md-3 row-cols-xl-6 justify-content-start"
+    >
+      <div class="col-6 godcard">
+        <div class="card">
+          <!-- Product image-->
+          <img
+            class="card-img-top"
+            src="https://static.onecms.io/wp-content/uploads/sites/43/2022/05/19/228553-MoistChocolateMuffins-mfs-2X3-0923.jpg"
+            alt="..."
+          />
+          <!-- Product details-->
+          <div class="card-body">
+            <div class="">
+              <!-- Product name-->
+              <h6 class="fw-bolder">Fancy</h6>
+              <!-- Product price-->
+              <p>$80.00</p>
+            </div>
+          </div>
+          <!-- Product actions-->
+        </div>
+      </div>
 
+      <div class="col-6 godcard">
+        <div class="card">
+          <!-- Product image-->
+          <img
+            class="card-img-top"
+            src="https://static.onecms.io/wp-content/uploads/sites/43/2022/05/19/228553-MoistChocolateMuffins-mfs-2X3-0923.jpg"
+            alt="..."
+          />
+          <!-- Product details-->
+          <div class="card-body">
+            <div class="">
+              <!-- Product name-->
+              <h6 class="fw-bolder">Fancy</h6>
+              <!-- Product price-->
+              <p>$80.00</p>
+            </div>
+          </div>
+          <!-- Product actions-->
+        </div>
+      </div>
 
-</body>
+      <div class="col-6 godcard">
+        <div class="card">
+          <!-- Product image-->
+          <img
+            class="card-img-top"
+            src="https://static.onecms.io/wp-content/uploads/sites/43/2022/05/19/228553-MoistChocolateMuffins-mfs-2X3-0923.jpg"
+            alt="..."
+          />
+          <!-- Product details-->
+          <div class="card-body p-2">
+            <div class="subCardBody">
+              <!-- Product name-->
+              <h6 class="fw-bolder">Fancy</h6>
+              <!-- Product price-->
+              <p>$80.00</p>
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 48 48"
+              >
+                <circle cx="24" cy="24" r="21" fill="#4CAF50" />
+                <g fill="#fff">
+                  <path d="M21 14h6v20h-6z" />
+                  <path d="M14 21h20v6H14z" />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <!-- Product actions-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">
+      <a routerLink="/view">rrrrrrrrr</a>
+    </p>
+  </div>
+</footer>
