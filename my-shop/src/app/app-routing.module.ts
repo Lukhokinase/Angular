@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { bagComponent } from './bag/bag.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { PaymentComponent } from './payment/payment.component';
 
 // import { MenuComponent } from './menu/menu.component';
 import { MenuofGodComponent } from './menuof-god/menuof-god.component'
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'godcheck', component: GodcheckoutComponent},
   { path: 'bag', component: bagComponent},
   { path: 'category', component: CategoryComponent},
-  { path: 'products', component: ProductListComponent}
+  { path: 'products', component: ProductListComponent},
+  { path: 'payment', component: PaymentComponent},
 
 
 

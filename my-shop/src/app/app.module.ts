@@ -16,6 +16,7 @@ import { bagComponent } from './bag/bag.component';
 import { EmptyBagComponent } from './empty-bag/empty-bag.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { PaymentComponent } from './payment/payment.component';
 // import { TypesComponent } from './types/types.component';
 
 @NgModule({
@@ -31,6 +32,7 @@ import { ProductListComponent } from './product-list/product-list.component';
     GodcheckoutComponent,
     GodcartComponent,
     NavComponent,
+    PaymentComponent,
     
   ],
   
