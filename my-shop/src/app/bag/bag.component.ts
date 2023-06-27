@@ -9,7 +9,7 @@ import { BagService } from '../bag.service';
 
 export class bagComponent implements OnInit {
    items = JSON.parse(localStorage.getItem('items') || '[]')
-
+  
   constructor(private bagService:  BagService){}
   ngOnInit(): void {
    this.items
