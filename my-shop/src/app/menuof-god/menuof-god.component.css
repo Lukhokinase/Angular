@@ -131,8 +131,8 @@
   
   /* Legend */
   .legend{
-    border:500px solid transparent;
-    border-left:800px solid rgba(52, 73, 94, .1);
+    border:100px solid transparent;
+    border-left:400px solid rgba(121, 94, 57, 0.8);
     border-bottom:0;
     position:absolute;
     bottom:0;
