@@ -4,6 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { MenuofGodComponent } from './menuof-god/menuof-god.component'
 import { ViewoneComponent } from './viewone/viewone.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   // { path: 'menu', component: MenuComponent },
