@@ -568,6 +568,13 @@
   }
   .heading{
     text-align: center;
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  .imagefit{
+    object-fit: scale-down;
+    
+    
   }
   .imagefit{
     object-fit: scale-down;
