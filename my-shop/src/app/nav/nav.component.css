@@ -14,3 +14,9 @@ li{
 .nav-item.logo{
     float: left;
 } */
+
+.cartIcon{
+    position: absolute;
+    top: 22px;
+    right: 45px
+}
