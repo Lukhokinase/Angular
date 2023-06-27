@@ -11,6 +11,10 @@ import { ViewoneComponent } from './viewone/viewone.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { GodcartComponent } from './godcart/godcart.component';
 import { GodcheckoutComponent } from './godcheckout/godcheckout.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   // { path: 'menu', component: MenuComponent },
