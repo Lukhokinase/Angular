@@ -10,7 +10,7 @@ import { ViewoneComponent } from './viewone/viewone.component';
 import { GodcheckoutComponent } from './godcheckout/godcheckout.component';
 import { GodcartComponent } from './godcart/godcart.component';
 import { NavComponent } from './nav/nav.component';
-import { bagComponent } from './bag/bag.component';
+
 
 
 import { EmptyBagComponent } from './empty-bag/empty-bag.component';
@@ -19,13 +19,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { PaymentComponent } from './payment/payment.component';
 // import { TypesComponent } from './types/types.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './home/home.component';
-import { DeshboardComponent } from './deshboard/deshboard.component';
-import { LoginComponent } from './login/login.component';
-import { FormGroupComponent } from './form-group/form-group.component';
-// import { RegisterformGroupComponent } from './registerform-group/registerform-group.component';
-import { SharedserviceComponent } from './sharedservice/sharedservice.component';
+
 
 @NgModule({
   declarations: [
@@ -36,21 +30,12 @@ import { SharedserviceComponent } from './sharedservice/sharedservice.component'
     EmptyBagComponent,
     CategoryComponent,
     ProductListComponent,
-    bagComponent,
     GodcheckoutComponent,
     GodcartComponent,
     NavComponent,
     PaymentComponent,
 
     CheckoutComponent,
-    RegisterComponent,
-    HomeComponent,
-    DeshboardComponent,
-    LoginComponent,
-    FormGroupComponent,
-    // RegisterformGroupComponent,
-    SharedserviceComponent,
-
 
 
   ],

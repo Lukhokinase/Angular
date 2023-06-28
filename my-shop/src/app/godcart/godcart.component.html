@@ -4,13 +4,13 @@
       <!-- Breadcrumb -->
       <nav class="d-flex">
         <h6 class="mb-0">
-          <a href="" class="text-white-50">Home</a>
+          <a routerLink="/menu" class="text-white-50">1. Home</a>
           <span class="text-white-50 mx-2"> > </span>
-          <a href="" class="text-white"><u>2. Shopping cart</u></a>
+          <a routerLink="/Cart" class="text-white"><u>2. Cart</u></a>
           <span class="text-white-50 mx-2"> > </span>
-          <a href="" class="text-white-50">3. Order info</a>
+          <a routerLink="/Checkout" class="text-white-50">3. Order info</a>
           <span class="text-white-50 mx-2"> > </span>
-          <a href="" class="text-white-50">4. Payment</a>
+          <a routerLink = "/Payment" class="text-white-50">4. Payment</a>
         </h6>
       </nav>
       <!-- Breadcrumb -->
@@ -69,7 +69,7 @@
 
                         <div class="summary-item"><span class="text">Total</span><span class="price">R{{total}}</span></div>
                         
-                        <button type="button" class="btn btn-dark btn-lg btn-block" routerLink="/godcheck">Checkout</button>
+                        <button type="button" class="btn btn-dark btn-lg btn-block" routerLink="/Checkout">Checkout</button>
                         <button type="button" class="btn btn-dark btn-lg btn-block button1">Back to Menu</button>
                     </div>
                 </div>

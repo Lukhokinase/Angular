@@ -27,7 +27,7 @@ export class ProductsService {
   };
   
   getOne(id:any): Observable<Item> {
-    return this.http.get<Item>(apiUrl + '/:id')
+    return this.http.get<Item>(apiUrl+ '/'+ id)
   }
 
   deleteOne(id: any):Observable<any>{

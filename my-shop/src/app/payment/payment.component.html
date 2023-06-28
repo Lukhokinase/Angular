@@ -4,13 +4,13 @@
       <!-- Breadcrumb -->
       <nav class="d-flex">
         <h6 class="mb-0">
-          <a href="" class="text-white-50">Home</a>
-          <span class="text-white-50 mx-2"> > </span>
-          <a href="" class="text-white-50">2. Shopping cart</a>
-          <span class="text-white-50 mx-2"> > </span>
-          <a href="" class="text-white-50">3. Order info</a>
-          <span class="text-white-50 mx-2"> > </span>
-          <a href="" class="text-white"><u>4. Payment</u></a>
+            <a routerLink="/menu" class="text-white-50">1. Home</a>
+            <span class="text-white-50 mx-2"> > </span>
+            <a routerLink="/Cart" class="text-white-50"><u>2. Cart</u></a>
+            <span class="text-white-50 mx-2"> > </span>
+            <a routerLink="/Checkout" class="text-white-50">3. Order info</a>
+            <span class="text-white-50 mx-2"> > </span>
+            <a routerLink = "/Payment" class="text-white">4. Payment</a>
         </h6>
       </nav>
       <!-- Breadcrumb -->
@@ -23,7 +23,7 @@
             <div class="col-12">
                 <div class="d-flex flex-column">
                     <p class="text mb-1">Person Name</p>
-                    <input class="form-control mb-3" type="text" placeholder="Name" value="Barry Allen">
+                    <input class="form-control mb-3" type="text" placeholder="Name" value="">
                 </div>
             </div>
             <div class="col-12">
@@ -46,10 +46,13 @@
             </div>
             <div class="col-12">
                 <div class="btn btn-primary mb-3">
-                    <span class="ps-3">Pay $243</span>
+                    <span class="ps-3">R</span>
                     <span class="fas fa-arrow-right"></span>
                 </div>
             </div>
+            <button type="button" class="btn btn-dark btn-lg btn-block button1" routerLink="/menu">Finish</button>
         </div>
+      
     </div>
+    
 </div>
