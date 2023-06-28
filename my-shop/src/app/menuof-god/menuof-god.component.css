@@ -124,12 +124,14 @@
   .image img{
     width:100%;
     height:auto;
+    object-fit: cover;
+    background: url("https://kickassbaker.com/wp-content/uploads/2022/05/easy-banana-chocolate-chip-muffins-1x1-1.jpg");
   }
   
   /* Legend */
   .legend{
-    border:500px solid transparent;
-    border-left:800px solid rgba(52, 73, 94, .1);
+    border:100px solid transparent;
+    border-left:400px solid rgba(121, 94, 57, 0.8);
     border-bottom:0;
     position:absolute;
     bottom:0;
@@ -473,7 +475,7 @@
     margin:20px auto;
   }
   .container h1{
-    font-family:Arial;
+    font-family:fantasy;
     font-size:24px;
     color:#222;
     text-transform:uppercase;
@@ -560,6 +562,7 @@
   .wordss{
     position: absolute;
     bottom: 250px;
+
    
   }
   .wordss1{
@@ -571,3 +574,4 @@
     font-family: 'Raleway';
     text-decoration: underline;
   }
+  
