@@ -27,159 +27,48 @@
   <section class="bg-light py-5">
     <div class="container">
       <div class="row">
-        <div class="col-xl-8 col-lg-8 mb-4">
-          <div class="card mb-4 border shadow-0">
-            
-          </div>
-  
-          <!-- Checkout -->
-          <div class="card shadow-0 border">
-            <div class="p-4">
-              
-  
-              
-  
-              
-  
-              <h5 class="card-title mb-3">Shipping info</h5>
-  
-              <div class="row mb-3">
-                <div class="col-lg-4 mb-3">
-                  <!-- Default checked radio -->
-                  <div class="form-check h-100 border rounded-3">
-                    <div class="p-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        Express delivery <br />
-                        <small class="text-muted">3-4 days via Fedex </small>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 mb-3">
-                  <!-- Default radio -->
-                  <div class="form-check h-100 border rounded-3">
-                    <div class="p-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
-                      <label class="form-check-label" for="flexRadioDefault2">
-                        Post office <br />
-                        <small class="text-muted">20-30 days via post </small>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 mb-3">
-                  <!-- Default radio -->
-                  <div class="form-check h-100 border rounded-3">
-                    <div class="p-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" />
-                      <label class="form-check-label" for="flexRadioDefault3">
-                        Self pick-up <br />
-                        <small class="text-muted">Come to our shop </small>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="row">
-                <div class="col-sm-8 mb-3">
-                  <p class="mb-0">Address</p>
-                  <div class="form-outline">
-                    <input type="text" id="typeText" placeholder="Type here" class="form-control" />
-                  </div>
-                </div>
-  
-                <div class="col-sm-4 mb-3">
-                  <p class="mb-0">City</p>
-                  <select class="form-select">
-                    <option value="1">Cape Town</option>
-                    <option value="2">Sea Point</option>
-                    <option value="3">Camps bay</option>
-                  </select>
-                </div>
-  
-                <div class="col-sm-4 mb-3">
-                  <p class="mb-0">House</p>
-                  <div class="form-outline">
-                    <input type="text" id="typeText" placeholder="Type here" class="form-control" />
-                  </div>
-                </div>
-  
-                <div class="col-sm-4 col-6 mb-3">
-                  <p class="mb-0">Postal code</p>
-                  <div class="form-outline">
-                    <input type="text" id="typeText" class="form-control" />
-                  </div>
-                </div>
-  
-                <div class="col-sm-4 col-6 mb-3">
-                  <p class="mb-0">Zip</p>
-                  <div class="form-outline">
-                    <input type="text" id="typeText" class="form-control" />
-                  </div>
-                </div>
-              </div>
-  
-              
-  
-              <div class="mb-3">
-                <p class="mb-0">Message to seller</p>
-                <div class="form-outline">
-                  <textarea class="form-control" id="textAreaExample1" rows="2"></textarea>
-                </div>
-              </div>
-  
-              <div class="float-end">
-                <button class="btn btn-light border">Cancel</button>
-                <button class="btn btn-success shadow-0 border" routerLink="/payment">Continue</button>
-              </div>
-            </div>
-          </div>
-          <!-- Checkout -->
-        </div>
-        <div class="col-xl-4 col-lg-4 d-flex justify-content-center justify-content-lg-end">
+        <h6 class="mb-3">Summary</h6>
+        <div class="col-xl-4 col-lg-4 d-flex justify-content-center justify-content-lg-end " *ngFor="let item of totalItems">
           <div class="ms-lg-4 mt-4 mt-lg-0" style="max-width: 320px;">
-            <h6 class="mb-3">Summary</h6>
+            
             <div class="d-flex justify-content-between">
-              <p class="mb-2">Muffin price:</p>
-              <p class="mb-2">$195.90</p>
+              <p class="mb-2">{{item.itemname}}</p>
+              <p class="mb-2"></p>
             </div>
             
             
             <hr />
-            <div class="d-flex justify-content-between">
-              <p class="mb-2">Total price:</p>
-              <p class="mb-2 fw-bold">$195.90</p>
-            </div>
-  
+           
+          </div>
           
   
-            <hr />
-            <h6 class="text-dark my-4">Items in cart</h6>
+            
+            <!-- <h6 class="text-dark my-4">Items in cart</h6>
   
             <div class="d-flex align-items-center mb-4">
               <div class="me-3 position-relative">
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
                   1
                 </span>
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRUVFhYZGRgYHBocHBwcHBweHBoaGhoaGh4cHBwcIS4lHh4rIRkcJzgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHzQrJCs0ND00NDQ0NDQ0NDQ0NDY0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAMIBAwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQIDBgABB//EAD8QAAEDAgQDBQYEBQIGAwAAAAEAAhEDIQQSMUEFUWEicYGRoQYTMrHB8BRCUtEVI3Lh8WKyFiQzNIKiB5LC/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAJxEAAgIBBAICAQUBAAAAAAAAAAECESEDEjFBE1EEYSIUcYGx8KH/2gAMAwEAAhEDEQA/APnFA3TPDvCStqckVReVLGPW1Fex6VUXItr0gGLKiIp1tkupvRVJ0mBuqAPp1EazhtZ4BDDB0JstR7P+zjGMD6rZeRMHQJriQ45Qz/C5tTWccRRtDSvk+d1OGVGzLT4IWoxzdWnyX0nEUBIbF0pxbAAQYtrIWf6iS5RfgT4Zg6lRBV3WWyrBhBlgPghG0aRsKTSn+pXoXgl0zL4R1iiaSb1eHUpIjL3FDHh36Xz3rSOvB9kS0ZIDqvUGOUsRQc03Qzqi1TvKM2muQfilXKWnqtDw2pmYCkGLwT60NYxzj0ErS8I4HXYwAsI70borlhTfCLRUXOcm2G4A9w7RATDCcFYx0v7UbKJa0F2Nacn0ZhQcVrMfh2P+BuWEqqcOYBdyzj8qPZo9GXQmc7ohqhTTFcPv2H26oCvhS3VwK1jrRl2Q9KS6BS5QL1J5A3QdeuNlqQWOqLsypaJXEgIPW0FtgkybnKl7lF9VUPqhMtyLQVLMgnYhQ/EpWRvQxzLkt/FLkWLyIUsZ0KJpk8ivqH/D9En4QERT9nKOzQlR5R80o03mA1hM9E+w3srjHxLMgP6jp4BfQuCcIY2qwQLGVrMRRGafuyznuS/EuKi+T5/g/YdjGg1XucbSG2b+6bM9n8Mwghl23mTr9VpTSBGYmUpxuHdnkEAdeS5peQ3jGJ7UxjstjHIFCtxTjJLo7kq4xicrmsEuOsjSN1xqw1rZsd1g93ZttQ1ONgEh09N1RXxAe3SD/qSytjGszXiBIJ1KAZjg/K6bHQG10vyYbRo+nSjteMfRVVcDh8vZc6OhSDE8Rg9QqWcSN50Qkx0GYjAtEFjyZ5/ulteq9hGYW5qzCY0Zib20GylWxYfIe2x3RXsrJdgqT8RZjSRzOnmtBw32Mpth1Q5jrH5R4bqHDeMUgxrGgNjYJw3H5gFom0qTMpR3PKD6FBlMQxgHcF5Vq2kbIYYgQqcRiWtEkwpknyJIIoVDcnTkhsViRBIJkILE47s2udil/wCOGWCbkys2jRRGeGxWYwRCBxmLEmDpYpJjeIZXWdH1SjGcVMQ3rKcYNvBVUNMVxPLIF0trcTJ3SwVHP0BP3zR/D+EOeQX2bPiuiGizOU4o1GA4Y1zGOcLkIh/BGcgrsM7K0NGgRAqLuWEcDeRa7g7OSpqcDYdk2dUUfeQmV5J+zPVPZ5sqB9mmFaJ1YKh1UFA3qT9mff7Ls5+qDf7MQbErS1H9VU+qUYFvl7M3/wANHmV4tD+IXIHvkaCq/KLXJV+GrZW31RtLgFWwcQPVFt9n22zOJ7ldGQqw2LLXh42T3FYt7AXObeJHVW0+C0x+XzMpqGDKBsLfRZyjfDLjKujNji3YJDTcpNjuIF1YvcDkAgAH1hafE4Km57AWgtcHtIjcJHiOHMGHqFohzHkTvHJYuEvZ0RnH0Z3EY5xe45crG6Dmh6mPYWsablszHPqtHxHhFP32HbfJUDcwk7oXC+z1IYqtRvlDXOF97RdZvRky1qxMnxSs54a06Xg8gosx4yhjNWjU7rQcL4JTqMxJfMsacsGIiUrHBaZwprXzB+UX2hC0ZUPzIzlXE9o3vfzQ/wCI1ErScQ4LTZRo1ADneTN9lB3DaXvHNy9kNnXeFXhoXmRnW1yrWYrmm1PAsIb2bl3oqcfgWGrlAgdOiHpYH5ciTGYpzHtLTqE3wPtER8RSvimEzvkHsiw8FTR4doS60wU/EqI8uTV/8TafuoV/aLNNpSNuBaATu0+idYLDMzM7NnD1S8Nj8qRR/FHu+EENGytbRrPyjLlzmxKaYSgMlVkCRcIrEn+TRf8AoePmmtCIPWl0JqXAHudUa9/aYJ71KnwtgZSfEkug9dVoA+MQ/k9n0S9p/lsH6X/UrVRiuDNzk+QdjGtDwABDlPBOEtE6lVV3xnt+ZWcJol72gC5KTeQrFmmGDGyi6hGqufhnsvBQGIxb9Fq8E6ek5q0Tdheqg6mhPxT14ce7QhK0av40kXFig5kbKk4pyrfi3ItAvjyJ1Kai5ohUHEuKup4lpEEQUrQn8eRV7pciJXIsXgZ9WA33XCEP+JXhxAVnMW1KkLqbyWnzQz6gK8wlQ5oO9kmNFdetdp5PB8HBLsQ6GYpmpmR4pjjG3da8THVpQTwS+oNM7J9Fi7NVQtx1T/sjyyg+BAUqdaOIP5Frv9oQ9d80KJ3a8j1leVXRjyY1afVqal/Y9uCjglQe7xt/yn6pU6rlwEDeofkrMBUhmMEaj63QMPfhWMY0uJe6wBJ8gjdj+A25I8Tr9jDMnQT5lL3Yjt1XA7QndXgFd7qZyhjWtE5j9BJV9H2QbBmvEyScnLldZy14J5ZagzOUTGTpdUl93v7/AFW0w/s3QIEOe42kzFugARVP2Zw2SzLk6kukctSsv1UOrG9NmTxvCx+GbA7TRPesxRJ0uZt1naF9afhmtGVoGgG0+qF4XgaLHlzKbGvH5yJcCdYS/Vx6QLSfsyFD2drFrXvhgdbK6c3fA0TKn7PuYwfzWnKZ0I8NVpKtIuJIaXH5/so0uHg/9Qx0nffnKxXyZtlvTijMU6kPPUQV4XE0qjP0mVo6vDaLCXBpcQBa5J7gFBnCGEF2RzJ1BtPn+y2j8pcMl6foSseS6i7m2CqXNhrxN2vB8z/dPqHCR2WtLuzcSPuUJi+Cvl5t24gTeVotaD7J2sT4lkZvAov2edFdneo46g9oggjn4KrhFSKzehV2nwLo+luqApfisAx8yI6rmYqdASr2Uy86Fb5ZintyjOYvhrmXb2h6pRUqtBh1ivoTsGAFm/aPAtgOy95T2+zePyZLnIhHRe5VT7gDQwraDy09oSFMotG8fkRl9EHNVLwmOKxTLACJVBYClwarUi1YHfmuRnuWrkWG+J9HbTO9lJ1BNPdj/N/moig3ktLPIElSnfcK2i6InzTR2GCrOD6pFWB1ql5An+4Qtdn82n1YQfBMX4R2yHqYR+ZjgAS2bnqih2ZbEs/kTHwVSPVe8XcaT3Yl5E5AKbTu6IBdyaJ8U1wWBLc7azQWF2ZjbkucJdccrL2pw0VHipWh5/K0/C3vA+I+gXNqTUcLk2jn9jFcNw+JrOhrclN93Py5WlpuSJueQWw4dToNHuKRgMEud8V5k5nAbopzZlpiOthPh4WU8NkcHBkdmxDRGt+6f3C4XOUnX/DakkTNFoAi5O9r+aX4+QQwXcfIDqjMbRc0NAmTBgH0/wAKBfldB7TuWw8Tospp3TVDi1zyUYTDua0FxuYtpHgVAhznEQWxy0O26Op1S/Nma5jWkASR241OxA71eKzMzSIkjQG5Ght0VKN94E5fRm8Thi2ZtYanRW4KnTa0OnqXfvCq9oMSxri0ucd8oE+Z0CRfxIhjsjYNyCZ7Mfl6nVZReWmauNpM1OI4gNGEHoI+SAz1hMsbcc9fWyW8Hw73tzuINySbyOokX1TnD0Ysb7gm55xNlVNvInS4KeGveXvJaRGk2A/ptcKzE4gknM5oHWNEu4ljXh5EP5WaT5FUUcNWeM73e7FhBIcSN+yND3+qlPBW32PcGCBmgcgenQ7qrFYwN1uDbTTWZKpZiy2ZMsgiSRIPUAQl+NxxA7LC/YBu3Uzt+yu+iVHIXiA3sySZ68uu6pwz2U35ntBDt7Zh+6GpBzx2w5oEFuxMjcKipRbYydLdAJGq0hNxdoUoKSpm9woY9ocwgjojKbI0XzDCY6pRqAMeQdY1DgOeyc4j2veREBp6aeC9LT+TGSzhnJPQkuODZ4io0XcQFkvaHjDC0sbdIMTxl75lxCUve6SZlaeSyVCg33w5r1taN0sbUve3epuMJ7goPqVgdUK8nVriFSHlQc4p2It/F1Oa5USVyKQbpez6++rUYOy89ylT4hVAkuaf6m/shKmL6Dol9XFOkgkQUmQh/wDx2LFoMawSpt9oGG+V0dIKzgqsIcZId5grsOIB7QjlO6m3ZWDWU+L0z+od4VzeIUz+ZZGriQ1tr8lTSxADmguEkiY1uVSYqNjXcHQ4QRtPVAPxEHm0a99rR4+QRNQQNhcR1Siq0nthsOMyNjEi50Hxarz9Zyu0dOnFcFFas4kgFx1t3nXyMKVXHOoMc1xD3udma1o+A5RDXFt3EuGnXkpsoktzRDxqLkA728D4zyUqdRrcoy5XOE5g0Wnc6GSPvllpSUctWaSjYD7O4bEGq7E4lxDnMy02OIJYCQ55cW21AgXgSm2IcC6Te88pgGJ6XNl1GqS0uIESMuuaCO1PjbwQ2IqASS7sxeZ7r37kTk5K2EYqz04vM0iD2SQZEeQ1ImwQONxjQJLnAu7QDWy6BroDGiFqYmS5jHw5gBdF3DwMyTdQwpMvLpdYicxm5BAgQByssWmzVJIup4Gm+H5C55IPbzQBuYmI6EKeVpeGMMABzuzAA5kCI15KLsQGxTe5pLwLB0XIAytESeu9yoOGQhsA/DbYAmc2snT08ltXQWWYV1mwdZGXuJ7UzzB81TxDGObBPw8vqOn7I1mUuaJLtgYFySdIiBpZBcbLXDPPS1z3dP8ACpqkEcsCq4ot+p5Ec0D7t5OYuI3DYJ35n5W71GgHHICDlnUk6926PDyTAsN7jYGN+7r4JNIq2gR9R3wiGhxbNrnrbx+ypUoaJMk9oXOovmPMf28UFxitcienOL6HrM7pY3HuDcg1bIE3gE7mJJE69U1G1gBlUxWWBJgG2vMnx1VD8b+XO431jX0gIAH3ksYYMjM6LEibTvqe5FUaTWASS5x3iIt0E+avaksgTGIkm9ot0g22VFZ4Iub87eKqxFRx/KZBuevSEO5oEbHW+v3oqigotaSLSrWg6qim4TEo2jTnnC64ytHLNbZUetcHQMoK6pgd2mOiLbRA0VzADaVaZDQnqUHNuqC9aFlFs3uoVsAx2jY7lcZPslr0Z/OuRb+GGTC8V7kRn0fR3YYRE3PXRDuw7dCSfBTzEugNJjzKubTg3HreUyKBH4VloNoVJwzYnMUyNCO0IXCmwQX9nlvqjAWLmACA7tfOFWym1rszdiD6pg/DtmBad1TVwxEkRI+4SaGmaWm/OJGg3+iortdlIblzSJA5E+GwjzS3hmMgOY7Q7js98HYo3DYlr3/GHQSQJgD4REbmzr9ea5pxV0dEW2rQPiXOHba6ADBN4d2ohw1vt37L1lF1RzSZaATmbaHDSDHjcQialKzpIc0nSLgWt1Nje2vmQ2nkygCXAAAkR1idFj423ng0ckljkqeWkOAIMWIFiJFrbbLPYuoWyZHd0JAk/wCU34i1xa6J1sGuh3ZIcYLSCN/A+CUY6gHuawz8Og7yDAA/KefNE4p4SHB0KnuJIfJaCHgA2mSO0DJkTIE7iw0TXDUQKeScrnXsSCMxzaDUba7KOGw8vDXAyG/FlhoBiQY3ANp5nlKuwru0A5z4zBoFsrS0SQ2NZGvd4LLZTLbsnUw4LGuBiSCHGDoNbm5MaX13QGLqOc6HABs3JMXMgNEaknrv4Il/EGP961rHZqJHZcwgOkCCwugA2I8OST47LYElr5kgFsm5EEkRcwNpvexSlFWVG+y7CY2G1G2JJ10LYAmeQuoZgA1rnyAJPcQNTsdULiA7OGMEFxIcASeze9tjpYfmUH1cwLb3AseUA2A2tEb5vJUUFVnhrSwSAbTB17zrygTr1Q1Wt7thcXdomwjSRvvuhH4sDKGjtNmx0E2kGNLz5dUnx2Lz7zBdYyA4aQIPX/KajYijE1cxkX2jbW+n3ZWCTmBI37/u6XueIh3w77c9+9XMqAugATE9w+481rspBeRlw7EQ0gw0XEzcA731v81ZifdsfSdmLi0ERIAeSJBO1vVLMLGZ57QtEyZ7st/NeY4iBqb6DvvG6W38hF9XiAzGNPsoPF189xYjTu5IRwl3aHw3sfLTVeGsGDvmTzlaRhXBLkG4TtvaI116QtBh2lu9uqF9n8KAJe2HuiJ/TFvVaJjKcZTutoxwYTlbKKAaQJUKlFodaUTQwgBs6RyKnWwmUzFtdVW1kbiuhhZHLqpkZTAcCgquJI+F2uyrZVZPbdB6IQB2TouQv4mn+r1XJhj2aylUeASAAIuTY/3Voe51zMKx9Bws0NFtTc+AV2GYIguzgidp/stznISxzYM2+ai2newk7b/NEe7Em3d3qDKRzf5+SloZF1IW5lC/BIu48v2KPrVYExFu5K6sm5J6JcDK3PcRpEzv5It2AJpsr0/ygh7QdxqQP/aOp5qnI2OZGybcBqwXNiA4THUf2+SmUVJUyoycXaF+C4o2bul4bGRoDSTMknmZI3iO9MvxAOVzSBZ1pMjQGTptqfqgqvB2Z6zC0FxHvGO3tYjqNLdSkNTDVaVBtRr8zHSCAS1wdNwdhdpHguZqUV9HUtsjRV6oZlcXkn4YIknkAJgnNlMnYdUtbSYMQHONTOWlknTLBJgj4ZygSVnf4lUa+m6pTdka7MJaYJtBaSI5HkvMXx8vc9mYsB1gZeUFomZmNeazcvouMPs1VbFBrmtc9sPBAIsSdbEkjLtz6lLs4bkz5CAdQeXaGTcnW9v+mUkw3ES+CQyWBzQXaAQYJE3+9brxnFiJL7BmUMa0RDezsWxmidNkm75KUaHeKeHOzteww0NaAf0kkl0aNEAHxCW8SyVGgQ0AdouGpqNy2byBiB3lBVcaXXkkzla0nsgaku/1fuljKhzth5jPcATAknKTzNjbkpVstKhnisULvzOOhBsI1JmdZvfTySv8WHszRkcDe4BAExli4kSPNR4rVAa7KQQ4ETuP0kDpJ0slGBrNkO/SLyPicdBJNxbkZVRhasTlQyGLBN2wXw0OmTF5seYPioVqtiDAA/eBB7rJO+vneeyM5Bkxv4rsbitRMAWaGwBHO21h5K/HlEb1ktqVQBDdXGSd40E8lT+KMwI74ibjfkgRifik/EdNlD8RGgOq2UDJ6iGlOuWAmdZkzyEAAdZVtXEAsLgY0Fyc03cD3bJU4PLS/wDKPTwUnUnZGy74z8I++qPH2Ly+jm1XPtBJ6fVOeGUm04e8S/bk0fUrsFRDey0aQLalxTj+HiAS3XdV+KIe5o8PGJ/ICeasZxSvo1gHWFZSpAbR3IsuZofBLevRO1+wRmKxLjsFGvQrv+J5RLahBRLMYDIcPFPex7BQzh4F3OcfGFczAU9wfNGVWTpoqnmLAqdzHtRX7lv6QvV34jouT3MNqPobKRe4PymANXaT3IllLV1vALBD2prkRmaBOw+pleO49VcDNR3hb1C6aOY3j6kESDfcX+V1P3jLkEeJAjzXzh/Eifie49Sbql/FWCZePMJ0BvK+PpntB7Y68+gQ349mUdoQNReb67LD/wAXYNJPQAn6Lx/FDeGPtzbHzhJxsLNr/F6IBgF3MQq28eDHhzGkgQb/ACWGbxN7vhYe8kBRfj606NHif2RtCz69iKnao1RdsgTzY8dk9bHzCWVGg08TQIu12Zo6OO3kPNBeyWOdXwrmPIzsJZb9PxsN+udvginu/n03H4ajcjtLuPZk9czWlcmqqbXs6tPKv/YAmUhVwLmEdqk639Lv7yl/BcDTqUcQxzGl7Bmad4BuJ32smnCnZX16J0e1wA/1Nvr5oH2eqZMWWH4Xse3/ANcw/wBoWaatX2v+o1dpOunYj4Pw9j8Q2k8HI4x2TBB0B84S7jmA9zWfTHwtdAnWNr9ycYNwp4phn8036GYCq9vG5cTUPMjygFUqcU/sbb3NfQJxzhZw7WVA8uFRmYToAQNtjrpy8h+HcKfXpvqMflFJrnkGTIaJOU9yd+05D8Hg3bZHDydCo9iqn8rGN29xV/2H9lahFyaM90tqZj8PRLzlzHXy2VntBwl2Gqe7c7MS0OtyMx6DTqu4O6cQxo/UAet7pp/8hVc2MdazWsb5NB+qtRVEOTsBwXADUoVq+fK2kwvIgkmAfhM6235pfwTh/vqrKZ/MYJ3jWVqKNbJwrEnd7qbO8OqCfQFJvZh2Q16m7KNRw/qiB6lUoqkQ5O2I3sbnfk+HMY5kA2J7wj+M0GsFFgAzZA91rkuJgHuA9ULwykS9o6iPNEcRqe8xD3ajNA6BvZHyTwBXiTFNjALuJce4WH30XrndscmQPK5Xld4LzyYAB/46+sqqhJFz8Rk/NS2Uh/wo9oOImJce92nonBxEnKJy9UnwLIaJFzf78FaKkFZPJdDQvgwVxftHigBUmc3gV6H9UgoYB4tf0UmDoClrX9V6MQUUMZMcBsQrHlhEkeSXfizbkvHYmEyGgnK3ouQPvui5GR0APwrhY1HT0AHyU6HD8zZJebwe0fojfeWMXneIKrcXOJDTA5/QQu04yH8OpiJbJ6kn6q6lg2fla224A8VNwa1rWg5tMx5X0RZpDJOnz/vyTApN5OvPmIhU1X57NFhPci30yWdqIjQbd68qvjstAgWQCBGYYNE621Gkkeq993LA7X9vuFYylaCXRz0Hd1V7qZ+LKQDZsaevyQA79hqhZWc3QPY4f+QGYfI+a0HEqRyPIEaPHQwA6PNqxOArOZUY8T2XA+R0PfC+iYl+YgbZvAh7beRErl+RG0dGjKmIMRULXsxAsHZXHx1HnIS/GuNDF03XgPE/0zefCUfVYTTgiRTfflBuLd6E9oyMrKpE5oB6ltj5i/iuT0/T/s6k817Qn403JXH+l1/NXe39PM4P5sYfEtCl7QjOabxrUyu7v1eRBCs9qsPmp0i3QsA8iR8oTSahXphdyT+gCu8v4fh/9AqD/wB5UPYk/wAvGc/c1B5tj6qOEM4FoFwx9QHoHAR55SVR7KVAKeNE390Y/wDuwfVaxl+TZEl+KX2I+DCcUz+oIr25M4upAtmhD8EH/NMnZ07oj20b/wAy+N3O+a0vgh9hHF35OGUm6F9YE9zWPI9SEqwT8mFxD935GDxcHH0aUd7WvIw2DZ0c/wCQHy9EpxMjDUm/qc53fsrvgzrk7hTi3M/9IJB6jT1VODMZnn8oJ71wcW0HR+ZwB7tfvuUWmKTp/MWj1k/JIZBp7PVx/uVfTEeFvqVVlu0T181cwR980h8BNDiBAuS5ugdu3o4JrRcHCB8XzCQmncubZ0afld3hFcPx4gtuCNWnVvdzCcorohSaG7hFpuOihorKWKY9oi/X91e8HYWI8P8AKy4Nkwd1Mqum8TBJhWlh7l4wNcY0I1vCGBfiabQC4HXQbHuQXvosvKtQTFyBaVAPIlVQifvVyj4ei5FAGvqNaQ3PLnXgC7R1nRSwVIvIaezJEXtofAf2S2lTeGhzWATqXQb7aeKnUNRwgOy2AhoMSBBIM3+9l2L7OMPr1skNLuz2rbAg8hr39UI7jrBINwOm42AQreGtgve4u57QYuYlE4Ph7CIyCDvfeeWlksgU/wDEjnkGnTNrCx9YH1TPCUKzmGo5oGsjKXGOokWV9BjGENADQekieqb0BlcXu+AWfp2RIFuthAVJexN+hTh6l828RcSAOfzXtTDEEZXnUk9mQ3ukmTdW8QqtzOy6GDoAdN4tPPmqHvOWANSZjW3I9UDCqVIOZ2XiTaDIM3EmFsOEYkVKLRBzsAY4GxBaJaSOolYUfDHjMdUZgMY+k9r23JiRPxNG3eNQevVRKO5FRltZq6jIfXZs9kgbTGb6HzS7i9DPhGE6sLvUD9vRNKddlR1GowhzTLXiRLdbO7gvHUD+GrtIuJtygrilB01/sHXGStMQ0qc4WhUkyyWeJe9x9CFbx1+bBMcPjlwtoGwPXT1VfD2Z8JUaPyPBjbcH6eia4ljXYN8iA1oI/qmLeadXF/wxt1JfuY7ggnA4iNntPo4D5ob2MpFz6w/Ux4PkYnxRXBZ/B4m2jge+Ne9UexrDNZomXjKNZ755JxVt/sKTpfyKuEs/52mB+rW/mu9rQDinNaZ7RE8zN/28FdwamW49rTqHZTyEWQ3F2RiucPPnKpcIT5YR7bNAGGZMkMv52+qUcSd2KDYgBgjqTcn19Ey9sJdVYSblgMctvoguMNj3LZ0YJ6Tt8lfZBRinD3bG7Ez6RdUVhZgnSVLE3y9wVdV8u8AECZJp7RPgvaVWcx6oatWAlu5U8O+BEJpEyl0HsPeq61MOiLPGjhr/AIVuGrlwiNOmql7n80eaokGwuKIeWmGvGo/K/wDYp9hcSH2NgNZ1b39OqR4zAZgHNsRoee6hg8SZh1nttP0dzClxsqMqNRiGFsaQdD/dDPp55gEnpH2VZg8U1zSxwvrHXmI2V+IpBkPiQRsQLdyzb9I0TQub2SfKCFNtEneO8FSqMYe0Ccu5zXBPMFRksNnW8JCKYJk/dO/SfVcvPeO/UfJclTHgYY4unI2IY0EuIAgkTFgEHh3EOBsRaB1sSTzCNqGWuYTJm8dLRP0VWeGDIMoG3O5EknYrsZyEPcho+I5pkdVOliCDFrXsND8pUQZdAMuO/IAX+XzUHsc1wsBFwNyNZI0AM+qAGDXF1yBNwOY6+nzVuPxLCQxgIaL3PxOgSTzFyjaTKVem6GhlZmZ5GYnMCJcGm0ERIF9OSzQd2iRc3Mn71TbEghztHaT05KxlUACd7zve/wB96oe7f08FUw2JPl9VNlUH1NWwTBk3+nlqvW1CDO1x1j/KIo0W5STFtz05eXhCWueJzBxdmJ7gBpf7mEWMMwVd9N+amYcdZ+F0bHoOfVazAe0tB4eyqfducIh3wk9HxGsm8arGl5hsb78tiqajZ6iNPWSUmkwTaNn7P0JbWZaHA32N7X5L3ipLcG9g179Y1WO4bialGRTqPZOzTLfFh7JPgvKnF8RDszmPbBkOEEz1bF/BZvTxS9Gi1M2xt7MYbNhqzT+YO8wJHyKo9jRkdU2iYJ5gKjhntGKNPIaDjP6Xg2jkQEJgeOMpg9h976NP/wCvnzU7Gmn9FvUTTBuDnNiy48z67q3iNMHHbQHXQWD4kGPc/wB285iSIgG+gAmEPieMvNRz2Uru/URadxA5oUHSFvVs7jFbPiHHYHKO4FQ4wcz45AD0S59apmzQGumT4rnUnvzOLjO8cvvqqUWS5IljMQ1pudhZAOqEmRafVEjCCNPNWNpAJqJLlYKyhME7o2lTUmsHLu5K9rVVE2RaEQ2u+MpcYGk3+agG8lIJDJZyUPicNmM6OG/79EUwjuP1Uak7iO/kgCjC4i+V1nD7kdE7wnEIs4Ag6g6d45W2SWpTDtr7Hl1U8NVIOV9js7Y/sUOKl+4J0N6tRsktEB2xEgjaD4IdhcXAbbCQJHeVbQe34KlhsYnyUn0QLtPZ5/2USTSpmkWmVPr3MNHmuXuTp814s6RpbGR0P3uVRitvD5uXLl1nIR4Uf57P6v2TLH/Ge53zC9XKuhdlfAP+4b3O/wBjkHU+FvePkuXKWM9fq7+oqulofH5FcuSYB2J+EdwQ1X4m+PyXLkFHVPiP9J+RU+X3uuXIQkUt1KHxGru8fRcuTYjsN8Xkq8Tqe9cuS9AAVtu8f7QpO+Iff6ly5PsHwDEWd4fVXUNCvVyQdAtTRy4bLlyT5Gi78pUxt3L1cqB8k2Lz91y5SUSpat8fkUa74H9Jjp3cly5AmL/z+SjX37ivVylAF0v+k3uHyRWB+A937rlyerwEOf5JL1cuXKdR/9k="  height="50" width="50"/>
-              </div>
-              <div class="">
-                <a href="#" class="nav-link">
-                  Muffin <br />
-                  Chocolate Flavour
-                </a>
-                <div class="price text-muted">Total: $195.90</div>
-              </div>
-            </div>
+                <img src="""
+              </div>-->
+      
   
             
   
            
-          </div>
+       
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="mb-2">Total items:</p>
+          <p class="mb-2 fw-bold px-2">{{items}}</p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="mb-2">Total price:</p>
+          <p class="mb-2 fw-bold px-2">{{totalAmount}}</p>
         </div>
       </div>
+      <button type="button" class="btn btn-dark btn-lg btn-block button1" routerLink="/Payment">Checkout</button>
     </div>
   </section>
   

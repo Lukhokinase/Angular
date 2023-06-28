@@ -1,5 +1,5 @@
 <!-- Navigation-->
-<!-- <app-nav></app-nav> -->
+<app-nav></app-nav>
 
 <!-- Header-->
 
@@ -88,21 +88,19 @@
 
 <!-- Section-->
 <section class="py-5">
-    <h1 class="heading">OUR MENU</h1>
+  <h1 class="heading">OUR MENU</h1>
   <div class="container px-4 px-lg-5 mt-5">
-   
-    <div
-      class="row gx-4 gx-lg-5 row-cols-4 row-cols-md-3 row-cols-xl-6 justify-content-start"
-    >
-      <div class="col-6 godcard" *ngFor = "let item of products">
-        <div class="card">
+ 
+    <div class="row gx-4 gx-lg-5 row-cols-4 row-cols-md-3 row-cols-xl-6 justify-content-start">
+        <div class="col-6 godcard" *ngFor = "let item of products">
+          <div class="card">
           <!-- Product image-->
-          <a routerLink="/view"><img
+          <a routerLink="/view/{{item.id}}">
+            <img
             class="card-img-top imagefit" height="62px"
             src={{item.picture}}
             alt="..."
           /></a>
-          <!-- Product details-->
           <div class="card-body p-2">
             <div class="subCardBody">
               <!-- Product name-->
@@ -110,7 +108,7 @@
               <!-- Product price-->
               <p>R{{item.price}}</p>
               <button type="button" (click)="addToCart(item)">
-
+  
               <svg
                 class="icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -126,15 +124,18 @@
                 </g>
               </svg>
               </button>
+            
             </div>
           </div>
+          <!-- Product details-->
           
           <!-- Product actions-->
+          </div>
         </div>
-      </div>
+     
     </div>
   </div>
 </section>
-<app-bag></app-bag>
+
 
 

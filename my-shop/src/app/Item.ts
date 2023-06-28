@@ -4,6 +4,7 @@ export interface Item {
     category: string;
     details: string;
     picture: string;
-    qty:number
+    qty:number,
+    id:string
   }
 

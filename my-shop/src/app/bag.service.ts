@@ -8,6 +8,7 @@ import { Injectable, OnInit } from '@angular/core';
 export class BagService implements OnInit {
 
 items: any[] = [];
+totAmount = 0
 /* . . . */
 
 ngOnInit(): void {
@@ -19,6 +20,7 @@ addToCart(product: any) {
 .find(({itemname}) => itemname === product.itemname); // find product by name
   if (!productExistInCart) {
     this.items.push({...product, qty:1}); 
+    this.items.length
     // enhance "porduct" opject with "num" property
     return;
   }
