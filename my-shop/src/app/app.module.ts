@@ -19,6 +19,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { PaymentComponent } from './payment/payment.component';
 // import { TypesComponent } from './types/types.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     PaymentComponent,
 
     CheckoutComponent,
+      LoginComponent,
+      RegisterComponent,
 
 
   ],
