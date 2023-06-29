@@ -1,32 +1,73 @@
-input{
+#picture{
+  background-image:url("https://media.istockphoto.com/id/1396211354/photo/coffee-border-over-old-liht-stone-background.webp?b=1&s=170667a&w=0&k=20&c=vPH4cIHw1RqiX6wnC_voTcOgJQ1JWuRhGUiKkR8ge18=");
+  height: 620px;
+}
+
+ input{
   justify-items: center;
   align-items: center;
   display: flex;
+  width: 300px;
+  margin-left: 7%;
 }
 .row{
   margin: 0;
   padding: 0;
-  text-align: center;
-  display: inline;
+  /* text-align: center; */
+  /* display: inline; */
 }
-.container {
+
+.text-right {
+  margin-left: 55%;
+}
+
+.text-center{
+  margin-right: 30%;
+}
+
+.text{
+  margin-left: 10%;
+  font-size: medium;
+
+}
+/* .container {
   max-width: 250px;
   flex-direction: row;
   background-color: wheat;
-}
-.form-control{
+} */
+/* .form-control{
   height: 50px;
   margin-left: 10px;
-}
-.flex-container {
+} */
+/* .flex-container {
   display: flex;
   flex-wrap: wrap;
-}
-div{
+} */
+/* div{
   height: 80px;
   width: 100px;
   text-align: center;
   justify-content: flex;
   flex-direction: row;
 
+  } */
+ button{
+  background-color: black;
+  color: white;
+  /* margin-top: 10px; */
+  height: 33px;
+align-content: center;
+
  }
+
+ /* .form-group{
+  background-color: rgba(128, 128, 128, 0.199);
+  margin-top: 30%;
+
+ } */
+label{
+  margin-left: 30px;
+}
+
+
+

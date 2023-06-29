@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { CategoryComponent } from './category/category.component';
@@ -14,9 +14,11 @@ import { GodcheckoutComponent } from './godcheckout/godcheckout.component';
 
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-  
+
   { path: '', redirectTo: '/menu', pathMatch: 'full' },
   { path: 'menu', component: MenuofGodComponent},
   { path: 'view/:id', component: ViewoneComponent},
@@ -27,7 +29,8 @@ const routes: Routes = [
   { path: 'category', component: CategoryComponent},
   { path: 'products', component: ProductListComponent},
   { path: 'Payment', component: PaymentComponent},
-
+  {path: 'login', component:LoginComponent},
+  { path:'register',component:RegisterComponent}
 
 
 
