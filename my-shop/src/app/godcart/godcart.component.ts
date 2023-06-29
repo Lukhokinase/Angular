@@ -27,16 +27,21 @@ export class GodcartComponent implements OnInit{
       this.total+= (item.qty * item.price)
       
       console.log(this.total)
+
+      // return this.products.reduce((acc, prod) => (acc += prod.num), 0);
     });
     localStorage.setItem('items', JSON.stringify(this.items))
     localStorage.setItem('totalAmount',JSON.stringify(this.total))
+  }
+  calcTot(){
+    return this.items.reduce((acc: any, prod: { num: any; }) => (acc += prod.num), 0);
   }
 
   delete(i:number){
     this.items.splice(i,1);
     this.calcTotal();
   }
-  updateQty($event: any){
+  updateQty(_$event: any){
     this.calcTotal()
   }
 
@@ -45,4 +50,5 @@ export class GodcartComponent implements OnInit{
     this.items[i].qty = qty
     this.calcTotal()
   }
+
 }

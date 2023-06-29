@@ -19,7 +19,7 @@ addToCart(product: any) {
   const productExistInCart = this.items
 .find(({itemname}) => itemname === product.itemname); // find product by name
   if (!productExistInCart) {
-    this.items.push({...product, qty:1}); 
+    this.items.push({...product, qty: 1} ); 
     this.items.length
     // enhance "porduct" opject with "num" property
     return;
