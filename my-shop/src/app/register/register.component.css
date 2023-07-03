@@ -30,12 +30,139 @@ div{
   flex-direction: row;
 
  } */
- input{
+ /* input{
   justify-items: center;
   align-items: center;
   display: flex;
   width: 325px;
   margin-left: 7%;
+  color: white;
+  /* font-weight: bolder; */
+
+/* .row{
+  margin: 0;
+  padding: 0;
+  /* text-align: center; */
+  /* display: inline; */
+
+/* .text-right {
+  margin-left: 30px;
+  font-weight: bolder;
+  margin-top: 70%;
+  /* color: white; */
+
+/* button{
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  height: 33px;
+align-content: center;
+ } */
+
+ /* form{
+  /* margin-top: 150px; */
+  /* background-color:rgba(128, 128, 128, 0.199); */
+
+
+ /* label{
+  margin-left: 30px;
+} */
+/* #picture{
+   background-image:url("https://w0.peakpx.com/wallpaper/127/701/HD-wallpaper-coffee-cake.jpg");
+  height: 740px ;
+  /* background-image: center; */
+  /* object-fit: cover; */
+  /* background-color: back; */
+
+/* .text-center-login{
+ font-size: bolder;
+ margin-top: 0px;
+ font-weight: bolder;
+ color: white;
+} */
+/* #form-group{
+font-weight:bolder;
+} */
+/* #form-control{
+
+  font-weight: bolder;
+  margin-right: 30%;
+  height: 50px;
+  margin-left: 60px;
+  position: relative;
+  top: 240px;
+  border-color: gray;
+
+} */
+/* .text-left{
+  font-weight: bolder;
+  color: white;
+  margin:  20px;
+  margin-right: 270%;
+
+} */
+
+/* input{
+
+  margin-top: 3%;
+    height: 50px;
+    margin-left: 50px;
+    margin: right 50% ;
+    position: relative;
+    top: 240px;
+    border-color: gray;
+} */
+/* .text-center{
+  margin-top: 50;
+} */
+
+/* input{
+  justify-items: center;
+  align-items: center;
+  display: flex;
+  width: 300px;
+  margin-left: 7%;
+  height: 50px;
+  margin: left 40%; ;
+  /* color: gray; */
+
+
+/*
+.text-right {
+  margin-left: 55%;
+  margin-top: 70%;
+  /* font-weight: bolder; */
+
+
+
+/* .text-center{
+  margin-right: 100%;
+  margin-top: 80%;
+  /* font-weight: bolder; */
+
+
+
+/* .text{
+  /* margin-left: 10%; */
+  /* font-size: medium; */
+
+ #picture{
+    background-image:url("https://w0.peakpx.com/wallpaper/127/701/HD-wallpaper-coffee-cake.jpg");
+    height: 740px;
+
+   /* background-image: center; */
+   /* object-fit: cover; */
+   /* background-color: back; */
+ }
+
+ input{
+  justify-items: center;
+  align-items: center;
+  display: flex;
+  width: 300px;
+  margin-left: 7%;
+  /* color: gray; */
+
 }
 .row{
   margin: 0;
@@ -43,22 +170,87 @@ div{
   /* text-align: center; */
   /* display: inline; */
 }
+
 .text-right {
-  margin-left: 30px;
+  margin-left: 55%;
+  margin-top: 70%;
+  /* font-weight: bolder; */
+
 }
-button{
+
+.text-center{
+  margin-right: 30%;
+  margin-top:80%;
+  font-weight: bolder;
+  color: white;
+  /* font-weight: bolder; */
+
+}
+.text-sign-up{
+  font-weight: bolder;
+}
+
+.text{
+  margin-left: 10%;
+  font-size: medium;
+
+}
+/* .container {
+  max-width: 250px;
+  flex-direction: row;
+  background-color: wheat;
+} */
+.form-control {
+  height: 50px;
+  margin-left: 10px;
+  position: relative;
+  top: 240px;
+  border-color: gray;
+}
+/* .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+} */
+/* div{
+  height: 80px;
+  width: 100px;
+  text-align: center;
+  justify-content: flex;
+  flex-direction: row;
+
+  } */
+ button{
   background-color: black;
   color: white;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   height: 33px;
 align-content: center;
- }
-
- form{
-  margin-top: 30px;
-  background-color:rgba(128, 128, 128, 0.199);
 
  }
- label{
+
+ .form-group{
+  background-color: rgba(128, 128, 128, 0.199);
+  /* margin-top: 30%; */
+  font-weight: bolder;
+  color: white;
+
+ }
+label{
   margin-left: 30px;
+  position: relative;
+  top: 240px;
 }
+.form-control{
+  color: white;
+  /* font-weight: bolder; */
+
+}
+.text-left{
+  color: white;
+  font-weight: bolder;
+}
+.text-center-login{
+  color: white;
+  font-weight: bolder;
+}
+

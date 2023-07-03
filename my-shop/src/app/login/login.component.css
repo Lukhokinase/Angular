@@ -1,14 +1,20 @@
-#picture{
-  background-image:url("https://media.istockphoto.com/id/1396211354/photo/coffee-border-over-old-liht-stone-background.webp?b=1&s=170667a&w=0&k=20&c=vPH4cIHw1RqiX6wnC_voTcOgJQ1JWuRhGUiKkR8ge18=");
-  height: 620px;
-}
+ #picture{
+    background-image:url("https://w0.peakpx.com/wallpaper/127/701/HD-wallpaper-coffee-cake.jpg");
+    height: 740px;
+
+   /* background-image: center; */
+   /* object-fit: cover; */
+   /* background-color: back; */
+ }
 
  input{
   justify-items: center;
   align-items: center;
-  display: flex;
+  display: flex; 
   width: 300px;
   margin-left: 7%;
+  /* color: gray; */
+
 }
 .row{
   margin: 0;
@@ -19,10 +25,19 @@
 
 .text-right {
   margin-left: 55%;
+  margin-top: 70%;
+  /* font-weight: bolder; */
+
 }
 
 .text-center{
   margin-right: 30%;
+  margin-top: 2%;
+  /* font-weight: bolder; */
+
+}
+.text-sign-up{
+  font-weight: bolder;
 }
 
 .text{
@@ -35,10 +50,13 @@
   flex-direction: row;
   background-color: wheat;
 } */
-/* .form-control{
+.form-control {
   height: 50px;
   margin-left: 10px;
-} */
+  position: relative;
+  top: 240px;
+  border-color: gray;
+}
 /* .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -60,14 +78,24 @@ align-content: center;
 
  }
 
- /* .form-group{
+ .form-group{
   background-color: rgba(128, 128, 128, 0.199);
-  margin-top: 30%;
+  /* margin-top: 30%; */
+  font-weight: bolder;
+  color:white
 
- } */
+ }
 label{
   margin-left: 30px;
+  position: relative;
+  top: 240px;
 }
+/* div{
+  margin-bottom: 50px;
+} */
 
 
+/* body{
+  background-color: gray;
+} */
 
