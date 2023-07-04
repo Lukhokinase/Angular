@@ -6,6 +6,10 @@ import { Injectable, OnInit } from '@angular/core';
   providedIn: 'root'
 })
 export class BagService implements OnInit {
+event: any;
+findIndex(arg0: (p: any) => boolean): number {
+  throw new Error('Method not implemented.');
+}
 
 items: any[] = [];
 totAmount = 0
