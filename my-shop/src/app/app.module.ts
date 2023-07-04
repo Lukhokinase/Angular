@@ -21,6 +21,7 @@ import { PaymentComponent } from './payment/payment.component';
 // import { CheckoutComponent } from './checkout/checkout.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ClosingPageComponent } from './closing-page/closing-page.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { RegisterComponent } from './register/register.component';
     // CheckoutComponent,
       LoginComponent,
       RegisterComponent,
+      ClosingPageComponent,
 
 
   ],
