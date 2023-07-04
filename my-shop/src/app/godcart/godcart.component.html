@@ -4,13 +4,7 @@
       <!-- Breadcrumb -->
       <nav class="d-flex">
         <h6 class="mb-0">
-          <a routerLink="/menu" class="text-white-50">1. Home</a>
-          <span class="text-white-50 mx-2"> > </span>
-          <a routerLink="/Cart" class="text-white"><u>2. Cart</u></a>
-          <span class="text-white-50 mx-2"> > </span>
-          <a routerLink="/Checkout" class="text-white-50">3. Order info</a>
-          <span class="text-white-50 mx-2"> > </span>
-          <a routerLink = "/Payment" class="text-white-50">4. Payment</a>
+    
         </h6>
       </nav>
       <!-- Breadcrumb -->
@@ -21,7 +15,7 @@
 <section class="shopping-cart dark">
     <div class="container">
        <div class="block-heading">
-         <h2>Shopping Cart</h2>
+         <h2>Cart</h2>
          <p>Enjoy your easy shopping experience , Shop again</p>
        </div>
        <div class="content">
@@ -47,9 +41,15 @@
                                                 </div>
                                             </div>
                                             
-                                            <div class="col-md-4 quantity">
-                                                <label for="quantity">Quantity:</label>
-                                                <input id="quantity" type="number" value ={{item.qty}} class="form-control quantity-input">
+                                            <div class="col-md-4 quantity del d-flex" >
+                                                <ul>
+                                                    <!-- {{ item.name }} -->
+                                                    <button (click)="decrementQuantity(item)">-</button>
+                                                    {{ item.qty}}
+                                                    <button (click)="incrementQuantity(item, 1)">+</button>
+
+                                                    <button (click)="delete(item)">x</button>
+                                                </ul>
                                             </div>
                                            
                                             <div class="col-md-3 price">
@@ -59,18 +59,20 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                         
                     </div>
+                    <!-- <a >-</a> -->
                 </div>
                 <div class="col-md-12 col-lg-4">
                     <div class="summary">
                         <h3>Summary</h3>
+                    
 
                         <div class="summary-item"><span class="text">Total</span><span class="price">R{{total}}</span></div>
                         
                         <button type="button" class="btn btn-dark btn-lg btn-block" routerLink="/Checkout">Checkout</button>
-                        <button type="button" class="btn btn-dark btn-lg btn-block button1">Back to Menu</button>
+                        <button type="button" class="btn btn-dark btn-lg btn-block button1" routerLink="/menu">Back to Menu</button>
                     </div>
                 </div>
             </div> 

@@ -4,7 +4,7 @@ import { Item } from '../Item';
 import { Observable, catchError, map } from 'rxjs';
 
 
-const apiUrl = 'http://localhost:3200/v1/items'
+const apiUrl = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/v1/items'
 @Injectable({
   providedIn: 'root'
 })
