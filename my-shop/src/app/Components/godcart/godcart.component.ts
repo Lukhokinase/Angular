@@ -1,6 +1,6 @@
 import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
-import { BagService } from '../bag.service';
-import { Item } from '../Item';
+import { BagService } from '../../services/bag.service';
+import { Item } from '../../Item';
 
 @Component({
   selector: 'app-godcart',
@@ -8,10 +8,6 @@ import { Item } from '../Item';
   styleUrls: ['./godcart.component.css']
 })
 export class GodcartComponent implements OnInit{
-
-// cartProducts: Products[] = [];
-// totalQuantity: number;
-
 
   items = JSON.parse(localStorage.getItem('items') || '[]')
   total = this.bagService.totAmount
@@ -51,7 +47,6 @@ export class GodcartComponent implements OnInit{
     item.qty++;
     item.calcTotal = item.price * item.qty;
     this.items.quantity  = item
-    
     this.calcTotal()
   }
 

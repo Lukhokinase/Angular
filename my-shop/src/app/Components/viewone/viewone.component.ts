@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProductsService } from '../services/products.service';
-import { Item } from '../Item';
-import { BagService } from '../bag.service';
+import { ProductsService } from '../../services/products.service';
+import { Item } from '../../Item';
+import { BagService } from '../../services/bag.service';
 
 @Component({
   selector: 'app-viewone',
