@@ -1,6 +1,6 @@
 import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
-import { BagService } from '../bag.service';
-import { Item } from '../Item';
+import { BagService } from '../../services/bag.service';
+import { Item } from '../../Item';
 
 @Component({
   selector: 'app-godcart',
