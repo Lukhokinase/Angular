@@ -9,10 +9,6 @@ import { Item } from '../../Item';
 })
 export class GodcartComponent implements OnInit{
 
-// cartProducts: Products[] = [];
-// totalQuantity: number;
-
-
   items = JSON.parse(localStorage.getItem('items') || '[]')
   total = this.bagService.totAmount
   constructor(private bagService:  BagService){}
@@ -51,7 +47,6 @@ export class GodcartComponent implements OnInit{
     item.qty++;
     item.calcTotal = item.price * item.qty;
     this.items.quantity  = item
-    
     this.calcTotal()
   }
 
