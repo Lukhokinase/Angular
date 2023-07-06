@@ -21,7 +21,10 @@ import { PaymentComponent } from './payment/payment.component';
 // import { CheckoutComponent } from './checkout/checkout.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
+// import { IndexComponent } from './post/index/index.component';
+// import { CreateComponent } from './post/create/create.component';
+// import { EditComponent } from './post/edit/edit.component';
+// import { ViewComponent } from './post/view/view.component';
 
 @NgModule({
   declarations: [
@@ -36,11 +39,13 @@ import { RegisterComponent } from './register/register.component';
     GodcartComponent,
     NavComponent,
     PaymentComponent,
-
     // CheckoutComponent,
       LoginComponent,
       RegisterComponent,
-
+      // IndexComponent,
+      // CreateComponent,
+      // EditComponent,
+      // ViewComponent
 
   ],
 
