@@ -21,6 +21,7 @@ import { PaymentComponent } from './Components/payment/payment.component';
 // import { CheckoutComponent } from './checkout/checkout.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { RegisterComponent } from './Components/register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [],

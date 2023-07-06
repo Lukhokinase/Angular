@@ -15,6 +15,6 @@ export class PaymentComponent {
       this.totalItems
       this.items =this.totalItems.length
     } 
-
+ 
 
 }
