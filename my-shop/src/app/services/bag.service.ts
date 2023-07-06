@@ -1,4 +1,4 @@
-import { Item } from './Item';
+import { Item } from '../Item';
 // import { Product } from './product-list/product-list.component';
 import { Injectable, OnInit } from '@angular/core';
 /* . . . */

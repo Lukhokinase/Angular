@@ -1,21 +1,21 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CategoryComponent } from './category/category.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { PaymentComponent } from './payment/payment.component';
+import { CategoryComponent } from './Components/category/category.component';
+// import { ProductListComponent } from './product-list/product-list.component';
+import { PaymentComponent } from './Components/payment/payment.component';
 
 
-import { MenuofGodComponent } from './menuof-god/menuof-god.component'
-import { ViewoneComponent } from './viewone/viewone.component';
+import { MenuofGodComponent } from './Components/menuof-god/menuof-god.component'
+import { ViewoneComponent } from './Components/viewone/viewone.component';
 // import { CheckoutComponent } from './checkout/checkout.component';
-import { GodcartComponent } from './godcart/godcart.component';
-import { GodcheckoutComponent } from './godcheckout/godcheckout.component';
+import { GodcartComponent } from './Components/godcart/godcart.component';
+import { GodcheckoutComponent } from './Components/godcheckout/godcheckout.component';
 
 
 import { ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './Components/login/login.component';
+import { RegisterComponent } from './Components/register/register.component';
 
 const routes: Routes = [
 
@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'Checkout', component: GodcheckoutComponent},
 
   { path: 'category', component: CategoryComponent},
-  { path: 'products', component: ProductListComponent},
+  // { path: 'products', component: ProductListComponent},
   { path: 'Payment', component: PaymentComponent},
   {path: 'login', component:LoginComponent},
   { path:'register',component:RegisterComponent}
