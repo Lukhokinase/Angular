@@ -1,33 +1,22 @@
- <div id=picture>
-  <!-- <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
-    <div class="card auth">
-      <div class="card-body auth-card">
-        <div class="auth-avatar"> -->
-           <!-- <img src="" alt="user" class="user-image"> -->
-        <!-- </div> -->
-        <!-- <form > -->
-          <div class="form-group">
-            <label for="email">Email : </label>
-            <input type="text" name="email" class="form-control" placeholder="Email">
-          <!-- </div> -->
-          <!-- <div class="form-group"> -->
-            <label class="password" for="password">Password : </label>
-            <input type="password" name="password" class="form-control" placeholder="********">
-            <div class="text-right forget-pass">
-              <a routerLink="/forget-password">Forget Password ?</a>
-            </div>
-
-          <div class="text-center">
-            <button onclick="submit" class="btn btn-my" value="Login" >Login</button>
-          </div>
-        <!-- </form> -->
-        <div class="text sign-up">
-          Don`t have an account ? <a routerLink="/register">Sign Up</a> here.
-        </div>
+<div class="wrapper">
+  <div class="logo">
+      <img src="" alt="">
+  </div>
+  <div class="text-center mt-4 name">
+      PhungaCafe
+  </div>
+  <form class="p-3 mt-3">
+      <div class="form-field d-flex align-items-center">
+          <span class="far fa-user"></span>
+          <input type="text" name="userName" id="userName" placeholder="Username or Email">
       </div>
-
-
-      <!-- </div>
-    </div>
-  </div> -->
+      <div class="form-field d-flex align-items-center">
+          <span class="fas fa-key"></span>
+          <input type="password" name="password" id="pwd" placeholder="Password">
+      </div>
+      <button class="btn mt-3" routerLink="/Payment">Login</button>
+  </form>
+  <div class="text-center fs-6">
+    <a routerLink="">Forget password?</a> or <a routerLink="/login">Sign up</a>
+  </div>
 </div>

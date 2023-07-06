@@ -6,6 +6,10 @@ import { Injectable, OnInit } from '@angular/core';
   providedIn: 'root'
 })
 export class BagService implements OnInit {
+event: any;
+findIndex(arg0: (p: any) => boolean): number {
+  throw new Error('Method not implemented.');
+}
 
 items: any[] = [];
 totAmount = 0
@@ -19,7 +23,7 @@ addToCart(product: any) {
   const productExistInCart = this.items
 .find(({itemname}) => itemname === product.itemname); // find product by name
   if (!productExistInCart) {
-    this.items.push({...product, qty:1}); 
+    this.items.push({...product, qty: 1} ); 
     this.items.length
     // enhance "porduct" opject with "num" property
     return;

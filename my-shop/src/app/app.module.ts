@@ -18,7 +18,7 @@ import { CategoryComponent } from './category/category.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { PaymentComponent } from './payment/payment.component';
 // import { TypesComponent } from './types/types.component';
-import { CheckoutComponent } from './checkout/checkout.component';
+// import { CheckoutComponent } from './checkout/checkout.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
@@ -37,7 +37,7 @@ import { RegisterComponent } from './register/register.component';
     NavComponent,
     PaymentComponent,
 
-    CheckoutComponent,
+    // CheckoutComponent,
       LoginComponent,
       RegisterComponent,
 
