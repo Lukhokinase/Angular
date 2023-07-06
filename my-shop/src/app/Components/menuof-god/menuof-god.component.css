@@ -159,6 +159,7 @@
     -webkit-animation:content-s 7.5s infinite;
     -moz-animation:content-s 7.5s infinite;
     animation:content-s 7.5s infinite;
+   
   }
   .content-txt h1{
     font-family: 'Alfa Slab One';
@@ -568,9 +569,13 @@
   .wordss{
     position: absolute;
     bottom: 250px;
+    
+    
+   
 
    
   }
+ 
   .wordss1{
     position: absolute;
     bottom: 300px;
