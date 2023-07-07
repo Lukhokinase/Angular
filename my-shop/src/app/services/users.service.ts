@@ -4,7 +4,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 
-const apiUrl = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/v2/users'
+const auth_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/pi/auth'
+const User_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/v2/users/'
+
 
 @Injectable({
   providedIn: 'root'
@@ -25,10 +27,11 @@ export class UsersService {
   // }
   login(user: User) {
     this.user.push(user)
+    return this.http.get<User>(auth_api+ '/signin')
   }
 
   deleteOne(id: any):Observable<any>{
-    return this.http.get<any>(apiUrl + '/:id')
+    return this.http.get<any>(User_api + '/:id')
   }
 
 }
