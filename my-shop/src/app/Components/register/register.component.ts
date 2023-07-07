@@ -20,7 +20,7 @@ import { AuthService } from 'src/app/services/auth.service';
     constructor(private authService: AuthService) { }
     ngOnInit(): void {
     }
-    onSubmit(): void {
+    SignUp(): void {
       const { username, email, password } = this.User;
       this.authService.register(username, email, password).subscribe({
         next: data => {
@@ -34,6 +34,7 @@ import { AuthService } from 'src/app/services/auth.service';
         }
       });
     }}
+
 
 
     // import { Component, OnInit } from '@angular/core';
