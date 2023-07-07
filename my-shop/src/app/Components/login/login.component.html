@@ -7,14 +7,14 @@
   </div>
   <form name="User"  (ngSubmit)="f.form.valid && login()"  #f="ngForm"novalidate>
       <div class="form-field d-flex align-items-center">
-          <span class="far fa-user"></span>
+          <span class="far fa-user">{{User.username}}</span>
           <input type="text" name="userName" id="userName" placeholder="Username" 
-          name="username" ngModel required #username="ngModel">
+          name="username" ngModel required #username="ngModel" [(ngModel)]="username">
       </div>
       <div class="form-field d-flex align-items-center">
-          <span class="fas fa-key">{{User.username}}</span>
+          <span class="fas fa-key">{{User.password}}</span>
           <input type="password" name="password" id="pwd" placeholder="Password"
-          name="password" ngModel required #password="ngModel">
+          name="password" ngModel required #password="ngModel" [(ngModel)]="password">
       </div>
       <button class="btn mt-3" >Login</button>
   </form>
