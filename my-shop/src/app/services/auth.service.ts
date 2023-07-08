@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 const User_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/v2/users/';
 const auth_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/api/auth/'
 // const auth_api = "http://localhost:3200/"
-
+const authy = 'http://localhost:8080/api/auth/'
 
 const httpOptions = {headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
 
@@ -16,14 +16,14 @@ export class AuthService {
   constructor(private http: HttpClient) { }
   login(username: string, password: string):
    Observable<any> {
-    return this.http.post(auth_api + 'signin', {
+    return this.http.post(authy + 'signin', {
       username,
       password
     }, httpOptions);
   }
-  register(username: string, email: string, password: string):
+  register(username: any, email: any, password: any):
   Observable<any> {
-    return this.http.post( auth_api+ 'signup', {
+    return this.http.post( 'http://localhost:8080/api/auth/signup', {
       username,
       email,
       password

@@ -23,6 +23,8 @@ import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { FormsModule } from '@angular/forms';
 import { ClosingPageComponent } from './closing-page/closing-page.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { UserDBoardComponent } from './Components/user-dboard/user-dboard.component';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import { ClosingPageComponent } from './closing-page/closing-page.component';
       LoginComponent,
       RegisterComponent,
       ClosingPageComponent,
+      NavbarComponent,
+      UserDBoardComponent,
 
 
   ],

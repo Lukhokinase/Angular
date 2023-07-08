@@ -13,6 +13,7 @@ export class MenuofGodComponent implements OnInit {
   products: Item[]= []
   title=""
   items= this.bagService.items
+  totalAmount = 0;
 
  
   constructor(private productService: ProductsService, private bagService: BagService){
@@ -21,14 +22,23 @@ export class MenuofGodComponent implements OnInit {
 
   }
   ngOnInit(): void {
+    this.totalAmount = this.bagService.totAmount;
     this.getAllItems()
+  }
+  addToBag(item: Item ) {
+  
+    this.bagService.addToCart(item);
+    window.alert('Your product has been added to the cart!');
+    //console.log(this.items)
+    //localStorage.setItem("items",JSON.stringify(this.items))
+    this.bagService.Total();
+    //this.getTotal();
   }
 
  addToCart(item: Item) {
     this.bagService.addToCart(item);
-    window.alert('Your product has been added to the cart!');
-    console.log(this.items)
-    localStorage.setItem("items",JSON.stringify(this.items))
+    this.bagService.Total();
+    console.log(item)
   }
   getAllItems(){
     this.productService.getAllItems().subscribe((data)=>{
@@ -36,4 +46,7 @@ export class MenuofGodComponent implements OnInit {
       console.log(data)
     })
   }
+  // getTotal(){
+  //   this.bagService.getItems();
+  // }
 }

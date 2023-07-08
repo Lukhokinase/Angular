@@ -1,5 +1,5 @@
 <!-- Navigation-->
-<app-nav></app-nav>
+<app-navbar></app-navbar>
 
 <!-- Header-->
 
@@ -102,8 +102,8 @@
               <!-- Product name-->
               <h6 class="fw-bolder">{{item.itemname}}</h6>
               <!-- Product price-->
-              <p>R{{item.price}}</p>
-              <button type="button" (click)="addToCart(item)">
+              <span>R{{item.price}}</span>
+              <a type="button" (click)="addToBag(item)">
   
               <svg
                 class="icon"
@@ -119,7 +119,7 @@
                   <path d="M14 21h20v6H14z" />
                 </g>
               </svg>
-              </button>
+            </a>
             
             </div>
 

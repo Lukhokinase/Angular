@@ -10,9 +10,9 @@ import { AuthService } from 'src/app/services/auth.service';
 
     export class RegisterComponent implements OnInit {
    form: any = {
-      username: null,
-      email: null,
-      password: null
+      username: '',
+      email: '',
+      password: ''
     };
     isSuccessful = false;
     isSignUpFailed = false;
@@ -22,6 +22,7 @@ import { AuthService } from 'src/app/services/auth.service';
     }
     SignUp(): void {
       const { username, email, password } = this.form;
+      console.log(username, email, password)
       this.authService.register(username, email, password).subscribe({
         next: data => {
           console.log(data);
@@ -37,10 +38,11 @@ import { AuthService } from 'src/app/services/auth.service';
     }
   
     replacePage(): void {
-      window.location.replace('/Checkout')
+      window.location.replace('/menu')
     }
   
   }
+
 
 
 

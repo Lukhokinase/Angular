@@ -49,7 +49,7 @@ import { UsersService } from 'src/app/services/users.service';
     }
   
   replacePage(): void {
-    window.location.replace('/Checkout')
+    window.location.replace('/menu')
   }
 
   }
