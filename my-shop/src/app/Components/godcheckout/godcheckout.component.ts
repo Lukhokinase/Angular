@@ -8,6 +8,7 @@ import { TokenService } from 'src/app/services/token.service';
   styleUrls: ['./godcheckout.component.css']
 })
 export class GodcheckoutComponent implements OnInit {
+
 items = JSON.parse(`${localStorage.getItem('CartItems')}`)
 count = JSON.parse(`${localStorage.getItem('Count')}`)
 userId:any
@@ -40,8 +41,9 @@ totalAmount = JSON.parse(`${localStorage.getItem('TotalAmount')}`)
   //const pid = this.items[0].id
   // const userId = this.userId  
   // console.log(this.userId)
-  
-  
-    
   }
+
+  clearCart() {
+    throw new Error('Method not implemented.');
+    }
 }
