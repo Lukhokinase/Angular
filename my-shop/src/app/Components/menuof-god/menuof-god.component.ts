@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Item } from '../../Item';
 import { ProductsService } from '../../services/products.service';
 import { BagService } from '../../services/bag.service';
+import { TokenService } from 'src/app/services/token.service';
 //import { CartService } from '../cart.service';
 
 @Component({
@@ -14,9 +15,11 @@ export class MenuofGodComponent implements OnInit {
   title=""
   items= this.bagService.items
   totalAmount = 0;
+  isLoggedIn: boolean=false;
+  username: any;
 
  
-  constructor(private productService: ProductsService, private bagService: BagService){
+  constructor(private productService: ProductsService, private bagService: BagService, private tokenStorage: TokenService){
     // private cartService: CartService
 
 
@@ -24,6 +27,13 @@ export class MenuofGodComponent implements OnInit {
   ngOnInit(): void {
     this.totalAmount = this.bagService.totAmount;
     this.getAllItems()
+
+    this.isLoggedIn = !!this.tokenStorage.getToken()
+    if(this.isLoggedIn){
+      const user = this.tokenStorage.getUser()
+      this.username = user.username
+      console.log(this.username)
+    }
   }
   addToBag(item: Item ) {
   

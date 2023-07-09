@@ -28,7 +28,7 @@ import { AuthService } from 'src/app/services/auth.service';
           console.log(data);
           this.isSuccessful = true;
           this.isSignUpFailed = false;
-          this.replacePage()
+          //this.replacePage()
         },
         error: err => {
           this.errorMessage = err.error.message;

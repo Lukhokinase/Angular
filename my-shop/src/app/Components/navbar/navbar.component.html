@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand  navbar-dark bg-dark mb-2" aria-label="Tenth navbar example">
+<nav class="navbar fixed-top navbar-expand  navbar-dark bg-dark " aria-label="Tenth navbar example">
     <div class="container-fluid justify-content-even">
         <div>
             <img src="../../assets/logo.png" alt="" height="35" width="35">
@@ -33,9 +33,10 @@
         <a class="dropdown-toggle text-align" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-bars" aria-hidden="true"></i></a>
           <ul class="dropdown-menu dropdown-menu-end ">
-            <li><a class="dropdown-item" routerLink="/signin">Login</a></li>
+            <li><a class="dropdown-item" routerLink="/userProfile">Profile</a></li>
+            <li><a class="dropdown-item" routerLink="/login">Login</a></li>
             <li><a class="dropdown-item" routerLink="/register">Signup</a></li>
-            <li ><a class="dropdown-item" >Signout</a></li>
+            <li *ngIf="isLoggedIn" ><a class="dropdown-item" (click)="logout()">Signout</a></li>
           </ul>
         
       </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import { TokenService } from 'src/app/services/token.service';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -13,9 +14,7 @@ import { UsersService } from 'src/app/services/users.service';
     export class LoginComponent implements OnInit {
     isLoginFailed: boolean | undefined;
 
-    onSubmit(f: NgForm){
-      
-    }
+   
     form: any = {
       username: null,
       password: null
@@ -24,7 +23,7 @@ import { UsersService } from 'src/app/services/users.service';
     isSuccessful = true;
     isSignUpFailed = true;
     errorMessage = 'password or username is incorrect';
-    constructor(private authservice: AuthService, private usersservice: UsersService) { }
+    constructor(private authservice: AuthService, private usersservice: UsersService, private tokenStorage: TokenService) { }
     ngOnInit(): void {
 
       
@@ -36,6 +35,8 @@ import { UsersService } from 'src/app/services/users.service';
       this.authservice.login(username, password).subscribe({
         next: (data) => {
           console.log(data);
+          this.tokenStorage.saveToken(data.accessToken)
+          this.tokenStorage.saveUser(data)
           this.isSuccessful = true;
           this.isLoginFailed = false;
           this.replacePage()

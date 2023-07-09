@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { BagService } from '../../services/bag.service';
 import { Item } from '../../Item';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-godcart',
@@ -11,13 +12,16 @@ export class GodcartComponent implements OnInit{
 
   items = JSON.parse(localStorage.getItem('CartItems') || '[]')
   totalAmount = this.bagService.totAmount
+  userId: any;
   //totalAmount: this.bagService.totAmount
 
-  constructor(private bagService:  BagService){}
+  constructor(private bagService:  BagService, private tokenStorage: TokenService){}
   ngOnInit(): void {
    this.items
    this.getAllItem()
    this.calcTotal()
+   const user = this.tokenStorage.getUser()
+   this.userId = user.id
   }
 
 
@@ -60,5 +64,17 @@ export class GodcartComponent implements OnInit{
 
 }
 
+postToCart(){
+console.log(this.items[0].id)
+const pid = this.items[0].id
+const userId = this.userId  
+console.log(this.userId)
 
+
+  this.bagService.sendToCart({pid, userId}).subscribe({
+    next(data){
+      console.log(data)
+    },
+  })
+}
 }

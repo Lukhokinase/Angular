@@ -14,7 +14,8 @@ export class NavbarComponent implements OnInit{
   cartTotal = new BehaviorSubject<any>(0); 
   //cartCount = ;
   //cartTotal = JSON.parse(`${localStorage.getItem('TotalAmount')}`)
-  
+  isLoggedIn = false
+  username = "";
   
   constructor(private cartService: BagService, private tokenStorage: TokenService) { }
   
@@ -24,7 +25,16 @@ export class NavbarComponent implements OnInit{
     this.cartTotal = this.cartService.getTotal();
     //this.cartTotal;
     //this.cartCount;
+    this.isLoggedIn = !!this.tokenStorage.getToken()
+
+    if(this.isLoggedIn){
+    const user = this.tokenStorage.getUser()
+    this.username = user.username
+    console.log(this.username)
   }
+  }
+
+  
 
   logout(): void{
     this.tokenStorage.signOut()

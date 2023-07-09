@@ -1,5 +1,6 @@
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Item } from '../Item';
+import { HttpClient } from '@angular/common/http';
 //import { Product } from './product-list/product-list.component';
 import { Injectable, OnInit } from '@angular/core';
 /* . . . */
@@ -7,10 +8,9 @@ import { Injectable, OnInit } from '@angular/core';
   providedIn: 'root'
 })
 export class BagService implements OnInit {
-event: any;
-findIndex(arg0: (p: any) => boolean): number {
-  throw new Error('Method not implemented.');
-}
+  apiUrl = 'http://localhost:8080/api/cart/items'
+  apiUrl1 = 'http://localhost:8080/api/cart/u_items'
+  
   cartItemcount = new BehaviorSubject<any>(0);
   public cartTotal = new BehaviorSubject<any>(0);
 
@@ -23,7 +23,7 @@ findIndex(arg0: (p: any) => boolean): number {
 //items: any[] = [];
 totAmount = 0
 /* . . . */
-
+  constructor(private http: HttpClient){}
 ngOnInit(): void {
 this.getAllItems()
 }
@@ -60,31 +60,25 @@ addToCart(product: any ) {
 }
 
 
-getCount(){
-  
-  return this.cartItemcount;
-}
+  getCount(){
+    return this.cartItemcount;
+  }
 
-getTotal(){
-  
+  getTotal(){
+    return this.cartTotal;
+  }
 
-  return this.cartTotal;
-}
-// addToCart(product: any) {
-//   const productExistInCart = this.items
-// .find(({itemname}) => itemname === product.itemname); // find product by name
-//   if (!productExistInCart) {
-//     this.items.push({...product, qty: 1} ); 
-//     this.items.length
-//     // enhance "porduct" opject with "num" property
-//     return;
-//   }
-//   productExistInCart.qty += 1;
-// }
-getAllItems() {
-  console.log(this.items)
-  return this.items
-};
+  getAllItems() {
+    console.log(this.items)
+    return this.items
+  };
+
+  sendToCart(payload: any):Observable<any>{
+    return this.http.post<any>(this.apiUrl,payload)
+  }
+  getUserCart():Observable<any>{
+    return this.http.get<any>(this.apiUrl1)
+  }
 
 /* . . . */
 }
