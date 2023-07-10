@@ -10,7 +10,7 @@ import { MenuofGodComponent } from './Components/menuof-god/menuof-god.component
 import { ViewoneComponent } from './Components/viewone/viewone.component';
 import { GodcheckoutComponent } from './Components/godcheckout/godcheckout.component';
 import { GodcartComponent } from './Components/godcart/godcart.component';
-import { NavComponent } from './Components/nav/nav.component';
+// import { NavComponent } from './Components/nav/nav.component';
 import { EmptyBagComponent } from './Components/empty-bag/empty-bag.component';
 import { CategoryComponent } from './Components/category/category.component';
 // import { ProductListComponent } from './product-list/product-list.component';
@@ -20,7 +20,7 @@ import { PaymentComponent } from './Components/payment/payment.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { FormsModule } from '@angular/forms';
-import { ClosingPageComponent } from './closing-page/closing-page.component';
+import { ClosingPageComponent } from './Components/closing-page/closing-page.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { UserDBoardComponent } from './Components/user-dboard/user-dboard.component';
 
@@ -36,7 +36,7 @@ import { UserDBoardComponent } from './Components/user-dboard/user-dboard.compon
     // ProductListComponent,
     GodcheckoutComponent,
     GodcartComponent,
-    NavComponent,
+    NavbarComponent,
     PaymentComponent,
 
     // CheckoutComponent,

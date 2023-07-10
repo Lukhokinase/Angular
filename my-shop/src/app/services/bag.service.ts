@@ -8,8 +8,8 @@ import { Injectable, OnInit } from '@angular/core';
   providedIn: 'root'
 })
 export class BagService implements OnInit {
-  apiUrl = 'http://localhost:8080/api/cart/items'
-  apiUrl1 = 'http://localhost:8080/api/cart/u_items'
+User_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/v2/users/';
+auth_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/api/auth/'
   
   cartItemcount = new BehaviorSubject<any>(0);
   public cartTotal = new BehaviorSubject<any>(0);
@@ -74,11 +74,11 @@ addToCart(product: any ) {
   };
 
   sendToCart(payload: any):Observable<any>{
-    return this.http.post<any>(this.apiUrl,payload)
+    return this.http.post<any>(this.auth_api,payload)
   }
   getUserCart():Observable<any>{
-    return this.http.get<any>(this.apiUrl1)
+    return this.http.get<any>(this.User_api)
   }
 
-/* . . . */
+
 }
