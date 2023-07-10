@@ -4,7 +4,8 @@ import { Item } from '../Item';
 import { Observable, catchError, map } from 'rxjs';
 
 
-const apiUrl = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/v1/items'
+//const apiUrl = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/v1/items'
+const apiUrl = 'http://localhost:8080/api/products/'
 @Injectable({
   providedIn: 'root'
 })
@@ -17,12 +18,9 @@ export class ProductsService {
 
   constructor(private http: HttpClient) { }
 
-  addToCart(product: Item) {
-    
-    this.items.push(product);
-  }
+ 
   getAllItems(): Observable<Item[]> {
-    return this.http.get<Item[]>(apiUrl+'/products/getall')
+    return this.http.get<Item[]>(apiUrl)
       
   };
   

@@ -13,15 +13,18 @@ import { GodcartComponent } from './Components/godcart/godcart.component';
 import { GodcheckoutComponent } from './Components/godcheckout/godcheckout.component';
 
 
-import { ReactiveFormsModule } from '@angular/forms';
+//import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { UserDBoardComponent } from './Components/user-dboard/user-dboard.component';
 
 const routes: Routes = [
 
   { path: '', redirectTo: '/menu', pathMatch: 'full' },
   { path: 'menu', component: MenuofGodComponent},
   { path: 'view/:id', component: ViewoneComponent},
+  { path: 'navbar', component: NavbarComponent},
   // { path: "Checkout", component: CheckoutComponent },
   { path: 'Cart', component: GodcartComponent},
   { path: 'Checkout', component: GodcheckoutComponent},
@@ -30,7 +33,8 @@ const routes: Routes = [
   // { path: 'products', component: ProductListComponent},
   { path: 'Payment', component: PaymentComponent},
   {path: 'login', component:LoginComponent},
-  { path:'register',component:RegisterComponent}
+  { path:'register',component:RegisterComponent},
+  { path:'userProfile',component:UserDBoardComponent}
 
 
 
