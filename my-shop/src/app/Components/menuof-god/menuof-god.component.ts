@@ -38,7 +38,7 @@ export class MenuofGodComponent implements OnInit {
   addToBag(item: Item ) {
   
     this.bagService.addToCart(item);
-    window.alert('Your product has been added to the cart!');
+    // window.alert('Your product has been added to the cart!');
     //console.log(this.items)
     //localStorage.setItem("items",JSON.stringify(this.items))
     this.bagService.Total();
@@ -57,6 +57,6 @@ export class MenuofGodComponent implements OnInit {
     })
   }
   // getTotal(){
-  //   this.bagService.getItems();
+  //   this.bagService.getAllItems();
   // }
 }
