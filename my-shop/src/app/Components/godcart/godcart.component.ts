@@ -62,24 +62,24 @@ export class GodcartComponent implements OnInit{
 
 }
 
-postToCart(){
-  let pid;
-  let userId = this.userId
-  this.items.forEach((items:{id:any})=>{
-    pid = items.id
-    console.log(pid)
-    this.bagService.sendToCart({pid, userId}).subscribe({
-    next(data){
-      console.log(data)
-    },
-  })
-  })
-console.log(this.items[0].id)
- pid = this.items[0].id
-userId = this.userId  
-console.log(this.userId)
+// postToCart(){
+//   let pid;
+//   let userId = this.userId
+//   this.items.forEach((items:{id:any})=>{
+//     pid = items.id
+//     console.log(pid)
+//     this.bagService.sendToCart({pid, userId}).subscribe({
+//     next(data){
+//       console.log(data)
+//     },
+//   })
+//   })
+// console.log(this.items[0].id)
+//  pid = this.items[0].id
+// userId = this.userId  
+// console.log(this.userId)
 
 
   
 
-}}
+}

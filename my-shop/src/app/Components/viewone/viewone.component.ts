@@ -23,7 +23,7 @@ export class ViewoneComponent implements OnInit{
 
   addToCart(product: Item) {
     this.bagService.addToCart(product);
-    window.alert('Your product has been added to the cart!');
+    // window.alert('Your product has been added to the cart!');
     console.log(this.product)
     localStorage.setItem("items",JSON.stringify(this.items))
   }
@@ -31,9 +31,9 @@ export class ViewoneComponent implements OnInit{
 
   getItem(): void {
     const id = this.route.snapshot.params['id']
-    console.log(id)
+    // console.log(id)
     this.productService.getOne(id)
-    .subscribe(item => this.product = item);
+    // .subscribe(item => this.product = item);
   }
 
 }
