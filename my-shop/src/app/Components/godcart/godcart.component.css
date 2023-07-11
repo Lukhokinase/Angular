@@ -13,7 +13,7 @@
 }
 
 .shopping-cart .block-heading{
-    padding-top: 50px;
+    padding-top: 130px;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -108,31 +108,33 @@
 
 .shopping-cart .summary button{
 	margin-top: 20px;
-	
-	
-	
+
+
+
 }
 
 @media (min-width: 768px) {
 	.shopping-cart .items .product .info {
 		padding-top: 25px;
-		text-align: left; 
+		text-align: left;
 	}
 
 	.shopping-cart .items .product .info .price {
 		font-weight: bold;
 		font-size: 22px;
-		top: 17px; 
+		top: 17px;
 	}
 
 	.shopping-cart .items .product .info .quantity {
-		text-align: center; 
+		text-align: center;
 	}
 	.shopping-cart .items .product .info .quantity .quantity-input {
 		padding: 4px 10px;
-		text-align: center; 
+		text-align: center;
 	}
 }
 .button1{
 	margin-left: 1px;
 }
+
+

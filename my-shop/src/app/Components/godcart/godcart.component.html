@@ -1,23 +1,13 @@
-<app-nav></app-nav>
-<div class="bg-dark">
-    <div class="container py-4">
-      <!-- Breadcrumb -->
-      <nav class="d-flex">
-        <h6 class="mb-0">
-    
-        </h6>
-      </nav>
-      <!-- Breadcrumb -->
-    </div>
-  </div>
+<app-navbar></app-navbar>
+
 
 <main>
 <section class="shopping-cart dark">
     <div class="container">
        <div class="block-heading">
-         <h2>Cart</h2>
+         <h2>Your Wagon</h2>
          <p>Enjoy your easy shopping experience , Shop again</p>
-       </div>
+        </div>
        <div class="content">
             <div class="row">
                 <div class="col-md-12 col-lg-8" *ngFor = "let item of items">
@@ -35,12 +25,12 @@
                                                     <a href="#"></a>
                                                     <div class="product-info">
                                                         <div>Product: <span class="value">{{item.itemname}}</span></div>
-                                                        
-                                                        
+
+
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="col-md-4 quantity del d-flex" >
                                                 <ul>
                                                     <!-- {{ item.name }} -->
@@ -51,7 +41,7 @@
                                                     <button (click)="delete(item)">x</button>
                                                 </ul>
                                             </div>
-                                           
+
                                             <div class="col-md-3 price">
                                                 <span>R{{item.price}}</span>
                                             </div>
@@ -59,23 +49,23 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> 
-                        
+                        </div>
+
                     </div>
                     <!-- <a >-</a> -->
                 </div>
                 <div class="col-md-12 col-lg-4">
                     <div class="summary">
-                        <h3>Summary</h3>
-                    
 
-                        <div class="summary-item"><span class="text">Total</span><span class="price">R{{total}}</span></div>
-                        
-                        <button type="button" class="btn btn-dark btn-lg btn-block" routerLink="/login">Checkout</button>
+
+
+                        <div class="summary-item"><span class="text">Total</span><span class="price">{{totalAmount| currency:'R'}}</span></div>
+
+                        <button type="button" class="btn btn-dark btn-lg btn-block" routerLink="/Checkout">Checkout</button>
                         <button type="button" class="btn btn-dark btn-lg btn-block button1" routerLink="/menu">Back to Menu</button>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
 </section>

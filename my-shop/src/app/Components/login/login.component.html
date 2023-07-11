@@ -1,3 +1,26 @@
+<div class="wrapper">
+  <div class="logo">
+    <img src="../../assets/logo.png" alt="" height="35" width="35">
+  </div>
+  <div class="text-center mt-4 name">
+      PhungaCafe
+  </div>
+  <form name="form"  (ngSubmit)="f.form.valid && login()"  #f="ngForm"novalidate>
+      <div class="form-field d-flex align-items-center">
+          <!-- <span class="far fa-user">{{form.username}}</span> -->
+          <input type="text" id="userName" placeholder="Username"
+          name="username" [(ngModel)]="form.username" >
+      </div>
+      <div class="form-field d-flex align-items-center">
+          <!-- <span class="fas fa-key">{{form.password}}</span> -->
+          <input type="password" name="password" id="pwd" placeholder="Password"
+          name="password" [(ngModel)]="form.password" required>
+      </div>
+      <button class="btn mt-3" >Login</button>
+  </form>
+  <div class="text-center fs-6">
+    <a>Forget password?</a> or <a routerLink="/register">Sign up</a>
+  </div>
 <div class="login_form_wrapper">
     <div class="container">
         <div class="row">

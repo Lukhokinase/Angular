@@ -1,9 +1,12 @@
-.login_form_wrapper {
-  float: left;
-  width: 100%;
-  padding-top: 40px;
-  padding-bottom: 100px;
-  background-color:grey;
+/* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reseting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 .login_wrapper {
