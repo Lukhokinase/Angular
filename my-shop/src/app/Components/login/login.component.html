@@ -1,41 +1,22 @@
-<div class="wrapper">
-  <div class="logo">
-    <img src="../../assets/logo.png" alt="" height="35" width="35">
-  </div>
-  <div class="text-center mt-4 name">
-      PhungaCafe
-  </div>
-  <form name="form"  (ngSubmit)="f.form.valid && login()"  #f="ngForm"novalidate>
-      <div class="form-field d-flex align-items-center">
-          <!-- <span class="far fa-user">{{form.username}}</span> -->
-          <input type="text" id="userName" placeholder="Username"
-          name="username" [(ngModel)]="form.username" >
-      </div>
-      <div class="form-field d-flex align-items-center">
-          <!-- <span class="fas fa-key">{{form.password}}</span> -->
-          <input type="password" name="password" id="pwd" placeholder="Password"
-          name="password" [(ngModel)]="form.password" required>
-      </div>
-      <button class="btn mt-3" >Login</button>
-  </form>
-  <div class="text-center fs-6">
-    <a>Forget password?</a> or <a routerLink="/register">Sign up</a>
-  </div>
+<app-navbar></app-navbar>
+
+
+
 <div class="login_form_wrapper">
+
+    
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <!-- login_wrapper -->
                 <div class="login_wrapper">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                            <a href="#" class="btn btn-primary facebook"> <span>Login with Facebook</span> <i class="fa fa-facebook"></i> </a>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                            <a href="#" class="btn btn-primary google-plus"> Login  with Google <i class="fa fa-google-plus"></i> </a>
-                        </div>
-                    </div>
-                    <h2>or</h2>
+                    <div class="logo d-flex justify-content-center">
+                        <img src="../../assets/logo.png" alt="" height="80" width="80">
+                      </div>
+                      <div class="text-center mt-4 name phunga">
+                          PhungaCafe
+                      </div>
+                    
                     <div class="formsix-pos">
                         <div class="form-group i-email">
                             <input type="email" class="form-control" required="" id="email2" placeholder="Email Address *">
@@ -47,17 +28,14 @@
                         </div>
                     </div>
                     <div class="login_remember_box">
-                        <label class="control control--checkbox">Remember me
-                            <input type="checkbox">
-                            <span class="control__indicator"></span>
-                        </label>
+                       
                         
                     </div>
                     <div class="login_btn_wrapper">
-                        <a href="#" class="btn btn-primary login_btn"> Login </a>
+                        <a href="#" class="btn btn-dark login_btn"> Login </a>
                     </div>
                     <div class="login_message">
-                        <p>Don&rsquo;t have an account ? <a href="#"> Sign up </a> </p>
+                        <p>Don&rsquo;t have an account ? <a routerLink="/register"> Sign up </a> </p>
                     </div>
                 </div>
                 <!-- /.login_wrapper-->
