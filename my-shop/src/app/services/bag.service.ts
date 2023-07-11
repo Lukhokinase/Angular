@@ -8,8 +8,12 @@ import { Injectable, OnInit } from '@angular/core';
   providedIn: 'root'
 })
 export class BagService implements OnInit {
-User_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/v2/users/';
-auth_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/api/auth/'
+  getItems() {
+    throw new Error('Method not implemented.');
+  }
+// const User_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/v2/users/';z
+ auth_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/api/auth/'
+//  auth_api = 'https://localhost:3200'
   
   cartItemcount = new BehaviorSubject<any>(0);
   public cartTotal = new BehaviorSubject<any>(0);
@@ -77,8 +81,8 @@ addToCart(product: any ) {
     return this.http.post<any>(this.auth_api,payload)
   }
   getUserCart():Observable<any>{
-    return this.http.get<any>(this.User_api)
+    return this.http.get<any>(this.auth_api)
   }
 
-
+/* . . . */
 }

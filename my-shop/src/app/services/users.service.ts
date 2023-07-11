@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 
-const auth_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/api/auth'
+// const auth_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/api/auth'
 const User_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/v2/users/'
 
 
@@ -23,7 +23,7 @@ export class UsersService {
   }
  
   login(id:any): Observable<User> {
-    return this.http.get<User>(auth_api+ '/signin')
+    return this.http.get<User>(User_api+ '/signin')
   }
 
   // login(user: User) {
@@ -32,7 +32,7 @@ export class UsersService {
   // }
 
   deleteOne(id: any):Observable<any>{
-    return this.http.get<any>(auth_api + '/:id')
+    return this.http.get<any>(User_api + '/:id')
   }
 
 }
