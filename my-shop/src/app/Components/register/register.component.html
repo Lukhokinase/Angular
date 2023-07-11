@@ -1,6 +1,6 @@
 <div class="wrapper">
     <div class="logo">
-        <img src="" alt="">
+      <img src="../../assets/logo.png" alt="" height="35" width="35">
     </div>
     <div class="text-center mt-4 name">
         PhungaCafe
@@ -8,7 +8,7 @@
     <form name="form"  (ngSubmit)="f.form.valid && SignUp()"  #f="ngForm"novalidate>
         <div class="form-field d-flex align-items-center">
             <!-- <span class="far fa-user">{{form.username}}</span> -->
-            <input type="text" id="userName" placeholder="Username" 
+            <input type="text" id="userName" placeholder="Username"
             name="username" [(ngModel)]="form.username" >
         </div>
         <div class="form-field d-flex align-items-center">

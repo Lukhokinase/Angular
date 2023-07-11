@@ -4,7 +4,7 @@
     height: 88px;
     left: calc(50% - 316px/2);
     top: 69px;
-    
+
     background: #D0B48F;
     border-radius: 7px;
 }
@@ -16,7 +16,7 @@
     left: 34px;
     top: 104px;
     z-index: 999;
-    
+
     background: #FFFFFF;
     border-radius: 15px;
 }
@@ -57,6 +57,7 @@ left: 25px;
 top: 196px;
 
 background: linear-gradient(116.82deg, #FFF0D2 16.13%, rgba(255, 255, 255, 0) 100%);
+
 border: 1px solid #CCCCCC;
 border-radius: 18px;
 }
@@ -94,7 +95,7 @@ top: 13px;
     height: 35px;
     left: 172px;
     top: 13px;
-    
+
 
 }
 .ppl{
@@ -104,5 +105,6 @@ top: 13px;
     left: 246px;
     top: 13px;
     
+
 
 }
