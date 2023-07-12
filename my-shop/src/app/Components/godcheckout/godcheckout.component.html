@@ -7,17 +7,19 @@
         <div class="col-xl-4 col-lg-4 d-flex justify-content-center justify-content-lg-end " *ngFor="let item of items">
           <div class="ms-lg-4 mt-4 mt-lg-0" style="max-width: 320px;">
 
-            <div class="d-flex justify-content-between">
-              <p class="mb-2">{{item.itemname}}</p>
-            </div>
+            <div class="col-md-3 price">
+              <span>{{item.itemname}}</span>
+          </div>
+
+
 
           </div>
         </div>
-        <div>Total Amount{{totalAmount}}</div>
+        <div class="summary-item"><span class="text">Total</span><span class="price">R{{totalAmount}}</span></div>
         </div>
         <div>
-          <button type="button" (click)="postToCart()">Confirm Order</button>
-          <button type="button" (click)="clearCart()">Cancel Order</button>
+          <button type="button" class="btn btn-dark btn-lg btn-block" >Confirm</button>
+          <button type="button" class="btn btn-dark btn-lg btn-block button1 /menu">Cancel Order</button>
 
         </div>
     </div>
