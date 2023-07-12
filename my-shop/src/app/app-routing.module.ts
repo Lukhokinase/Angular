@@ -18,6 +18,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { UserDBoardComponent } from './Components/user-dboard/user-dboard.component';
+import { ClosingPageComponent } from './Components/closing-page/closing-page.component';
 
 const routes: Routes = [
 
@@ -34,8 +35,8 @@ const routes: Routes = [
   { path: 'Payment', component: PaymentComponent},
   {path: 'login', component:LoginComponent},
   { path:'register',component:RegisterComponent},
-  { path:'userProfile',component:UserDBoardComponent}
-
+  { path:'userProfile',component:UserDBoardComponent},
+  { path:'closing-page',component:ClosingPageComponent}
 
 
 ];
