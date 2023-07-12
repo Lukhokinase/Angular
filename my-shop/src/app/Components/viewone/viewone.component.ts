@@ -13,7 +13,7 @@ export class ViewoneComponent implements OnInit{
   product:any
   items= this.bagService.items
   // bagService: any;
-  constructor( private route: ActivatedRoute, private bagService : BagService, private productService: ProductsService){
+  constructor( private route: ActivatedRoute, private bagService : BagService, private productService: ProductsService ){
   
   }
   ngOnInit(): void {
@@ -32,8 +32,7 @@ export class ViewoneComponent implements OnInit{
   getItem(): void {
     const id = this.route.snapshot.params['id']
     // console.log(id)
-    this.productService.getOne(id)
-    // .subscribe(item => this.product = item);
+    this.productService.getOne(id).subscribe(item => this.product = item);
   }
 
 }

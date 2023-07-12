@@ -20,8 +20,8 @@ export class GodcartComponent implements OnInit{
    this.items
    this.getAllItem()
    this.calcTotal()
-   const user = this.tokenStorage.getUser()
-   this.userId = user.id
+  //  const user = this.tokenStorage.getUser()
+  //  this.userId = user.id
   }
 
 
@@ -29,6 +29,7 @@ export class GodcartComponent implements OnInit{
     
     return this.bagService.getAllItems()
   }
+  
   calcTotal() {
     this.totalAmount = 0
     this.items.forEach((item: {quantity: number, price: number}) => {
@@ -36,14 +37,18 @@ export class GodcartComponent implements OnInit{
 
     return this.items.reduce((acc: any, products: { num: any; }) => (acc += products.num), 0);
   });
-    localStorage.setItem('CartItems', JSON.stringify(this.items))
-    localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
+
+    // localStorage.setItem('CartItems', JSON.stringify(this.items))
+    // localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
 }
 
 
   delete(i:number){
     this.items.splice(i,1);
     this.calcTotal();
+
+    // localStorage.setItem('CartItems', JSON.stringify(this.items))
+    // localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
   }
 
 
