@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
@@ -9,12 +10,10 @@ export class PaymentComponent {
 
   
   totalItems = JSON.parse(`${localStorage.getItem('items')}`)
+  
   items: any
-  totalAmount = JSON.parse(`${localStorage.getItem('totalAmount')}`)
-    ngOnInit(): void {
-      this.totalItems
-      this.items =this.totalItems.length
-    } 
- 
 
+  totalAmount= JSON.parse(`${localStorage.getItem('items')}`)
+
+  constructor(){}
 }

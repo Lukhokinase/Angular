@@ -9,11 +9,11 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class GodcheckoutComponent implements OnInit {
 
-items = JSON.parse(`${localStorage.getItem('CartItems')}`)
+items = JSON.parse(`${localStorage.getItem('items')}`)
 count = JSON.parse(`${localStorage.getItem('Count')}`)
 userId:any
 //items: any
-totalAmount = JSON.parse(`${localStorage.getItem('TotalAmount')}`)
+totalAmount = this.bagService.totAmount
 
 
   constructor(private bagService: BagService, private tokenService: TokenService){}
@@ -36,14 +36,20 @@ totalAmount = JSON.parse(`${localStorage.getItem('TotalAmount')}`)
         console.log(data)
       },
     })
+    this.replacePage()
     })
-  //console.log(this.items[0].id)
-  //const pid = this.items[0].id
-  // const userId = this.userId  
-  // console.log(this.userId)
+  console.log(this.items[0].id)
+  pid = this.items[0].id
+  userId = this.userId  
+  console.log(this.userId)
   }
 
   clearCart() {
     throw new Error('Method not implemented.');
     }
+
+    replacePage(): void {
+      window.location.replace('/Payment')
+    }
 }
+

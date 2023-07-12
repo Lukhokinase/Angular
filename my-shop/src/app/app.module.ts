@@ -20,7 +20,7 @@ import { PaymentComponent } from './Components/payment/payment.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { FormsModule } from '@angular/forms';
-import { ClosingPageComponent } from './Components/closing-page/closing-page.component';
+// import { ClosingPageComponent } from './Components/closing-page/closing-page.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { UserDBoardComponent } from './Components/user-dboard/user-dboard.component';
 
@@ -41,7 +41,7 @@ import { UserDBoardComponent } from './Components/user-dboard/user-dboard.compon
     // CheckoutComponent,
       LoginComponent,
       RegisterComponent,
-      ClosingPageComponent,
+      // ClosingPageComponent,
       NavbarComponent,
       UserDBoardComponent,
 

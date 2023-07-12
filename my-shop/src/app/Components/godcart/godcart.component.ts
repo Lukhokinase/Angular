@@ -20,8 +20,8 @@ export class GodcartComponent implements OnInit{
    this.items
    this.getAllItem()
    this.calcTotal()
-   const user = this.tokenStorage.getUser()
-   this.userId = user.id
+  //  const user = this.tokenStorage.getUser()
+  //  this.userId = user.id
   }
 
 
@@ -29,6 +29,7 @@ export class GodcartComponent implements OnInit{
     
     return this.bagService.getAllItems()
   }
+  
   calcTotal() {
     this.totalAmount = 0
     this.items.forEach((item: {quantity: number, price: number}) => {
@@ -36,14 +37,18 @@ export class GodcartComponent implements OnInit{
 
     return this.items.reduce((acc: any, products: { num: any; }) => (acc += products.num), 0);
   });
-    localStorage.setItem('CartItems', JSON.stringify(this.items))
-    localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
+
+    // localStorage.setItem('CartItems', JSON.stringify(this.items))
+    // localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
 }
 
 
   delete(i:number){
     this.items.splice(i,1);
     this.calcTotal();
+
+    // localStorage.setItem('CartItems', JSON.stringify(this.items))
+    // localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
   }
 
 
@@ -62,24 +67,24 @@ export class GodcartComponent implements OnInit{
 
 }
 
-postToCart(){
-  let pid;
-  let userId = this.userId
-  this.items.forEach((items:{id:any})=>{
-    pid = items.id
-    console.log(pid)
-    this.bagService.sendToCart({pid, userId}).subscribe({
-    next(data){
-      console.log(data)
-    },
-  })
-  })
-console.log(this.items[0].id)
- pid = this.items[0].id
-userId = this.userId  
-console.log(this.userId)
+// postToCart(){
+//   let pid;
+//   let userId = this.userId
+//   this.items.forEach((items:{id:any})=>{
+//     pid = items.id
+//     console.log(pid)
+//     this.bagService.sendToCart({pid, userId}).subscribe({
+//     next(data){
+//       console.log(data)
+//     },
+//   })
+//   })
+// console.log(this.items[0].id)
+//  pid = this.items[0].id
+// userId = this.userId  
+// console.log(this.userId)
 
 
   
 
-}}
+}

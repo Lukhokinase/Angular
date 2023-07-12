@@ -170,6 +170,9 @@
     -webkit-animation:content-s 7.5s infinite;
     -moz-animation:content-s 7.5s infinite;
     animation:content-s 7.5s infinite;
+    background: white;
+    
+    border-radius: 17px;
    
   }
   .content-txt h1{
@@ -580,7 +583,7 @@
   .wordss{
     position: absolute;
     bottom: 250px;
-    
+   
     
    
 
@@ -590,6 +593,7 @@
   .wordss1{
     position: absolute;
     bottom: 300px;
+   
   }
   .heading{
     text-align: center;

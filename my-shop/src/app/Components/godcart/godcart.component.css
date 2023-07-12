@@ -137,8 +137,24 @@
 	margin-left: 1px;
 }
 
+<<<<<<< HEAD
 .button three{
 margin-right:1px ;
 }
 
+=======
+.Godbuttons{
+	border-radius: 10px;
+	border: black solid;
+}
+
+.Godimage{
+	border-radius: 30px;
+    border: solid #292929;
+	border-width: 1px;
+}
+.Godtext{
+	font-size: 22px;
+}
+>>>>>>> 6c2ef1ddfcb8f445ac9d0390c667ae6f13499736
 
