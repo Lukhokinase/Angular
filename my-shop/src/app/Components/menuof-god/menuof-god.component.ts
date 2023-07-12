@@ -3,7 +3,7 @@ import { Item } from '../../Item';
 import { ProductsService } from '../../services/products.service';
 import { BagService } from '../../services/bag.service';
 import { TokenService } from 'src/app/services/token.service';
-//import { CartService } from '../cart.service';
+
 
 @Component({
   selector: 'app-menuof-god',
@@ -35,15 +35,15 @@ export class MenuofGodComponent implements OnInit {
       console.log(this.username)
     }
   }
-  addToBag(item: Item ) {
+  // addToBag(item: Item ) {
   
-    this.bagService.addToCart(item);
-    // window.alert('Your product has been added to the cart!');
-    //console.log(this.items)
-    //localStorage.setItem("items",JSON.stringify(this.items))
-    this.bagService.Total();
-    //this.getTotal();
-  }
+  //   this.bagService.addToCart(item);
+  //   // window.alert('Your product has been added to the cart!');
+  //   //console.log(this.items)
+  //   //localStorage.setItem("items",JSON.stringify(this.items))
+  //   this.bagService.Total();
+  //   //this.getTotal();
+  // }
 
  addToCart(item: Item) {
     this.bagService.addToCart(item);

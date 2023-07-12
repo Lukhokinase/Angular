@@ -8,12 +8,17 @@
           <div class="ms-lg-4 mt-4 mt-lg-0" style="max-width: 320px;">
 
             <div class="d-flex justify-content-between">
-              <p class="mb-2">{{item.itemname}}</p>
+              <h1 class="display-5 fw-bolder">{{item.itemname}}</h1>
+              <div class="fs-5 mb-5 border-radius: 42px;">
+                  <!-- <p class="text">R{{item.price}}</p> -->
+                  <!-- <span>R</span> -->
+              </div>
+              <!-- <p class="mb-2">{{item.itemname}}</p> -->
             </div>
 
           </div>
         </div>
-        <div>Total Amount{{totalAmount}}</div>
+        <div>Total Amount:R{{totalAmount}}</div>
         </div>
         <div>
           <button type="button" (click)="postToCart()">Confirm Order</button>

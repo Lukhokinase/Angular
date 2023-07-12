@@ -53,8 +53,8 @@ addToCart(product: any ) {
   this.totAmount = 0
   this.items.forEach((item:any) => {
     this.totAmount += (item.price * item.quantity)
-    //this.cartTotal.next(this.totAmount);
-    console.log(this.totAmount)
+    this.cartTotal.next(this.totAmount);
+    // console.log(this.totAmount)
     localStorage.setItem('TotalAmount',JSON.stringify(this.totAmount))
   })
   

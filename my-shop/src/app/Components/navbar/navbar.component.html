@@ -20,12 +20,14 @@
           </li>
           <li class="nav-item me-2 ">
             <a class="nav-link bag" routerLink="/Cart" >
-                <i class="fa fa-shopping-bag" aria-hidden="true"></i><span class="badge badge-light">{{cartCount | async}}</span>
+                <i class="fa fa-shopping-bag" aria-hidden="true">
+                  
+                </i><span class="badge badge-light">{{cartCount | async}}</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link tot" href="#">
-                <i><span class="total">{{cartTotal |async | currency:'R' }}</span></i>
+                <i><span class="total">{{cartTotal |async  }}</span></i>
             </a>
           </li>
           
