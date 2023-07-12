@@ -1,17 +1,14 @@
-.container {
-    width: 500px;
-    margin: 0 auto;
-    }
-    
-    h1 {
-    font-size: 2em;
-    }
-    
-    p {
-    font-size: 1em;
-    }
-    
-    a {
-    color: #000;
-    text-decoration: none;
-    }
+.text-center{
+  margin-top: 150px;
+  /* background-color: lightgray; */
+   justify-content:center ;
+  flex-direction: 100px;
+}
+.button{
+  margin-top: 120px;
+}
+
+.picture{
+  margin: auto;
+}
+

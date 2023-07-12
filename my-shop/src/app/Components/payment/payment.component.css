@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #0C4160;
+    background-color: lightblue;
 
     padding: 30px 10px;
 }
@@ -20,7 +20,7 @@ body {
 .card {
     max-width: 500px;
     margin: auto;
-    color: black;
+    /* color: black; */
     border-radius: 20 px;
 }
 
@@ -41,7 +41,7 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 0 15px;
-    background-image: linear-gradient(to right, #727272 0%, #d8d8d8 51%, #cacaca 100%);
+    background-image: linear-gradient(to right, lightgray 0%, #d8d8d8 51%, #cacaca 100%);
     border: none;
     transition: 0.5s;
     background-size: 200% auto;
@@ -64,7 +64,7 @@ p {
 
 .form-control {
     color: white;
-    background-color: #797979;
+    background-color: lightgray;
     border: 2px solid transparent;
     height: 60px;
     padding-left: 20px;
