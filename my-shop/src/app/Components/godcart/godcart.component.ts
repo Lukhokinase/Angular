@@ -8,20 +8,23 @@ import { TokenService } from 'src/app/services/token.service';
   templateUrl: './godcart.component.html',
   styleUrls: ['./godcart.component.css']
 })
+
 export class GodcartComponent implements OnInit{
 
   items = JSON.parse(localStorage.getItem('CartItems') || '[]')
   totalAmount = this.bagService.totAmount
   userId: any;
-  //totalAmount: this.bagService.totAmount
+  cartTotal: any;
+  
+  // totalAmount: this.bagService.totAmount
 
   constructor(private bagService:  BagService, private tokenStorage: TokenService){}
   ngOnInit(): void {
    this.items
    this.getAllItem()
    this.calcTotal()
-  //  const user = this.tokenStorage.getUser()
-  //  this.userId = user.id
+   const user = this.tokenStorage.getUser()
+   this.userId = user.id
   }
 
 
@@ -33,11 +36,11 @@ export class GodcartComponent implements OnInit{
   calcTotal() {
     this.totalAmount = 0
     this.items.forEach((item: {quantity: number, price: number}) => {
-    this.totalAmount+= (item.quantity * item.price)
+    this.totalAmount += (item.quantity)
 
     return this.items.reduce((acc: any, products: { num: any; }) => (acc += products.num), 0);
   });
-
+    
     // localStorage.setItem('CartItems', JSON.stringify(this.items))
     // localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
 }
@@ -47,14 +50,14 @@ export class GodcartComponent implements OnInit{
     this.items.splice(i,1);
     this.calcTotal();
 
-    // localStorage.setItem('CartItems', JSON.stringify(this.items))
-    // localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
+    localStorage.setItem('CartItems', JSON.stringify(this.items))
+    localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
   }
 
 
   incrementQuantity(item: any, i: number) {
     item.quantity++;
-    item.calcTotal = item.price * item.quantity;
+    item.calcTotal = item.price 
     this.items.quantity  = item
     this.calcTotal()
   }
@@ -66,6 +69,11 @@ export class GodcartComponent implements OnInit{
     this.calcTotal()
 
 }
+
+
+
+// 
+
 
 // postToCart(){
 //   let pid;

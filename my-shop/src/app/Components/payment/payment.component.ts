@@ -16,4 +16,15 @@ export class PaymentComponent {
   totalAmount= JSON.parse(`${localStorage.getItem('items')}`)
 
   constructor(){}
+
+  
+  // calcTotal() {
+  //   this.total = 0
+  //   this.items.forEach((item: {qty: number, price: number}) => {
+  //     this.total+= (item.qty * item.price)
+
+  //     console.log(this.total)
+  //   });
+  //   localStorage.setItem('items', JSON.stringify(this.items))
+  //   localStorage.setItem('totalAmount',JSON.stringify(this.total))
 }
