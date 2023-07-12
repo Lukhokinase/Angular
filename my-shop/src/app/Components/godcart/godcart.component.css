@@ -113,7 +113,7 @@
 
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 	.shopping-cart .items .product .info {
 		padding-top: 25px;
 		text-align: left;
@@ -132,17 +132,11 @@
 		padding: 4px 10px;
 		text-align: center;
 	}
-}
+} */
 .button1{
 	margin-left: 1px;
 }
 
-<<<<<<< HEAD
-.button three{
-margin-right:1px ;
-}
-
-=======
 .Godbuttons{
 	border-radius: 10px;
 	border: black solid;
@@ -156,5 +150,4 @@ margin-right:1px ;
 .Godtext{
 	font-size: 22px;
 }
->>>>>>> 6c2ef1ddfcb8f445ac9d0390c667ae6f13499736
 
