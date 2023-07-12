@@ -34,11 +34,13 @@
                                             <div class="col-md-4 quantity del d-flex" >
                                                 <ul>
                                                     <!-- {{ item.name }} -->
-                                                    <button (click)="decrementQuantity(item)">-</button>
+                                                    <button  (click)="decrementQuantity(item)">-</button>
                                                     {{ item.qty }}
-                                                    <button (click)="incrementQuantity(item, 1)">+</button>
+                                                    
+                                                    <button  (click)="incrementQuantity(item, 1)">+</button>
 
-                                                    <button (click)="delete(item)">x</button>
+                                                    <button  (click)="delete(item)">x</button>
+
                                                 </ul>
                                             </div>
 
