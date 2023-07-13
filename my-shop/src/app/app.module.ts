@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 // import { ClosingPageComponent } from './Components/closing-page/closing-page.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { UserDBoardComponent } from './Components/user-dboard/user-dboard.component';
+import { ProfileComponent } from './Components/profile/profile.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { UserDBoardComponent } from './Components/user-dboard/user-dboard.compon
       // ClosingPageComponent,
       NavbarComponent,
       UserDBoardComponent,
+      ProfileComponent,
 
 
   ],

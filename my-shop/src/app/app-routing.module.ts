@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CategoryComponent } from './Components/category/category.component';
 // import { ProductListComponent } from './product-list/product-list.component';
 import { PaymentComponent } from './Components/payment/payment.component';
+import { ProfileComponent } from './Components/profile/profile.component';
 
 
 import { MenuofGodComponent } from './Components/menuof-god/menuof-god.component'
@@ -18,6 +19,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { UserDBoardComponent } from './Components/user-dboard/user-dboard.component';
+import { EmptyBagComponent } from './Components/empty-bag/empty-bag.component';
 
 const routes: Routes = [
 
@@ -34,7 +36,9 @@ const routes: Routes = [
   { path: 'Payment', component: PaymentComponent},
   {path: 'login', component:LoginComponent},
   { path:'register',component:RegisterComponent},
-  { path:'userProfile',component:UserDBoardComponent}
+  { path:'userProfile',component:UserDBoardComponent},
+  { path: 'profile', component:ProfileComponent},
+  { path: 'empty', component:EmptyBagComponent}
 
 
 

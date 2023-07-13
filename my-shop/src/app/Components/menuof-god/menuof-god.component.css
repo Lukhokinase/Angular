@@ -170,19 +170,24 @@
     -webkit-animation:content-s 7.5s infinite;
     -moz-animation:content-s 7.5s infinite;
     animation:content-s 7.5s infinite;
-    background: white;
     
-    border-radius: 17px;
+    
+    
    
   }
   .content-txt h1{
     font-family: 'Alfa Slab One';
     text-transform:uppercase;
     font-size:24px;
-    color:#fff;
+    color:#000000;
     text-align:left;
     margin-left:30px;
-    padding-bottom:10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: #0000008f solid;
+    border-width: 0.5px;
   }
   .content-txt h2{
     font-family:arial;
@@ -583,6 +588,8 @@
   .wordss{
     position: absolute;
     bottom: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
    
     
    
@@ -609,3 +616,10 @@
     object-fit: scale-down;
     
   }
+
+  .img-fluid1{
+    width: 100%;
+    height: auto;
+  }
+
+ 

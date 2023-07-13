@@ -17,12 +17,15 @@
     </div>
   </div>
 <div class="container p-0">
+    
     <div class="card px-4">
-        <p class="h8 py-3">Payment Details</p>
+        <svg  class="Goditems1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48"><mask id="ipSBack0"><path fill="#fff" fill-rule="evenodd" stroke="#fff" stroke-linejoin="round" stroke-width="4" d="M44 40.836c-4.893-5.973-9.238-9.362-13.036-10.168c-3.797-.805-7.412-.927-10.846-.365V41L4 23.545L20.118 7v10.167c6.349.05 11.746 2.328 16.192 6.833c4.445 4.505 7.009 10.117 7.69 16.836Z" clip-rule="evenodd"/></mask><path fill="black" d="M0 0h48v48H0z" mask="url(#ipSBack0)"/></svg>
+        <p class="h8 py-3 ">Payment Details</p>
+        
         <div class="row gx-3">
             <div class="col-12">
                 <div class="d-flex flex-column">
-                    <p class="text mb-1">Person Name</p>
+                    <p class="text mb-1">Card Holder</p>
                     <input class="form-control mb-3" type="text" placeholder="Name" value="">
                 </div>
             </div>
@@ -47,10 +50,13 @@
             <div class="col-12">
                 <div class="btn btn-primary mb-3">
                     <span class="ps-3">R{{totalAmount}}</span>
-                    <span class="fas fa-arrow-right"></span>
+                    
                 </div>
             </div>
-            <button type="button" class="btn btn-dark btn-lg btn-block button1" routerLink="/menu">Pay</button>
+            <button type="button" class="btn btn-success btn-lg btn-block button1" routerLink="/menu">Pay</button>
+           
+    
+            <button type="button" class="btn btn-success btn-lg btn-block button1 CancelButton" routerLink="/menu">Cancel</button>
         </div>
       
     </div>

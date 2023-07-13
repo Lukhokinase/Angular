@@ -85,7 +85,7 @@
 .login_wrapper .form-control:focus {
   color: #999;
   background-color: fafafa;
-  border: 1px solid #4285f4 !important;
+  border: 1px solid #008323 ;
 }
 
 .login_remember_box {
@@ -167,4 +167,6 @@ p {
 
 .phunga{
   font-family: lobster;
+  font-size: 29px;
+    padding-bottom: 45px;
 }
