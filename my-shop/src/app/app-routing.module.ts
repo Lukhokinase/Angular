@@ -21,6 +21,7 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { UserDBoardComponent } from './Components/user-dboard/user-dboard.component';
 import { EmptyBagComponent } from './Components/empty-bag/empty-bag.component';
 import { ClosingPageComponent } from './Components/closing-page/closing-page.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 const routes: Routes = [
 
@@ -41,7 +42,8 @@ const routes: Routes = [
   { path: 'profile', component:ProfileComponent},
   { path: 'empty', component:EmptyBagComponent},
 
-  { path:'closing-page',component:ClosingPageComponent}
+  { path:'closing-page',component:ClosingPageComponent},
+  { path: 'admin', component:AdminDashboardComponent}
 
 
 ];

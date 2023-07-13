@@ -29,7 +29,21 @@ export class ProductsService {
   }
 
   deleteOne(id: any):Observable<any>{
-    return this.http.get<any>(apiUrl + '/:id')
+    return this.http.delete<any>(apiUrl + id)
+  }
+
+  updateItem(item: Item, id: any) {
+
+    const url = apiUrl+id;
+  
+    return this.http.put(url, item);
+   
+  }
+
+  
+
+  addItem(data: Item) {
+    return this.http.post(apiUrl + "products", data)
   }
  
 

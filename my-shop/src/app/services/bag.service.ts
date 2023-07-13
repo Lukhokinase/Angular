@@ -32,19 +32,25 @@ ngOnInit(): void {
 this.getAllItems()
 }
 addToCart(product: any ) {
+
+
       
   const productExistInCart = this.items.find(({itemname}) => itemname === product.itemname);
+  // productExistInCart.quantity = 0
   if (!productExistInCart) {
   this.items.push({...product}); 
   this.items.length;
   this.cartItemcount.next(this.cartItemcount.value + 1);
   JSON.stringify(localStorage.setItem('Count',this.cartItemcount.value + 1))
-  return;
+  // return;
  }
 
- productExistInCart.quantity! = productExistInCart.quantity! + 1;
- this.cartItemcount.next(this.cartItemcount.value + 1);
- console.log(productExistInCart.quantity)
+ if(productExistInCart){ 
+  productExistInCart.quantity = productExistInCart.quantity + 1;
+  this.cartItemcount.next(this.cartItemcount.value + 1);
+  console.log(productExistInCart.quantity)
+  this.Total()
+ }
  
  }
 

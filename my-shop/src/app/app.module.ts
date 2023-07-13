@@ -24,6 +24,9 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { UserDBoardComponent } from './Components/user-dboard/user-dboard.component';
 import { ProfileComponent } from './Components/profile/profile.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AdminUpdateItemComponent } from './admin-update-item/admin-update-item.component';
+
 
 
 
@@ -47,6 +50,9 @@ import { ProfileComponent } from './Components/profile/profile.component';
       NavbarComponent,
       UserDBoardComponent,
       ProfileComponent,
+      AdminDashboardComponent,
+      AdminUpdateItemComponent,
+
 
 
   ],
