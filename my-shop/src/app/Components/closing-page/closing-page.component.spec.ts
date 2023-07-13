@@ -19,3 +19,5 @@ describe('ClosingPageComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+export { ClosingPageComponent };

@@ -20,6 +20,7 @@ import { RegisterComponent } from './Components/register/register.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { UserDBoardComponent } from './Components/user-dboard/user-dboard.component';
 import { EmptyBagComponent } from './Components/empty-bag/empty-bag.component';
+import { ClosingPageComponent } from './Components/closing-page/closing-page.component';
 
 const routes: Routes = [
 
@@ -38,8 +39,9 @@ const routes: Routes = [
   { path:'register',component:RegisterComponent},
   { path:'userProfile',component:UserDBoardComponent},
   { path: 'profile', component:ProfileComponent},
-  { path: 'empty', component:EmptyBagComponent}
+  { path: 'empty', component:EmptyBagComponent},
 
+  { path:'closing-page',component:ClosingPageComponent}
 
 
 ];

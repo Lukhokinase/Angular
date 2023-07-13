@@ -56,7 +56,7 @@ export class MenuofGodComponent implements OnInit {
       console.log(data)
     })
   }
-  // getTotal(){
-  //   this.bagService.getAllItems();
-  // }
+  getTotal(){
+    this.bagService.getAllItems();
+  }
 }

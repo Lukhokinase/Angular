@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #0C4160;
+    background-color: lightblue;
 
     padding: 30px 10px;
 }
@@ -20,7 +20,7 @@ body {
 .card {
     max-width: 500px;
     margin: auto;
-    color: black;
+    /* color: black; */
     border-radius: 20 px;
 }
 

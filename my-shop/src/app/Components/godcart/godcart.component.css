@@ -113,7 +113,7 @@
 
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 	.shopping-cart .items .product .info {
 		padding-top: 25px;
 		text-align: left;
@@ -132,7 +132,7 @@
 		padding: 4px 10px;
 		text-align: center;
 	}
-}
+} */
 .button1{
 	margin-left: 1px;
 }
