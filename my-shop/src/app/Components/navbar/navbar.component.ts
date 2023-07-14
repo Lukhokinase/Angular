@@ -23,8 +23,6 @@ export class NavbarComponent implements OnInit{
   ngOnInit(): void {
     this.cartCount = this.cartService.getCount();
     this.cartTotal = this.cartService.getTotal();
-    this.cartTotal;
-    this.cartCount;
     this.isLoggedIn = !!this.tokenStorage.getToken()
 
     if(this.isLoggedIn){
