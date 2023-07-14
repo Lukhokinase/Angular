@@ -9,8 +9,8 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class GodcheckoutComponent implements OnInit {
 
-items = JSON.parse(`${localStorage.getItem('items')}`)
-count = JSON.parse(`${localStorage.getItem('Count')}`)
+items = JSON.parse(`${localStorage.getItem('Cartitems')}`)
+count = JSON.parse(`${localStorage.getItem('TotalAmount')}`)
 userId:any
 //items: any
 totalAmount = this.bagService.totAmount

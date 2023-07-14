@@ -12,7 +12,7 @@ import { TokenService } from 'src/app/services/token.service';
 export class GodcartComponent implements OnInit{
 
   items = JSON.parse(localStorage.getItem('CartItems') || '[]')
-  totalAmount = this.bagService.totAmount
+  totalAmount = JSON.parse(localStorage.getItem('totalAmount') || '[]')
   userId: any;
   cartTotal: any;
   
@@ -22,7 +22,7 @@ export class GodcartComponent implements OnInit{
   ngOnInit(): void {
    this.items
    this.getAllItem()
-   this.calcTotal()
+   this.cartTotal = this.bagService.getTotal();
    const user = this.tokenStorage.getUser()
    this.userId = user.id
   }
@@ -33,40 +33,42 @@ export class GodcartComponent implements OnInit{
     return this.bagService.getAllItems()
   }
   
-  calcTotal() {
+  Total() {
     this.totalAmount = 0
     this.items.forEach((item: {quantity: number, price: number}) => {
-    this.totalAmount += (item.quantity)
+    this.totalAmount += (item.quantity * item.price)
 
     return this.items.reduce((acc: any, products: { num: any; }) => (acc += products.num), 0);
   });
     
-    // localStorage.setItem('CartItems', JSON.stringify(this.items))
-    // localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
+    localStorage.setItem('CartItems', JSON.stringify(this.items))
+    localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
 }
 
 
   delete(i:number){
     this.items.splice(i,1);
-    this.calcTotal();
+    this.getTotal();
 
     localStorage.setItem('CartItems', JSON.stringify(this.items))
-    localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
+    localStorage.setItem('TotalAmount',JSON.stringify(this.cartTotal))
   }
 
-
+getTotal(){
+  return this.cartTotal
+}
   incrementQuantity(item: any, i: number) {
     item.quantity++;
     item.calcTotal = item.price 
     this.items.quantity  = item
-    this.calcTotal()
+    this.getTotal();
   }
 
   decrementQuantity(item: any){
     if (item.quantity > 1) {
       item.quantity--;
     }
-    this.calcTotal()
+    this.getTotal();
 
 }
 
