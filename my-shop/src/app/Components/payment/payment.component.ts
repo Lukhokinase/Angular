@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BagService } from 'src/app/services/bag.service';
 
 
 @Component({
@@ -6,16 +7,28 @@ import { Component } from '@angular/core';
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.css']
 })
-export class PaymentComponent {
+export class PaymentComponent implements OnInit {
+
+
+
+  cartTotal= JSON.parse(`${localStorage.getItem('items')}`)
+
+
+  constructor(private bagService: BagService, )  {}
+  ngOnInit(): void {
+    this.cartTotal = this.bagService.getTotal();
+  }
+
+
 
   
-  totalItems = JSON.parse(`${localStorage.getItem('items')}`)
+  // totalItems = JSON.parse(`${localStorage.getItem('items')}`)
   
-  items: any
+  // items: any
 
-  totalAmount= JSON.parse(`${localStorage.getItem('items')}`)
+  
 
-  constructor(){}
+  
 
   
   // calcTotal() {

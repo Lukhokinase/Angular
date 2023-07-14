@@ -68,6 +68,7 @@ addToCart(product: any ) {
   }
 
   getTotal(){
+    
     return this.cartTotal;
   }
 
@@ -83,4 +84,14 @@ addToCart(product: any ) {
   getUserCart():Observable<any>{
     return this.http.get<any>(this.auth_api)
   }
+
+  delete(i:number){
+    this.items.splice(i,1);
+    this.getTotal();
+
+    localStorage.setItem('CartItems', JSON.stringify(this.items))
+    localStorage.setItem('TotalAmount',JSON.stringify(this.cartTotal))
+  }
+
+  
 }

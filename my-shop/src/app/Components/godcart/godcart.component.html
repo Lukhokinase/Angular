@@ -65,7 +65,7 @@
 
                         <div class="summary-item">
                             <span class="text">Total</span>
-                            <span class="price">{{totalAmount| currency:'R'}}</span>
+                            <span class="price">R{{cartTotal |async}}</span>
                         </div>
 
                         <button type="button" class="btn btn-dark btn-lg btn-block" routerLink="/Checkout">Checkout</button>
