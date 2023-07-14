@@ -9,8 +9,8 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class GodcheckoutComponent implements OnInit {
 
-items = JSON.parse(`${localStorage.getItem('Cartitems')}`)
-count = JSON.parse(`${localStorage.getItem('TotalAmount')}`)
+items = JSON.parse(`${localStorage.getItem('CartItems')}`)
+count = JSON.parse(`${localStorage.getItem('Total')}`)
 userId:any
 //items: any
 totalAmount = this.bagService.totAmount
@@ -20,6 +20,7 @@ totalAmount = this.bagService.totAmount
 
   ngOnInit(): void {
     this.items
+    console.log(this.items)
     const user = this.tokenService.getUser()
     this.userId = user.id
     //this.items =this.totalItems.length
