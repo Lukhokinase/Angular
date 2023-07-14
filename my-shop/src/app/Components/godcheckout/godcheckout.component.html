@@ -6,15 +6,14 @@
   
 
 
-
-  <div *ngFor="let item of items">
+<div class='card-hearder btn-block' *ngFor="let item of items">
     {{item.itemname}}
     {{item.quantity}}
   </div>
     <div>Total Amount:R{{totalAmount}}</div>
 </div>
 <div>
-  <button type="button" class="btn btn-dark btn-lg btn-block" routerLink="/Payment">Confirm</button>
+  <button type="button" class="btn btn-dark btn-lg btn-block" [disabled]="totalAmount === 0" routerLink="/Payment">Confirm</button>
   <button type="button" class="btn btn-dark btn-lg btn-block button1" routerLink="/menu">Cancel Order</button>
  
 </div>

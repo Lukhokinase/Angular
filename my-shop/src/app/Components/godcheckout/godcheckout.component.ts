@@ -19,11 +19,25 @@ totalAmount = this.bagService.totAmount
   constructor(private bagService: BagService, private tokenService: TokenService){}
 
   ngOnInit(): void {
+
+    this.retrieveCheckout()
     this.items
     console.log(this.items)
     const user = this.tokenService.getUser()
     this.userId = user.id
     //this.items =this.totalItems.length
+  }
+
+  retrieveCheckout(): void {
+     
+    if(!window.sessionStorage.getItem('auth-token')){
+
+      setTimeout(() => {
+
+        window.location.replace('/login')
+      },2000)
+    }
+
   }
 
   postToCart(){
