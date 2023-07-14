@@ -32,7 +32,7 @@ export class NavbarComponent implements OnInit{
     this.username = user.username
     console.log(this.username)
   }
-  localStorage.setItem('CartItems', JSON.stringify(this.cartCount))
+  localStorage.setItem('CartCount', JSON.stringify(this.cartCount))
   localStorage.setItem('TotalAmount',JSON.stringify(this.cartTotal))
 
   }

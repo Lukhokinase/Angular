@@ -11,18 +11,19 @@ import { TokenService } from 'src/app/services/token.service';
 
 export class GodcartComponent implements OnInit{
 
-  items = JSON.parse(localStorage.getItem('CartItems') || '[]')
-  totalAmount = JSON.parse(localStorage.getItem('totalAmount') || '[]')
+  //items = JSON.parse(localStorage.getItem('CartItems') || '[]')
+  totalAmount = this.bagService.totAmount
   userId: any;
-  cartTotal: any;
+  items : any
+  //cartTotal: any;
   
   // totalAmount: this.bagService.totAmount
 
   constructor(private bagService:  BagService, private tokenStorage: TokenService){}
   ngOnInit(): void {
-   this.items
+   //this.items
    this.getAllItem()
-   this.cartTotal = this.bagService.getTotal();
+   this.calcTotal()
    const user = this.tokenStorage.getUser()
    this.userId = user.id
   }
@@ -30,38 +31,46 @@ export class GodcartComponent implements OnInit{
 
   getAllItem(){
     
-    return this.bagService.getAllItems()
+    this.items = this.bagService.getAllItems()
   }
   
-//   Total() {
-//     this.totalAmount = 0
-//     this.items.forEach((item: {quantity: number, price: number}) => {
-//     this.totalAmount += (item.quantity * item.price)
-
-//     return this.items.reduce((acc: any, products: { num: any; }) => (acc += products.num), 0);
-//   });
+  
     
-//     localStorage.setItem('CartItems', JSON.stringify(this.items))
-//     localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
-// }
+    // localStorage.setItem('CartItems', JSON.stringify(this.items))
+    // localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
 
 
-  delete(i:number){
-    this.items.splice(i,1);
-    this.getTotal();
 
+  // delete(i:number){
+  //   this.items.splice(i,1);
+  //   this.calcTotal();
+
+  //   localStorage.setItem('CartItems', JSON.stringify(this.items))
+  //   localStorage.setItem('TotalAmount',JSON.stringify(this.totalAmount))
+  // }
+  delete(index:any,e:Event) {
+    console.log(this.items[index].quantity)
+
+    this.bagService.cartItemcount.next(this.bagService.cartItemcount.value - this.items[index].quantity)
+    this.items.splice(index, 1);
+    this.calcTotal();
     localStorage.setItem('CartItems', JSON.stringify(this.items))
-    localStorage.setItem('TotalAmount',JSON.stringify(this.cartTotal))
   }
 
-getTotal(){
-  return this.cartTotal
-}
-  incrementQuantity(item: any, i: number) {
-    item.quantity++;
-    item.calcTotal = item.price 
-    this.items.quantity  = item
-    this.getTotal();
+  // incrementQuantity(quantity: any, i: number) {
+  //   quantity++;
+  //   item.calcTotal = item.price 
+  //   this.items[i].quantity  = quantity
+  //   this.calcTotal()
+  // }
+  increment(qty: any, index: number){
+    qty++
+    this.items[index].quantity = qty
+    this.items.length
+    this.bagService.cartItemcount.next(this.bagService.cartItemcount.value + 1)
+    this.bagService.cartTotal.next(this.bagService.cartTotal.value + this.totalAmount)
+
+    this.calcTotal();
   }
 //   decrementQuantity(quantity: any, i: number){
 //     if (quantity > 1) {
@@ -69,11 +78,13 @@ getTotal(){
 //     }
 //     this.calcTotal()
 
+// }
+
 decrementQuantity(qty: any, index: number){
     
   if(qty > 1){
     qty--
-  this.items[index].qty = qty
+  this.items[index].quantity = qty
   this.items.length;
   this.bagService.cartItemcount.next(this.bagService.cartItemcount.value - 1)
   //this.cartService.cartTotal.next(this.cartService.cartTotal.value - this.totalAmount)
@@ -97,13 +108,13 @@ calcTotal() {
   this.totalAmount = 0
     this.items.forEach((item: { quantity: number; price: number; }) => {
       this.totalAmount += (item.quantity * item.price);
-      this.cartTotal.next(this.totalAmount);
+      //this.bagService.cartTotal.next(this.totalAmount);
       //console.log(this.cartTotal)
       localStorage.setItem('Total',JSON.stringify(this.totalAmount))
     })
     
     this.bagService.cartTotal.next(this.totalAmount);
-    //localStorage.setItem('for', JSON.stringify(this.items))
+    localStorage.setItem('CartItems', JSON.stringify(this.items))
 
 }
 // 

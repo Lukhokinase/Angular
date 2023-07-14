@@ -14,7 +14,7 @@ export class BagService implements OnInit {
 //  auth_api = 'https://localhost:3200'
   
   cartItemcount = new BehaviorSubject<any>(0);
-  public cartTotal = new BehaviorSubject<any>(0);
+  cartTotal = new BehaviorSubject<any>(0);
 
   items: Item[] = [];
   
@@ -39,7 +39,7 @@ addToCart(product: any ) {
   this.items.push({...product}); 
   this.items.length;
   this.cartItemcount.next(this.cartItemcount.value + 1);
-  JSON.stringify(localStorage.setItem('Count',this.cartItemcount.value + 1))
+  JSON.stringify(localStorage.setItem('CartCount',this.cartItemcount.value))
   // return;
  }
 
@@ -56,7 +56,7 @@ addToCart(product: any ) {
     
   this.totAmount = 0
   this.items.forEach((item:any) => {
-    this.totAmount += (item.price)
+    this.totAmount += (item.price * item.quantity)
     this.cartTotal.next(this.totAmount);
     console.log(this.totAmount)
     localStorage.setItem('TotalAmount',JSON.stringify(this.totAmount))
