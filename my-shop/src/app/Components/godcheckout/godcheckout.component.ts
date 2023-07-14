@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BagService } from 'src/app/services/bag.service';
 import { TokenService } from 'src/app/services/token.service';
-
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-godcheckout',
   templateUrl: './godcheckout.component.html',
@@ -16,7 +16,7 @@ userId:any
 totalAmount = this.bagService.totAmount
 
 
-  constructor(private bagService: BagService, private tokenService: TokenService){}
+  constructor(private bagService: BagService, private tokenService: TokenService, private router: Router){}
 
   ngOnInit(): void {
 
@@ -31,11 +31,8 @@ totalAmount = this.bagService.totAmount
   retrieveCheckout(): void {
      
     if(!window.sessionStorage.getItem('auth-token')){
-
-      setTimeout(() => {
-
-        window.location.replace('/login')
-      },2000)
+      this.router.navigate(['/login'])
+      
     }
 
   }
