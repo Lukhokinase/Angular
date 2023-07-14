@@ -49,6 +49,7 @@ export class MenuofGodComponent implements OnInit {
     this.bagService.addToCart(item);
     this.bagService.Total();
     console.log(item)
+    
   }
   getAllItems(){
     this.productService.getAllItems().subscribe((data)=>{

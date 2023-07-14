@@ -8,9 +8,7 @@ import { Injectable, OnInit } from '@angular/core';
   providedIn: 'root'
 })
 export class BagService implements OnInit {
-  getItems() {
-    throw new Error('Method not implemented.');
-  }
+  
 // const User_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/v2/users/';
  auth_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/api/auth/'
 //  auth_api = 'https://localhost:3200'
