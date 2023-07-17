@@ -76,8 +76,13 @@
                     <div class="login_btn_wrapper">
                         <button  class="btn btn-dark login_btn text-center" (click)="SignUp()" [disabled]="username.invalid || password.invalid || email.invalid"> SIGN UP </button>
                     </div>
-                   
-                
+                    <div class="login_message">
+                        <p>Don&rsquo;t have an account ? <a routerLink="/register"> Sign up </a> </p>
+                    </div>
+                </form>
+                <div class="alert alert-success" *ngIf="isSuccessful">
+                    Your shop registration is successfull!
+                </div>
                 <!-- /.login_wrapper-->
             </div>
         

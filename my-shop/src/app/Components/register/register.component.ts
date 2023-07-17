@@ -8,15 +8,17 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 
 
-    export class RegisterComponent implements OnInit {
+   export class RegisterComponent implements OnInit {
    form: any = {
       username: '',
       email: '',
       password: ''
     };
+
     isSuccessful = false;
     isSignUpFailed = false;
     errorMessage = '';
+
     constructor(private authService: AuthService) { }
     ngOnInit(): void {
     }
