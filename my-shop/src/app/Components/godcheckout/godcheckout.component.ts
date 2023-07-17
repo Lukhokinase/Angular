@@ -61,7 +61,7 @@ totalAmount = this.bagService.totAmount
     }
 
     replacePage(): void {
-      window.location.replace('/Payment')
+      this.router.navigate(['/Payment'])
     }
 }
 
