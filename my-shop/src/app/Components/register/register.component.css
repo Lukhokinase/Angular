@@ -170,3 +170,26 @@ p {
   font-size: 29px;
     padding-bottom: 45px;
 }
+
+@media only screen and (min-width: 1272px){
+
+  .image-container {
+    width: 300px;
+    height: 300px;
+    /* 1746 */
+    background-image: url('../../../assets/Coffe.png');
+    background-size: cover; /* Adjust this property */
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* position: absolute;
+    left: 1123px;
+    top: 181px; */
+    /* position: absolute;
+    left: 1011px;
+    top: 181px; */
+    position: absolute;
+    left: 830px;
+    top: 270px;
+}
+
+}
