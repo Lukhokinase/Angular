@@ -67,22 +67,7 @@
     .container-fluid{
       background-color: red;
     }
-    @media (max-width: 768px) {
-      #sidebar {
-        margin-left: -17rem;
-      }
-      #sidebar.active {
-        margin-left: 0;
-      }
-      #content {
-        width: 100%;
-        margin: 0;
-      }
-      #content.active {
-        margin-left: 17rem;
-        width: calc(100% - 17rem);
-      }
-    }
+    
   
     .icon{
       bottom: 2px;
@@ -200,39 +185,6 @@
     }
     
     /* Switch */
-    .switch{
-      width:120px;
-      height:10px;
-      position:absolute;
-      bottom:50px;
-      z-index:99;
-      left:30px;
-    }
-    .switch > ul{
-      list-style:none;
-    }
-    .switch > ul > li{
-      width:10px;
-      height:10px;
-      border-radius:50%;
-      background:#333;
-      float:left;
-      margin-right:5px;
-      cursor:pointer;
-    }
-    .switch ul{
-      overflow:hidden;
-    }
-    .on{
-      width:100%;
-      height:100%;
-      border-radius:50%;
-      background:#f39c12;
-      position:relative;
-      -webkit-animation:on 30s infinite;
-      -moz-animation:on 30s infinite;
-      animation:on 30s infinite;
-    }
     
     /* Animation */
     /* @-webkit-keyframes slide{
