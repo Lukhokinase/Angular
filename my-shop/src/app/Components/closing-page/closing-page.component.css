@@ -1,0 +1,14 @@
+.text-center{
+  margin-top: 150px;
+  /* background-color: lightgray; */
+   justify-content:center ;
+  flex-direction: 100px;
+}
+.button{
+  margin-top: 120px;
+}
+
+.picture{
+  margin: auto;
+}
+

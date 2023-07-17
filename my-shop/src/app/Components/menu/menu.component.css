@@ -1,0 +1,110 @@
+.top{
+    position: absolute;
+    width: 316px;
+    height: 88px;
+    left: calc(50% - 316px/2);
+    top: 69px;
+
+    background: #D0B48F;
+    border-radius: 7px;
+}
+
+.top2{
+    position: absolute;
+    width: 111px;
+    height: 26px;
+    left: 34px;
+    top: 104px;
+    z-index: 999;
+
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+.logo{
+    position: absolute;
+    left: 7px;
+    top: 6px;
+}
+.logo2{
+    position: absolute;
+    left: 238px;
+    border-radius: 0px 0px 10px 0px;
+    top: 28px;
+    z-index: 9999;
+
+}
+.cat{
+    position: absolute;
+    left: calc(50% - 316px/2);
+top: 168px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 13px;
+display: flex;
+text-indent: 10px;
+
+color: #000000;
+}
+.contain{
+    box-sizing: border-box;
+
+position: absolute;
+width: 142px;
+height: 127px;
+left: 25px;
+top: 196px;
+
+background: linear-gradient(116.82deg, #FFF0D2 16.13%, rgba(255, 255, 255, 0) 100%);
+
+border: 1px solid #CCCCCC;
+border-radius: 18px;
+}
+.nav{
+    position: absolute;
+width: 311px;
+height: 61px;
+left: calc(50% - 311px/2 + 0.5px);
+top: 710px;
+
+background: rgba(0, 0, 0, 0.59);
+backdrop-filter: blur(2px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 32px;
+}
+.home{
+    position: absolute;
+width: 35px;
+height: 35px;
+left: 26px;
+top: 13px;
+}
+.heart{
+    position: absolute;
+width: 35px;
+height: 35px;
+left: 95px;
+top: 13px;
+
+}
+.cart{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 172px;
+    top: 13px;
+
+
+}
+.ppl{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 246px;
+    top: 13px;
+    
+
+
+}

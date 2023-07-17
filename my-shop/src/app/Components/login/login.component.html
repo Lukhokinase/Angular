@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+
+
+
+<div class="login_form_wrapper d-flex justify-content-center">
+
+    <div class="image-container"></div>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                
+                <form class="login_wrapper" (ngSubmit)="f.form.valid && login()" #f="ngForm" nonvalidate>
+                    <div class="logo d-flex justify-content-center">
+                        <img src="../../assets/logo.png" alt="" height="80" width="80">
+                      </div>
+                      <div class="text-center mt-4 name phunga">
+                          PhungaCafe
+                      </div>
+                    
+                    <div class="formsix-pos" >
+                        <div class="form-group i-email">
+                            
+                            <input type="username" class="form-control" required id="username" placeholder="username"
+                            name="username" [(ngModel)]="form.username" required #username="ngModel" 
+                            required [ngClass]="{'is-invalid': f.submitted && username.errors}">
+
+                        </div> 
+                    </div> 
+                    <div class="formsix-e">
+                        <div class="form-group i-password">
+                            <input type="password" class="form-control" required id="password" placeholder="password"
+                            name="password" [(ngModel)]="form.password" required #username="ngModel" 
+                            required >
+                        </div>
+                    </div>
+                    <div class="login_password"></div>
+                       
+                        
+                    
+                    <div class="login_btn_wrapper">
+                        <a  class="btn btn-dark login_btn" (click)="login()" > Login </a>
+                    </div>
+                    <div class="login_message">
+                        <p>Don&rsquo;t have an account ? <a routerLink="/register"> Sign up </a> </p>
+                    </div>
+                </form>
+            </div>
+            
+      
+                
+         
+            
