@@ -20,7 +20,7 @@ export class ProductsService {
 
  
   getAllItems(): Observable<Item[]> {
-    return this.http.get<Item[]>(apiUrl + 'products/getall')
+    return this.http.get<Item[]>(apiUrl)
       
   };
   
@@ -43,7 +43,7 @@ export class ProductsService {
   
 
   addItem(data: Item) {
-    return this.http.post(apiUrl + "products", data)
+    return this.http.post(apiUrl, data)
   }
  
 

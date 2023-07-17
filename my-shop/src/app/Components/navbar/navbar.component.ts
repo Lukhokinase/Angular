@@ -23,8 +23,6 @@ export class NavbarComponent implements OnInit{
   ngOnInit(): void {
     this.cartCount = this.cartService.getCount();
     this.cartTotal = this.cartService.getTotal();
-    this.cartTotal;
-    this.cartCount;
     this.isLoggedIn = !!this.tokenStorage.getToken()
 
     if(this.isLoggedIn){
@@ -32,7 +30,7 @@ export class NavbarComponent implements OnInit{
     this.username = user.username
     console.log(this.username)
   }
-  localStorage.setItem('CartItems', JSON.stringify(this.cartCount))
+  localStorage.setItem('CartCount', JSON.stringify(this.cartCount))
   localStorage.setItem('TotalAmount',JSON.stringify(this.cartTotal))
 
   }

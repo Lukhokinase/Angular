@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
 import { UsersService } from 'src/app/services/users.service';
@@ -23,7 +24,7 @@ import { UsersService } from 'src/app/services/users.service';
     isSuccessful = true;
     isSignUpFailed = true;
     errorMessage = 'password or username is incorrect';
-    constructor(private authservice: AuthService, private usersservice: UsersService, private tokenStorage: TokenService) { }
+    constructor(private authservice: AuthService, private usersservice: UsersService, private tokenStorage: TokenService, private router: Router ) { }
     ngOnInit(): void {
 
       
@@ -50,7 +51,7 @@ import { UsersService } from 'src/app/services/users.service';
     }
   
   replacePage(): void {
-    window.location.replace('/menu')
+    this.router.navigate(['/menu'])
   }
 
   }

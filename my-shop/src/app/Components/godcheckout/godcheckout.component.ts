@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BagService } from 'src/app/services/bag.service';
 import { TokenService } from 'src/app/services/token.service';
-
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-godcheckout',
   templateUrl: './godcheckout.component.html',
@@ -9,20 +9,32 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class GodcheckoutComponent implements OnInit {
 
-items = JSON.parse(`${localStorage.getItem('Cartitems')}`)
-count = JSON.parse(`${localStorage.getItem('TotalAmount')}`)
+items = JSON.parse(`${localStorage.getItem('CartItems')}`)
+count = JSON.parse(`${localStorage.getItem('Total')}`)
 userId:any
 //items: any
 totalAmount = this.bagService.totAmount
 
 
-  constructor(private bagService: BagService, private tokenService: TokenService){}
+  constructor(private bagService: BagService, private tokenService: TokenService, private router: Router){}
 
   ngOnInit(): void {
+
+    this.retrieveCheckout()
     this.items
+    console.log(this.items)
     const user = this.tokenService.getUser()
     this.userId = user.id
     //this.items =this.totalItems.length
+  }
+
+  retrieveCheckout(): void {
+     
+    if(!window.sessionStorage.getItem('auth-token')){
+      this.router.navigate(['/login'])
+      
+    }
+
   }
 
   postToCart(){
@@ -49,7 +61,7 @@ totalAmount = this.bagService.totAmount
     }
 
     replacePage(): void {
-      window.location.replace('/Payment')
+      this.router.navigate(['/Payment'])
     }
 }
 
