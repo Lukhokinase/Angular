@@ -39,7 +39,7 @@ addToCart(product: any ) {
   this.items.push({...product}); 
   this.items.length;
   this.cartItemcount.next(this.cartItemcount.value + 1);
-  JSON.stringify(localStorage.setItem('CartCount',this.cartItemcount.value))
+  localStorage.setItem('CartCount',JSON.stringify(this.cartItemcount.value))
   // return;
  }
 

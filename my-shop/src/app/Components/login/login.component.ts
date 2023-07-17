@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Location } from '@angular/common';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
 import { UsersService } from 'src/app/services/users.service';
@@ -23,7 +24,12 @@ import { UsersService } from 'src/app/services/users.service';
     isSuccessful = true;
     isSignUpFailed = true;
     errorMessage = 'password or username is incorrect';
-    constructor(private authservice: AuthService, private usersservice: UsersService, private tokenStorage: TokenService) { }
+    constructor(
+      private authservice: AuthService, 
+      private usersservice: UsersService, 
+      private tokenStorage: TokenService,
+      private location: Location
+      ) { }
     ngOnInit(): void {
 
       
@@ -39,7 +45,9 @@ import { UsersService } from 'src/app/services/users.service';
           this.tokenStorage.saveUser(data)
           this.isSuccessful = true;
           this.isLoginFailed = false;
-          this.replacePage()
+          // this.replacePage()
+          this.location.back();
+          
         },
         error: (err: { error: { message: string; }; }) => {
           this.errorMessage = err.error.message;
