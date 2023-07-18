@@ -41,8 +41,8 @@
           <ul class="dropdown-menu dropdown-menu-end ">
             <li><a class="dropdown-item" routerLink="/profile">Profile</a></li>
             <li><a class="dropdown-item" routerLink="/login" *ngIf="!isLoggedIn">Login</a></li>
-            <li><a class="dropdown-item" routerLink="/register">Signup</a></li>
-            <li><a class="dropdown-item" routerLink="/admin">My Shop</a></li>
+            <li><a class="dropdown-item" routerLink="/register" *ngIf = "!isLoggedIn">Signup</a></li>
+            <li><a class="dropdown-item" routerLink="/admin" *ngIf="isAdmin == true">My Shop</a></li>
             <li *ngIf="isLoggedIn" ><a class="dropdown-item" (click)="logout()">Signout</a></li>
           </ul>
         
