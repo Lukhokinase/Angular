@@ -25,6 +25,7 @@ totalAmount = this.bagService.totAmount
     console.log(this.items)
     const user = this.tokenService.getUser()
     this.userId = user.id
+    
     //this.items =this.totalItems.length
   }
 
