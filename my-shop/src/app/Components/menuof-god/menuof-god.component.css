@@ -16,10 +16,6 @@
     background-image: linear-gradient(90deg, #edeaea 0%, #ffffff 50%, #ffffff 100%);
     
   }
-  .card:hover{
-    transform: scale(1.1);
-    background-image: linear-gradient(180deg, #edeaea 0%, #ffffff 50%, #ffffff 100%);
-  }
   
   .vertical-nav {
     min-width: 17rem;
@@ -512,10 +508,6 @@
  
 
 
-  .a{
-    color: #fe0066;
-  }
-
   #slider{
     height: 250px;
     border-radius: 30px;
@@ -537,11 +529,7 @@
    
   }
  
-  .wordss1{
-    position: absolute;
-    bottom: 300px;
-   
-  }
+
   .heading{
     text-align: center;
     font-family: 'Raleway';
