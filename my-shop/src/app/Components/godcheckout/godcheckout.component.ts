@@ -10,10 +10,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class GodcheckoutComponent implements OnInit {
 
 items = JSON.parse(`${localStorage.getItem('CartItems')}`)
-count = JSON.parse(`${localStorage.getItem('Total')}`)
+totalAmount = JSON.parse(`${localStorage.getItem('Total')}`)
 userId:any
 //items: any
-totalAmount = this.bagService.totAmount
+
 
 
   constructor(private bagService: BagService, private tokenService: TokenService, private router: Router){}
@@ -22,6 +22,7 @@ totalAmount = this.bagService.totAmount
 
     this.retrieveCheckout()
     this.items
+    this.totalAmount
     console.log(this.items)
     const user = this.tokenService.getUser()
     this.userId = user.id

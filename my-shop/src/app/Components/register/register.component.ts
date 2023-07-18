@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,7 @@ import { AuthService } from 'src/app/services/auth.service';
     isSuccessful = false;
     isSignUpFailed = false;
     errorMessage = '';
-    constructor(private authService: AuthService) { }
+    constructor(private authService: AuthService, private location: Location) { }
     ngOnInit(): void {
     }
     SignUp(): void {
@@ -28,7 +29,7 @@ import { AuthService } from 'src/app/services/auth.service';
           console.log(data);
           this.isSuccessful = true;
           this.isSignUpFailed = false;
-          this.replacePage()
+          this.location.back()
         },
         error: err => {
           this.errorMessage = err.error.message;
@@ -37,9 +38,9 @@ import { AuthService } from 'src/app/services/auth.service';
       });
     }
   
-    replacePage(): void {
-      window.location.replace('/menu')
-    }
+    // replacePage(): void {
+    //   window.location.replace('/menu')
+    // }
   
   }
 

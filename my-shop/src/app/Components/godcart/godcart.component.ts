@@ -116,6 +116,7 @@ calcTotal() {
     
     this.bagService.cartTotal.next(this.totalAmount);
     localStorage.setItem('CartItems', JSON.stringify(this.items))
+    localStorage.setItem('Total',JSON.stringify(this.totalAmount))
 
 }
 // 
