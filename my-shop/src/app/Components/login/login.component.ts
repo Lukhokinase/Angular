@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
 import { UsersService } from 'src/app/services/users.service';
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -24,7 +24,7 @@ import { UsersService } from 'src/app/services/users.service';
     isSuccessful = true;
     isSignUpFailed = true;
     errorMessage = 'password or username is incorrect';
-    constructor(private authservice: AuthService, private usersservice: UsersService, private tokenStorage: TokenService, private router: Router ) { }
+    constructor(private authservice: AuthService, private usersservice: UsersService, private tokenStorage: TokenService, private router: Router, private location: Location ) { }
     ngOnInit(): void {
 
       
@@ -40,7 +40,8 @@ import { UsersService } from 'src/app/services/users.service';
           this.tokenStorage.saveUser(data)
           this.isSuccessful = true;
           this.isLoginFailed = false;
-          this.replacePage()
+          //this.replacePage()
+          this.location.back()
         },
         error: (err: { error: { message: string; }; }) => {
           this.errorMessage = err.error.message;
