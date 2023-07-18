@@ -25,7 +25,7 @@ import { UsersService } from 'src/app/services/users.service';
     isSuccessful = true;
     isSignUpFailed = true;
     errorMessage = 'password or username is incorrect';
-    constructor(private authservice: AuthService, private usersservice: UsersService, private tokenStorage: TokenService) { }
+    constructor(private authservice: AuthService, private usersservice: UsersService, private tokenStorage: TokenService, private location : Location) { }
     ngOnInit(): void {
 
       
@@ -53,8 +53,8 @@ import { UsersService } from 'src/app/services/users.service';
       });
     }
   
-  replacePage(): void {
-    this.router.navigate(['/menu'])
-  }
+  // replacePage(): void {
+  //   this.router.navigate(['/menu'])
+  // }
 
   }
