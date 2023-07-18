@@ -32,6 +32,7 @@ export class GodcartComponent implements OnInit{
   getAllItem(){
     
     this.items = this.bagService.getAllItems()
+    window.sessionStorage.setItem("cart", JSON.stringify(this.items))
   }
   
   

@@ -23,15 +23,39 @@
                             
                             <input type="username" class="form-control" required id="username" placeholder="username"
                             name="username" [(ngModel)]="form.username" required #username="ngModel" 
-                            required [ngClass]="{'is-invalid': f.submitted && username.errors}">
+                            required [ngClass]="{'is-invalid': f.submitted && username.errors}" minlength="4">
+                            
+                            <div *ngIf="username.invalid && (username.dirty || username.touched)"
+    class="alert">
+
+  <div *ngIf="username.errors?.['required']">
+    Username is required.
+  </div>
+  <div *ngIf="username.errors?.['minlength']">
+    Name must be at least 4 characters long.
+  </div>
+  
+
+</div>
 
                         </div> 
+                        
                     </div> 
                     <div class="formsix-e">
                         <div class="form-group i-password">
                             <input type="password" class="form-control" required id="password" placeholder="password"
-                            name="password" [(ngModel)]="form.password" required #username="ngModel" 
-                            required >
+                            name="password" [(ngModel)]="form.password" required #password="ngModel" 
+                            minlength="4" >
+                            
+                            <div *ngIf="password.invalid && (password.dirty || password.touched)"
+    class="alert">
+
+  <div *ngIf="password.errors?.['required']">
+    Password is required.
+  </div>
+  <div *ngIf="username.errors?.['minlength']">
+    Password must be at least 4 characters long.
+  </div>
                         </div>
                     </div>
                     <div class="login_password"></div>
@@ -39,12 +63,12 @@
                         
                     
                     <div class="login_btn_wrapper">
-                        <a  class="btn btn-dark login_btn" (click)="login()" > Login </a>
+                        <button class="btn btn-dark login_btn text-center" (click)="login()" [disabled]="username.invalid || password.invalid" > LOGIN </button>
                     </div>
                     <div class="login_message">
                         <p>Don&rsquo;t have an account ? <a routerLink="/register"> Sign up </a> </p>
                     </div>
-                </form>
+                
             </div>
             
       
