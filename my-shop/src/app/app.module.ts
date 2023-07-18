@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 
 import { AppComponent } from './app.component';
-import { MenuComponent } from './Components/menu/menu.component';
+
 import { MenuofGodComponent } from './Components/menuof-god/menuof-god.component';
 import { ViewoneComponent } from './Components/viewone/viewone.component';
 import { GodcheckoutComponent } from './Components/godcheckout/godcheckout.component';
@@ -33,7 +33,6 @@ import { AdminUpdateItemComponent } from './admin-update-item/admin-update-item.
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
     MenuofGodComponent,
     ViewoneComponent,
     EmptyBagComponent,
