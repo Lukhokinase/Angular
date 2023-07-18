@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
 import { UsersService } from 'src/app/services/users.service';
+import { FormGroup,FormControl,Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,10 @@ import { UsersService } from 'src/app/services/users.service';
     export class LoginComponent implements OnInit {
     isLoginFailed: boolean | undefined;
 
+   requiredForm: FormGroup | undefined;
+    
    
+
     form: any = {
       username: null,
       password: null
@@ -25,11 +29,21 @@ import { UsersService } from 'src/app/services/users.service';
     isSuccessful = true;
     isSignUpFailed = true;
     errorMessage = 'password or username is incorrect';
-    constructor(private authservice: AuthService, private usersservice: UsersService, private tokenStorage: TokenService, private location : Location) { }
+    constructor(private fb: FormBuilder, private authservice: AuthService, private usersservice: UsersService, private tokenStorage: TokenService, private location : Location) { }
     ngOnInit(): void {
+      
 
       
     }
+
+    
+    myForm(){
+      this.requiredForm = this.fb.group({
+        username: ['',Validators.required]
+        
+        
+      })
+     }
     login(): void {
       const {username , password } = this.form;
       // console.log(this.form)
