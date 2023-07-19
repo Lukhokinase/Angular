@@ -1,14 +1,8 @@
-.text-center{
-  margin-top: 150px;
-  /* background-color: lightgray; */
-   justify-content:center ;
-  flex-direction: 100px;
-}
-.button{
-  margin-top: 120px;
+.jumbotron{
+  padding-top: 100px;
 }
 
-.picture{
-  margin: auto;
+.img{
+ position: absolute;
+ top: 40px;
 }
-
