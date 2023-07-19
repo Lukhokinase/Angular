@@ -27,10 +27,10 @@
                             <div *ngIf="username.invalid && (username.dirty || username.touched)"
     class="alert">
 
-  <div *ngIf="username.errors?.['required']">
+  <div *ngIf="username.errors?.['required']" class="alert alert-danger px-4">
     Username is required.
   </div>
-  <div *ngIf="username.errors?.['minlength']">
+  <div *ngIf="username.errors?.['minlength']" class="alert alert-danger px-4">
     Name must be at least 4 characters long.
   </div>
 
@@ -45,10 +45,10 @@
                             <div *ngIf="email.invalid && (email.dirty || email.touched)"
                             class="alert">
                         
-                          <div *ngIf="email.errors?.['required']">
+                          <div *ngIf="email.errors?.['required']" class="alert alert-danger px-4">
                             Email is required.
                           </div>
-                          <div *ngIf="email.errors?.['minlength']">
+                          <div *ngIf="email.errors?.['minlength']" class="alert alert-danger px-4">
                             Email must be at least 4 characters long.
                           </div>
                         </div>
@@ -61,10 +61,10 @@
                              <div *ngIf="password.invalid && (password.dirty || password.touched)"
     class="alert">
 
-  <div *ngIf="password.errors?.['required']">
+  <div *ngIf="password.errors?.['required']" class="alert alert-danger px-4">
     Password is required.
   </div>
-  <div *ngIf="password.errors?.['minlength']">
+  <div *ngIf="password.errors?.['minlength']" class="alert alert-danger px-4">
     Password must be at least 4 characters long.
   </div>
                         </div>
@@ -75,14 +75,16 @@
                     
                     <div class="login_btn_wrapper">
                         <button  class="btn btn-dark login_btn text-center" (click)="SignUp()" [disabled]="username.invalid || password.invalid || email.invalid"> SIGN UP </button>
+                        <div class="alert alert-danger p-3" *ngIf="isSignUpFailed">
+                            <span>Signup Failed!</span>
+                        </div>
+                        <div class="alert alert-success p-3" *ngIf="isSuccessful">
+                            <span>Signed up is successfully!</span>
+                        </div>
                     </div>
-                    <div class="login_message">
-                        <p>Don&rsquo;t have an account ? <a routerLink="/register"> Sign up </a> </p>
-                    </div>
+                    
                
-                <div class="alert alert-success" *ngIf="isSuccessful">
-                    Your shop registration is successfull!
-                </div>
+               
                 <!-- /.login_wrapper-->
             </div>
         

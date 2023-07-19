@@ -29,7 +29,8 @@ import { Location } from '@angular/common';
         next: data => {
           console.log(data);
           this.isSuccessful = true;
-          this.isSignUpFailed = false;
+          // this.isSignUpFailed = true;
+          
           this.location.back()
         },
         error: err => {
@@ -40,9 +41,9 @@ import { Location } from '@angular/common';
     }
   
     previousPage(): void {
-      setInterval(()=>{
+      setTimeout(()=>{
         this.location.back();
-      }, 1500)
+      }, 5000)
     }
   
   }
