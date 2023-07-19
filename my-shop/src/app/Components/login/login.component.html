@@ -53,7 +53,7 @@
   <div *ngIf="password.errors?.['required']" class="alert alert-danger px-4">
     Password is required.
   </div>
-  <div *ngIf="username.errors?.['minlength']" class="alert alert-danger px-4">
+  <div *ngIf="password.errors?.['minlength']" class="alert alert-danger px-4">
     Password must be at least 4 characters long.
   </div>
                         </div>
