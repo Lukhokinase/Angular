@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BagService } from 'src/app/services/bag.service';
 import { TokenService } from 'src/app/services/token.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-godcheckout',
@@ -11,11 +11,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GodcheckoutComponent implements OnInit {
 
-  userForm:any = FormGroup;
-  name: FormControl = new FormControl("", [Validators.required]);
-  number: FormControl = new FormControl("");
-	honeypot: FormControl = new FormControl('') // we will use this to prevent spam
-  message: FormControl = new FormControl('')
+  profileForm: any = FormGroup
+    name: FormControl = new FormControl('', [Validators.required])
+    number: FormControl= new FormControl('')
+    honeypot:FormControl =  new FormControl('') // we will use this to prevent spam
+    message: FormControl = new FormControl('')
+
+  ;
+
+  // userForm:any = FormGroup;
+  // name: FormControl = new FormControl("", [Validators.required]);
+  // number: FormControl = new FormControl("");
+	// honeypot: FormControl = new FormControl('') // we will use this to prevent spam
+  // message: FormControl = new FormControl('')
   
   
 
@@ -30,10 +38,21 @@ userId:any
 
 
 
-  constructor(private http: HttpClient ,private bagService: BagService, private tokenService: TokenService, private router: Router){}
-
+  constructor(private fb: FormBuilder, private http: HttpClient ,private bagService: BagService, private tokenService: TokenService, private router: Router){
+    this.profileForm = this.fb.group({
+      name: this.name,
+      message: this.message,
+      number: this.number,
+      honeypot: this.honeypot,
+      
+    });
+  }
+  onSubmi() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.profileForm.value);
+  }
   ngOnInit(): void {
-
+    //console.log(this.dataForm)
     this.retrieveCheckout()
     this.items
     this.totalAmount
@@ -96,20 +115,20 @@ userId:any
     }
 
     onSubmit(): void {
-  
+      console.warn(this.profileForm.value);
       setTimeout(() => {
-        window.location.replace('/thankyou')
+        //this.router.navigate(['/closing-page'])
       }, 3500);
-      if (this.userForm.status == "VALID" && this.honeypot.value == "") {
-        this.userForm.disable(); // disable the form if it's valid to disable multiple submissions
+      if (this.profileForm.status == "VALID" && this.honeypot.value == "") {
+        this.profileForm.disable(); // disable the form if it's valid to disable multiple submissions
         var formData: any = new FormData();
        
-        formData.append("name", this.userForm.get("name")?.value);
-        formData.append("number", this.userForm.get("number")?.value);
-        
+        formData.append("name", this.profileForm.get("name")?.value);
+        formData.append("number", this.profileForm.get("number")?.value);
+         console.log(this.profileForm.value.name)
         
         this.items.map((item: any) => {
-          formData.append("item", item.name)
+          formData.append("item", item.itemname)
           formData.append("quantity", item.quantity)
     
         })
@@ -128,14 +147,14 @@ userId:any
             } else {
               this.responseMessage = "Oops! Something went wrong... Reload the page and try again.";
             }
-            this.userForm.enable(); // re enable the form after a success
+            this.profileForm.enable(); // re enable the form after a success
             this.submitted = true; // show the response message
             this.isLoading = false; // re enable the submit button
             console.log(response);
           },
           (error) => {
             this.responseMessage = "Oops! An error occurred... Reload the page and try again.";
-            this.userForm.enable(); // re enable the form after a success
+            this.profileForm.enable(); // re enable the form after a success
             this.submitted = true; // show the response message
             this.isLoading = false; // re enable the submit button
             console.log(error);
