@@ -28,7 +28,7 @@
                             <div *ngIf="username.invalid && (username.dirty || username.touched)"
     class="alert">
 
-  <div *ngIf="username.errors?.['required']">
+  <div *ngIf="username.errors?.['required']" class="alert alert-danger px-4">
     Username is required.
   </div>
   <div *ngIf="username.errors?.['minlength']">
@@ -50,7 +50,7 @@
                             <div *ngIf="password.invalid && (password.dirty || password.touched)"
     class="alert">
 
-  <div *ngIf="password.errors?.['required']">
+  <div *ngIf="password.errors?.['required']" class="alert alert-danger px-4">
     Password is required.
   </div>
   <div *ngIf="username.errors?.['minlength']">
@@ -64,6 +64,9 @@
                     
                     <div class="login_btn_wrapper">
                         <button class="btn btn-dark login_btn text-center" (click)="login()" [disabled]="username.invalid || password.invalid" > LOGIN </button>
+                        <div class="alert alert-warning p-3" *ngIf="isLoginFailed">
+                            <span>Signin Failed!</span>
+                        </div>
                     </div>
                     <div class="login_message">
                         <p>Don&rsquo;t have an account ? <a routerLink="/register"> Sign up </a> </p>

@@ -9,12 +9,13 @@ import { Location } from '@angular/common';
 })
 
 
-    export class RegisterComponent implements OnInit {
+   export class RegisterComponent implements OnInit {
    form: any = {
       username: '',
       email: '',
       password: ''
     };
+
     isSuccessful = false;
     isSignUpFailed = false;
     errorMessage = '';

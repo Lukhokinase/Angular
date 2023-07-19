@@ -59,8 +59,10 @@ import { UsersService } from 'src/app/services/users.service';
       });
     }
   
-  // replacePage(): void {
-  //   this.router.navigate(['/menu'])
-  // }
+  previousPage(): void {
+    setInterval(()=>{
+      this.location.back();
+    }, 3000)
+  }
 
   }
