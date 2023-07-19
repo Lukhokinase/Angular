@@ -31,10 +31,8 @@ userId:any
   }
 
   retrieveCheckout(): void {
-     
     if(!window.sessionStorage.getItem('auth-token')){
       this.router.navigate(['/login'])
-      
     }
 
   }
@@ -50,6 +48,7 @@ userId:any
         console.log(data)
       },
     })
+    this.clearCart()
     this.replacePage()
     })
   console.log(this.items[0].id)
@@ -59,7 +58,14 @@ userId:any
   }
 
   clearCart() {
-    throw new Error('Method not implemented.');
+
+    localStorage.removeItem('CartItems')
+    localStorage.removeItem('Total')
+    setTimeout(()=>{
+      window.location.href = '/menu'
+    }, 2000)
+    
+    
     }
 
     replacePage(): void {
