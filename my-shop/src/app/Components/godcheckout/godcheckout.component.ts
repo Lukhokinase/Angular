@@ -30,11 +30,20 @@ userId:any
     //this.items =this.totalItems.length
   }
 
+
   retrieveCheckout(): void {
     if(!window.sessionStorage.getItem('auth-token')){
       this.router.navigate(['/login'])
     }
 
+  }
+
+  payWithAyoba(){
+    //Since this is south african only, currency always set to ZAR TODO: use dynamic currencies
+    let currency = "ZAR";
+    let provider = "Ozow"
+    console.log("I am here")
+    window["Android"].startPayment(provider,this.totalAmount,currency,"Test123");
   }
 
   postToCart(){
@@ -63,7 +72,7 @@ userId:any
     localStorage.removeItem('Total')
     setTimeout(()=>{
       window.location.href = '/menu'
-    }, 2000)
+    }, 500)
     
     
     }
