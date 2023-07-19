@@ -55,8 +55,8 @@ import { FormGroup,FormControl,Validators, FormBuilder } from '@angular/forms';
           this.tokenStorage.saveUser(data)
           this.isSuccessful = true;
           this.isLoginFailed = false;
-          // this.replacePage()
-          this.location.back();
+           this.previousPage()
+          
           
         },
         error: (err: { error: { message: string; }; }) => {
@@ -67,8 +67,10 @@ import { FormGroup,FormControl,Validators, FormBuilder } from '@angular/forms';
       });
     }
   
-  // replacePage(): void {
-  //   this.router.navigate(['/menu'])
-  // }
+  previousPage(): void {
+    setInterval(()=>{
+      this.location.back();
+    }, 3000)
+  }
 
   }
