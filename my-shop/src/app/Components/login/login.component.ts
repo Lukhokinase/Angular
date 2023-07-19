@@ -48,7 +48,7 @@ import { UsersService } from 'src/app/services/users.service';
           this.tokenStorage.saveUser(data)
           this.isSuccessful = true;
           this.isLoginFailed = false;
-          //this.replacePage()
+       
           this.previousPage()
         },
         error: (err: { error: { message: string; }; }) => {
@@ -60,9 +60,9 @@ import { UsersService } from 'src/app/services/users.service';
     }
   
   previousPage(): void {
-    setInterval(()=>{
+    setTimeout(()=>{
       this.location.back();
-    }, 1500)
+    }, 2000)
   }
 
   }

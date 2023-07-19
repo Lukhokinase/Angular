@@ -7,8 +7,8 @@
     
     <div class="row">
         <div class="col-md-4 order-md-2 mb-4"  >
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Your Order</span>
+            <h4 class="d-flex justify-content-between align-items-center text-center mb-3">
+                <span class="text-muted text-center text-align-center">Your Order Summary</span>
                 <!-- <span class="badge badge-secondary badge-pill">3</span> -->
             </h4>
             <ul class="list-group mb-3 sticky-top">
@@ -31,19 +31,17 @@
            
         </div>
         
+    <div class="d-flex justify-content-even" >
+      <button class="col-5 btn btn-block btn-dark ">Pay</button>
+      <div class="dropdown">
+        <button class="col-10 btn btn-outline-warning ms-5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Cancel Order</button>
+        <ul class="dropdown-menu dropdown-menu-end ">
+          <li><a class="dropdown-item" (click)="clearCart()">Yes</a></li>
+          <li><a class="dropdown-item">No</a></li>
     
-</div>
-<!-- 
-        <div *ngFor="let item of items">
-          {{item.itemname}}
-          {{item.quantity}}
-        </div>
-        <div>Total Amount{{totalAmount | currency:'R'}}</div> -->
-        
-        <div class="d-flex justify-content-center">
-          <button type="button" class="btn btn-dark btn-lg btn-block me-5 my-5" routerLink="/Payment">Confirm</button>
-          <button type="button" class="btn btn-light btn-lg btn-block button1 my-5" routerLink="/menu">Cancel Order</button>
+        </ul>
+      </div>
       
-        </div>
-  
+    </div>
 </div>
+
