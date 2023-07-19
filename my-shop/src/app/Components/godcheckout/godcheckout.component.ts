@@ -139,8 +139,8 @@ userId:any
         
         this.isLoading = true; // sending the post request async so it's in progress
         this.submitted = false; // hide the response message on multiple submits
-        this.http.post("https://script.google.com/macros/s/AKfycbzc-9OXizVxtFvVjG_hSmdMAAM5LoentgRnDrDuHrjrFoMHBNHd4kS8HRQcBsqzkLqfXA/exec", formData).subscribe(
-          (response:any) => {
+        this.http.post("https://script.google.com/macros/s/AKfycbwjs14-YwAGpeVhBqOsj4BoZ77Py_PMtngwKgszmYsc/dev/", formData).subscribe({
+          next: response => {
             // choose the response message
             if (response["result"] == "success") {
               this.responseMessage = "Thanks for the message! I'll get back to you soon!";
@@ -152,13 +152,13 @@ userId:any
             this.isLoading = false; // re enable the submit button
             console.log(response);
           },
-          (error) => {
+          error: e => {
             this.responseMessage = "Oops! An error occurred... Reload the page and try again.";
             this.profileForm.enable(); // re enable the form after a success
             this.submitted = true; // show the response message
             this.isLoading = false; // re enable the submit button
-            console.log(error);
-          }
+            console.log(e);
+          }}
         );
       }
     }

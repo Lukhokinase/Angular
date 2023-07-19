@@ -31,108 +31,16 @@
            
         </div>
     </div>
-
-    <div class=" col-12 col-sm-6 col-md-6 form mt-2">
-      <form [formGroup]="profileForm" method="post" (ngSubmit)="onSubmit()">
-
-        <label for="first-name">Name: </label>
-        <input id="first-name" type="text" formControlName="name">
-        <span *ngIf="name.invalid"></span>
-<br>
-        <label for="number">Number: </label>
-        <input id="number" type="number" formControlName="number">
-        <span *ngIf="number.invalid">*Number is </span>
-        <!-- <p>Complete the form to enable button.</p>
-        <button type="submit" [disabled]="isLoading">Submit</button> -->
-
-        <!-- <div class="col-12 mt-2 cc d-flex justify-content-between align-items-center mt-5">
-          <button [disabled]="isLoading" class="submit" type="submit" class="btn btn-primary btn1">Submit</button>
-          <button [formControl]="honeypot" routerLink="/cart"class="hidden" type="text" class="btn btn-primary btn0">Cancel</button>
-        </div> -->
-        <!-- <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
-          <span>{{responseMessage}}</span>
-        </div> -->
-        <div class="d-flex justify-content-even" >
-          <div class="dropdown">
-            <button class="col-10 btn btn-outline-primary ms-5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Pay1</button>
-            <ul class="dropdown-menu dropdown-menu-end ">
-              <li><button  class="submit" type="submit" class=" dropdown-item" (click)="payWithAyoba()">Pay with Ayoba</button></li>
-              <li><button [disabled]="isLoading" type="submit" class="submit" class=" dropdown-item btn btn-primary">Test Payment</button></li> -->
-              <!-- <li><a class="dropdown-item" (click)="payWithAyoba()">Pay with ayoba</a></li> -->
-              <!-- <li><a class="dropdown-item" routerLink="/closing-page">Test Payment</a></li> -->
-            </ul>
-          </div>
-          <div class="dropdown">
-            <button class="col-10 btn btn-outline-warning ms-5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Cancel Order</button>
-            <ul class="dropdown-menu dropdown-menu-end ">
-              <li><a class="dropdown-item" (click)="clearCart()">Yes</a></li>
-              <li><a class="dropdown-item">No</a></li>
-            </ul>
-          </div>
-          
-        </div>
-        <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
-          <span>{{responseMessage}}</span>
-        </div>
-      </form>
-      <!-- <form [formGroup]="userForm"  method="post" (ngSubmit)="onSubmit()">
-        <div class = "contactwrapper">
-      
-            <label for="name">Name:</label>
-            <input type="text" formControlName="name" placeholder="name" id="name"  name="name">
-            <span *ngIf="name.invalid"></span>
-            
-            <label for="number">Number:</label>
-            <input type="text" formControlName="number" placeholder="Number" id="number" >
-            <span *ngIf="number.invalid">*Number is </span>
-        
-        
-        
-          </div>
-          <div class="col-12 mt-2 cc d-flex justify-content-between align-items-center mt-5"> -->
-            <!-- <button [disabled]="isLoading" class="submit" type="submit" class="btn btn-primary btn1">Submit</button>
-            <button [formControl]="honeypot" routerLink="/cart"class="hidden" type="text" class="btn btn-primary btn0">Cancel</button> -->
-          <!-- </div>
-          <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
-            <span>{{responseMessage}}</span>
-          </div>
-          <div class="d-flex justify-content-even" >
-            <div class="dropdown">
-              <button class="col-10 btn btn-outline-primary ms-5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Pay</button>
-              <ul class="dropdown-menu dropdown-menu-end ">
-                <li><button  class="submit" type="submit" class=" dropdown-item" (click)="payWithAyoba()">Pay with Ayoba</button></li>
-                <li><button [disabled]="isLoading" type="submit" class="submit" class=" dropdown-item btn btn-primary">Test Payment</button></li> -->
-                <!-- <li><a class="dropdown-item" (click)="payWithAyoba()">Pay with ayoba</a></li> -->
-                <!-- <li><a class="dropdown-item" routerLink="/closing-page">Test Payment</a></li> -->
-              <!-- </ul>
-            </div>
-            <div class="dropdown">
-              <button class="col-10 btn btn-outline-warning ms-5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Cancel Order</button>
-              <ul class="dropdown-menu dropdown-menu-end ">
-                <li><a class="dropdown-item" (click)="clearCart()">Yes</a></li>
-                <li><a class="dropdown-item">No</a></li>
-              </ul>
-            </div>
-            
-          </div>
-          <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
-            <span>{{responseMessage}}</span>
-          </div>
-      
-        </form> -->
-      
-    </div>
+    
 
         
         
-    <!-- <div class="d-flex justify-content-even" >
+    <div class="d-flex justify-content-even" >
       <div class="dropdown">
         <button class="col-10 btn btn-outline-primary ms-5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Pay</button>
         <ul class="dropdown-menu dropdown-menu-end ">
-          <li><button [disabled]="isLoading" class="submit" type="submit" class=" dropdown-item" (click)="payWithAyoba()">Pay with Ayoba</button></li>
-          <li><button [formControl]="honeypot" type="text" routerLink="/closing-page" class=" dropdown-item btn btn-primary">Test Payment</button></li>
-          < <li><a class="dropdown-item" (click)="payWithAyoba()">Pay with ayoba</a></li> -->
-          <!-- <li><a class="dropdown-item" routerLink="/closing-page">Test Payment</a></li> 
+          <li><a class="dropdown-item" (click)="payWithAyoba()">Pay with ayoba</a></li>
+          <li><a class="dropdown-item" routerLink="/closing-page">Test Payment</a></li>
         </ul>
       </div>
       <div class="dropdown">
@@ -144,8 +52,5 @@
       </div>
       
     </div>
-    <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
-      <span>{{responseMessage}}</span>
-    </div> -->
 </div>
 
