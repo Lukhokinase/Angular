@@ -63,7 +63,7 @@ userId:any
     localStorage.removeItem('Total')
     setTimeout(()=>{
       window.location.href = '/menu'
-    }, 2000)
+    }, 500)
     
     
     }
