@@ -39,9 +39,11 @@ import { Location } from '@angular/common';
       });
     }
   
-    // replacePage(): void {
-    //   window.location.replace('/menu')
-    // }
+    previousPage(): void {
+      setInterval(()=>{
+        this.location.back();
+      }, 1500)
+    }
   
   }
 

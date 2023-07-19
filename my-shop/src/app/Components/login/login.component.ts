@@ -25,7 +25,7 @@ import { UsersService } from 'src/app/services/users.service';
       password: null
     }
   
-    isSuccessful = true;
+    isSuccessful = false;
     isSignUpFailed = true;
     errorMessage = 'password or username is incorrect';
     constructor(private authservice: AuthService, private usersservice: UsersService, private tokenStorage: TokenService, private router: Router, private location: Location ) { }
@@ -49,7 +49,7 @@ import { UsersService } from 'src/app/services/users.service';
           this.isSuccessful = true;
           this.isLoginFailed = false;
           //this.replacePage()
-          this.location.back()
+          this.previousPage()
         },
         error: (err: { error: { message: string; }; }) => {
           this.errorMessage = err.error.message;
@@ -62,7 +62,7 @@ import { UsersService } from 'src/app/services/users.service';
   previousPage(): void {
     setInterval(()=>{
       this.location.back();
-    }, 3000)
+    }, 1500)
   }
 
   }

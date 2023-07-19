@@ -67,6 +67,10 @@
                         <div class="alert alert-warning p-3" *ngIf="isLoginFailed">
                             <span>Signin Failed!</span>
                         </div>
+                        <div class="alert alert-primary p-3" *ngIf="isSuccessful">
+                            <span>Logging is successful!</span>
+                        </div>
+                        
                     </div>
                     <div class="login_message">
                         <p>Don&rsquo;t have an account ? <a routerLink="/register"> Sign up </a> </p>
