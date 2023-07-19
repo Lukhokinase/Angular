@@ -12,8 +12,9 @@ export class BagService implements OnInit {
 // const User_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/v2/users/';
  auth_api = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/api/auth/'
 //  auth_api = 'https://localhost:3200'
-  
-  cartItemcount = new BehaviorSubject<any>(0);
+ cart_api  = 'https://mvc-phunga-git-main-aphelelendlela.vercel.app/api/cart/'
+
+  cartItemcount  = new BehaviorSubject<any>(0);
   cartTotal = new BehaviorSubject<any>(0);
 
   items: Item[] = [];
@@ -39,7 +40,7 @@ addToCart(product: any ) {
   this.items.push({...product}); 
   this.items.length;
   this.cartItemcount.next(this.cartItemcount.value + 1);
-  JSON.stringify(localStorage.setItem('CartCount',this.cartItemcount.value))
+  localStorage.setItem('CartCount',JSON.stringify(this.cartItemcount.value))
   // return;
  }
 
@@ -82,7 +83,7 @@ addToCart(product: any ) {
   };
 
   sendToCart(payload: any):Observable<any>{
-    return this.http.post<any>(this.auth_api,payload)
+    return this.http.post<any>(this.cart_api,payload)
   }
 
   getUserCart():Observable<any>{

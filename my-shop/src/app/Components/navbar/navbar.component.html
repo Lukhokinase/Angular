@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand  navbar-dark bg-dark " aria-label="Tenth navbar example">
+<nav class="navbar fixed-top navbar-expand  navbar-dark bg-dark navGod " aria-label="Tenth navbar example">
     <div class="container-fluid justify-content-even">
         <div>
             <img src="../../assets/logo.png" alt="" height="35" width="35" style="
@@ -35,14 +35,14 @@
         </ul>
       </div>
       
-      <div class="dropdown ">
+      <div class="dropdown">
         <a class="dropdown-toggle text-align" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-bars" aria-hidden="true"></i></a>
           <ul class="dropdown-menu dropdown-menu-end ">
             <li><a class="dropdown-item" routerLink="/profile">Profile</a></li>
             <li><a class="dropdown-item" routerLink="/login" *ngIf="!isLoggedIn">Login</a></li>
-            <li><a class="dropdown-item" routerLink="/register">Signup</a></li>
-            <li><a class="dropdown-item" routerLink="/admin">My Shop</a></li>
+            <li><a class="dropdown-item" routerLink="/register" *ngIf = "!isLoggedIn">Signup</a></li>
+            <li><a class="dropdown-item" routerLink="/admin" *ngIf="isAdmin == true">My Shop</a></li>
             <li *ngIf="isLoggedIn" ><a class="dropdown-item" (click)="logout()">Signout</a></li>
           </ul>
         

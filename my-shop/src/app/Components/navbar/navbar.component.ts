@@ -16,6 +16,7 @@ export class NavbarComponent implements OnInit{
   //cartTotal = JSON.parse(`${localStorage.getItem('TotalAmount')}`)
   isLoggedIn = false
   username = "";
+  isAdmin=false
   
   constructor(private cartService: BagService, private tokenStorage: TokenService) { }
   
@@ -28,6 +29,7 @@ export class NavbarComponent implements OnInit{
     if(this.isLoggedIn){
     const user = this.tokenStorage.getUser()
     this.username = user.username
+    this.isAdmin = user.isAdmin
     console.log(this.username)
   }
   localStorage.setItem('CartCount', JSON.stringify(this.cartCount))

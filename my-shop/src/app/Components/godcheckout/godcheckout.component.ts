@@ -26,15 +26,14 @@ userId:any
     console.log(this.items)
     const user = this.tokenService.getUser()
     this.userId = user.id
+    
     //this.items =this.totalItems.length
   }
 
 
   retrieveCheckout(): void {
-     
     if(!window.sessionStorage.getItem('auth-token')){
       this.router.navigate(['/login'])
-      
     }
 
   }
@@ -58,6 +57,7 @@ userId:any
         console.log(data)
       },
     })
+    this.clearCart()
     this.replacePage()
     })
   console.log(this.items[0].id)
@@ -67,7 +67,14 @@ userId:any
   }
 
   clearCart() {
-    throw new Error('Method not implemented.');
+
+    localStorage.removeItem('CartItems')
+    localStorage.removeItem('Total')
+    setTimeout(()=>{
+      window.location.href = '/menu'
+    }, 500)
+    
+    
     }
 
     replacePage(): void {

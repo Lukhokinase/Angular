@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
 import { UsersService } from 'src/app/services/users.service';
-import { Location } from '@angular/common';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,20 +16,27 @@ import { Location } from '@angular/common';
     export class LoginComponent implements OnInit {
     isLoginFailed: boolean | undefined;
 
+  
+    
    
+
     form: any = {
       username: null,
       password: null
     }
   
-    isSuccessful = true;
+    isSuccessful = false;
     isSignUpFailed = true;
     errorMessage = 'password or username is incorrect';
     constructor(private authservice: AuthService, private usersservice: UsersService, private tokenStorage: TokenService, private router: Router, private location: Location ) { }
     ngOnInit(): void {
+      
 
       
     }
+
+    
+    
     login(): void {
       const {username , password } = this.form;
       // console.log(this.form)
@@ -40,8 +48,8 @@ import { Location } from '@angular/common';
           this.tokenStorage.saveUser(data)
           this.isSuccessful = true;
           this.isLoginFailed = false;
-          //this.replacePage()
-          this.location.back()
+       
+          this.previousPage()
         },
         error: (err: { error: { message: string; }; }) => {
           this.errorMessage = err.error.message;
@@ -51,8 +59,10 @@ import { Location } from '@angular/common';
       });
     }
   
-  replacePage(): void {
-    this.router.navigate(['/menu'])
+  previousPage(): void {
+    setTimeout(()=>{
+      this.location.back();
+    }, 2000)
   }
 
   }

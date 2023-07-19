@@ -152,8 +152,15 @@ li{
 	border-radius: 30px;
     border: solid #292929;
 	border-width: 1px;
+	height: 197px;
+    width: 300px;
+    object-fit: cover;
 }
 .Godtext{
 	font-size: 22px;
 }
+
+ 
+
+	
 
