@@ -32,7 +32,30 @@
         </div>
     </div>
     
+    <!-- Checkout -->
 
+    <form [formGroup]="profileForm" method="post" (submit)="onSubmit()">
+      <h2>USER infor</h2>
+    
+      <label for="name">Name: </label>
+      <input id="name" type="text" formControlName="name">
+    
+      <label for="Number">Cell: </label>
+      <input id="number" type="text" formControlName="number">
+    
+      <div class="col-12 mt-2 cc d-flex justify-content-between align-items-center mt-5">
+        <button [disabled]="isLoading" class="submit" type="submit" class="btn btn-primary btn1">Submit</button>
+        <button [formControl]="honeypot" routerLink="/cart"class="hidden" type="text" class="btn btn-primary btn0">Cancel</button>
+      </div>
+      <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
+        <span>{{responseMessage}}</span>
+      </div>
+    </form>
+
+
+
+
+    <!-- end -->
         
         
     <div class="d-flex justify-content-even" >

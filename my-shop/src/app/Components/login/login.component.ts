@@ -62,7 +62,7 @@ import { UsersService } from 'src/app/services/users.service';
   previousPage(): void {
     setTimeout(()=>{
       this.location.back();
-    }, 2000)
+    }, 1500)
   }
 
   }
