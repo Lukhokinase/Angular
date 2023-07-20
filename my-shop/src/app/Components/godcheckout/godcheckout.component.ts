@@ -139,7 +139,7 @@ userId:any
         
         this.isLoading = true; // sending the post request async so it's in progress
         this.submitted = false; // hide the response message on multiple submits
-        this.http.post("https://script.google.com/macros/s/AKfycbyghyeKH0oVi-L3Swj9epKm-41qPwaQg274pclA4wxDTw91x3zri3yKIl-A1Ys0yStA/exec", formData).subscribe({
+        this.http.post("https://script.google.com/macros/s/AKfycbwifHe-fTtnSjj5NmjBKH0tP6vXlysTpZn6zL_sqBSMWpfEucNLo6conCWv9LAyAUFK/exec", formData).subscribe({
           next: response => {
             // choose the response message
             if (response["result"] == "success") {
